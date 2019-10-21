@@ -1,0 +1,15 @@
+<!--pages/money/record.wxml-->
+<view class='yt_body'>
+  <view class='list x-row borderBottom' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='x-col x-col-center'>
+      <view class='state ed'>{{li.status==0?'审核中':(li.status==1?'审核通过':'拒绝')}}</view>
+      <view class='time'>{{li.date}}</view>
+    </view>
+    <view class='num x-col-center'>-{{li.price}}</view>
+  </view>
+</view>
+<view class='noMoreContent' wx:if="{{isAllList==2&&list.length>0}}">没有更多了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>

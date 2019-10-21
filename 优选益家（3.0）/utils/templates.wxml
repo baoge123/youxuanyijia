@@ -1,0 +1,37 @@
+<template name="userInfo">
+  <!-- <view class='user-header'>
+    <view class='user'>
+      <view class=" x-row">
+        <view class='x-col'></view>
+        <view class="head">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class='x-col'></view>
+
+      </view>
+
+    </view>
+
+  </view>
+  <view class='namePhone'>
+    <view class='name'>{{userInfo.nickName}}</view>
+    <view class='phone' wx:if="{{phone}}">{{phone}}</view>
+  </view> -->
+  <view class='user_header'>
+  <view class='user'>
+    <view class=" x-row">
+      <view class='x-col'></view>
+      <view class="head">
+        <image src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class='x-col'></view>
+
+    </view>
+
+  </view>
+</view>
+<view class='namePhone'>
+  <view class='name'>{{userInfo.nickName}}</view>
+  <!-- <view class='phone'>15800381947</view> -->
+</view>
+</template>

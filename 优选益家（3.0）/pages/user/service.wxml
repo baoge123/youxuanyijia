@@ -1,0 +1,9 @@
+<!--pages/user/service.wxml-->
+<view style="padding-left:30rpx;">
+  <view class='li x-row borderBottom' wx:for="{{list}}" wx:key="" wx:for-item="li" style='height:100rpx;padding-right:30rpx;' bindtap='gotoDetail' data-id='{{li.id}}'>
+    <view class='x-col x-col-center'>{{li.title}}</view>
+    <view class='x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+  </view>
+</view>

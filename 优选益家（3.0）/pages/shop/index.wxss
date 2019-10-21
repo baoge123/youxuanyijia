@@ -1,0 +1,491 @@
+/* pages/shop/index.wxss */
+
+/* 商家中心样式 */
+
+.shopTitel {
+  height: 208rpx;
+  background: rgba(50, 60, 88, 1);
+}
+
+.shopTitel .shopLo {
+  padding: 0 34rpx;
+}
+
+.shopTitel .shopLo image {
+  width: 112rpx;
+  height: 112rpx;
+}
+.shopTitel .phone{
+  color: #fff;
+  font-size: 40rpx;
+  padding-bottom: 14rpx;
+}
+.shopTitel .yxsh image {
+  width: 90rpx;
+  height: 32rpx;
+}
+
+.wdzcBox{
+  padding:0 40rpx; 
+  margin: 36rpx 0 0 0;
+}
+
+.wdzcBox .name{
+  font-size: 32rpx;
+  color: #333;
+}
+
+.wdzcBox .zhmx {
+  font-size: 24rpx;
+  color: #666A6F;
+}
+.wdzcBox .iconfont{
+  font-size: 30rpx;
+}
+
+
+.titleBox {
+  height:176rpx;
+  width: 100%;
+  border-bottom: 16rpx solid #f8f9f9;
+}
+
+.titleBox .ttzrs {
+  width: 25.4%;
+  padding-left: 68rpx;
+}
+
+.titleBox .num {
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #333;
+  font-size: 36rpx;
+}
+
+.titleBox .ttzrs .ttnum {
+  color: #000;
+  font-size: 40rpx;
+}
+
+.titleBox .name {
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.titleBox .yifs {
+  width: 128rpx;
+  padding: 0 50rpx 0 100rpx;
+}
+
+.titleBox .xian {
+  width: 4rpx;
+  height: 64rpx;
+  background: #674313;
+}
+
+.titleBox .ejfs {
+  padding-left: 50rpx;
+}
+
+.woline{
+  padding-left: 48rpx;
+}
+.woline .lin{
+  padding-right: 40rpx;
+  height: 98rpx;
+}
+.woline .lin .name{
+  font-size: 32rpx;
+  color: #202020;
+}
+.woline .lin .tglxr{
+  padding:0 16rpx;
+  color: #FF5D26;
+  font-size: 26rpx;
+}
+
+
+
+
+.swiper_box {
+  position: relative;
+}
+
+.swiper_box image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_box .dianBox {
+  text-align: center;
+  width: 100%;
+  line-height: 0.2;
+  position: absolute;
+  bottom: 20rpx;
+}
+
+.swiper_box .dianBox .d {
+  width: 12rpx;
+  height: 4rpx;
+  border-radius: 5rpx;
+  background: #cdd2da;
+  display: inline-block;
+  margin: 0 8rpx;
+}
+
+.swiper_box .dianBox .ded {
+  width: 20rpx;
+  height: 4rpx;
+  border-radius: 30rpx;
+  background: #323c58;
+}
+
+.yt_body {
+  padding-bottom: 182rpx;
+}
+
+.yt_body .info {
+  padding-left: 34rpx;
+  border-bottom: 20rpx solid rgb(245, 247, 249);
+}
+
+.yt_body .shopName {
+  padding: 32rpx 0 22rpx 0;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.yt_body .zhengBox {
+  padding-bottom: 20rpx;
+}
+
+.yt_body .zhengBox .yxsp {
+  height: 36rpx;
+}
+
+.yt_body .zhengBox .yxsp image {
+  width: 112rpx;
+  height: 36rpx;
+}
+
+.yt_body .zhengBox .zheng {
+  margin: 0 8rpx;
+  width: 36rpx;
+  height: 36rpx;
+  text-align: center;
+  line-height: 36rpx;
+  color: #abb2bc;
+  font-size: 24rpx;
+  background: rgba(248, 249, 249, 1);
+  border-radius: 4rpx;
+  border: 2rpx solid rgba(171, 178, 188, 1);
+}
+
+.yt_body .zhengBox .slx {
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 10rpx;
+}
+
+.star {
+  color: #63c39b;
+}
+
+.star .iconfont {
+  font-size: 34rpx;
+}
+
+.star .icon-select {
+  color: #f5a623;
+}
+
+.star .icon-no {
+  color: #f5a623;
+}
+
+.star span {
+  margin-left: 32rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.timeBox {
+  padding: 0 0rpx 20rpx 0;
+  margin-right: 30rpx;
+}
+
+.timeBox .cell {
+  width: 188rpx;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4rpx;
+  border: 2rpx solid rgba(52, 128, 240, 1);
+  padding-left: 22rpx;
+}
+
+.timeBox .cell .lxsj {
+  padding-left: 12rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.timeBox .time {
+  padding-top: 18rpx;
+}
+
+.addBox {
+  height: 136rpx;
+  padding-right: 30rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.addBox .adicon .iconfont {
+  font-size: 40rpx;
+  color: #ddd;
+  margin-right: 18rpx;
+}
+
+.addBox .copy {
+  padding-left: 40rpx;
+  text-align: center;
+}
+
+.addBox .copy .fz {
+  width: 86rpx;
+  height: 44rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4rpx;
+  border: 2rpx solid rgba(205, 210, 218, 1);
+}
+/* 商家中心样式 以上*/
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  min-width: 8%;
+  display: inline-block;
+  text-align: center;
+  padding-left: 30rpx;
+}
+
+.scroll-view-item_H  image {
+  width: 100%;
+  height: 70px;
+}
+
+.scroll-view-item_H .name {
+  font-size: 30rpx;
+}
+
+.yt_types {
+  padding: 20rpx 0 0 0rpx;
+}
+
+.yt_types .nearby {
+  width: 50%;
+  border-bottom: 6rpx solid #fff;
+  margin: 0 auto;
+  padding-top: 10rpx;
+}
+
+.yt_types .name {
+  font-size: 30rpx;
+  /* padding-bottom: 10rpx; */
+  color: #333;
+}
+
+.yt_types .noNearby {
+  padding-top: 10rpx;
+  border-bottom: 6rpx solid #e60000;
+}
+
+/* 底部tab样式 */
+
+.bomBtn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 182rpx;
+  background: #fff;
+}
+
+.bomBtn .icon {
+  height: 52rpx;
+  width: 292rpx;
+  text-align: center;
+}
+
+.bomBtn .icon image {
+  height: 52rpx;
+  width: 52rpx;
+}
+
+.bomBtn .right {
+  /* padding-right: 98rpx;*/
+  text-align: right;
+}
+
+.bomBtn .left {
+  /* padding-left: 98rpx; */
+}
+
+.bomBtn .shadow {
+  box-shadow: 0 -1rpx 0 0 #eaeaea;
+  /* box-shadow: 0rpx -4rpx 8rpx 0rpx rgba(0, 0, 0, 0.08); */
+  margin: 70rpx 0 0 0;
+  padding-top: 12rpx;
+}
+
+.bomBtn .center {
+  text-align: center;
+  background: #fff;
+}
+
+.bomBtn .center .smhx {
+  width: 128rpx;
+  height: 128rpx;
+  text-align: center;
+  line-height: 128rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx -4rpx 8rpx 0rpx rgba(0, 0, 0, 0.08);
+}
+
+.bomBtn .center .smhx .iconfont {
+  font-size: 50rpx;
+  font-weight: 700;
+  color: #323c58;
+}
+
+.bomBtn .center .smname {
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(50, 60, 88, 1);
+  line-height: 32rpx;
+  padding-top: 8rpx;
+}
+
+.bomBtn .name {
+  font-size: 20rpx;
+  color: rgba(171, 178, 188, 1);
+  line-height: 24rpx;
+  font-weight: 600;
+  padding-top: 4rpx;
+}
+
+.bomBtn .nameed {
+  color: #ed2106;
+}
+
+.bomBtn .left .name {
+  padding-left: 10rpx;
+}
+
+.bomBtn .right .name {
+}
+
+
+
+/* 弹框样式 */
+
+
+.fixedBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* background-color: #4c4c4c; */
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.fixedBox .yzBox {
+  margin: 48rpx 46rpx 54rpx 38rpx;
+}
+
+.fixedBox .yzBox .sfName {
+  font-size: 48rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 66rpx;
+}
+
+.fixedBox .sureBtn {
+  font-size: 36rpx;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  height:84rpx;
+  line-height: 84rpx;
+  background:rgba(229,231,235,1);
+}
+
+.fixedBox .yzBox .yzli {
+  padding: 58rpx 0 34rpx 0;
+}
+
+.fixedBox .guanbiBox {
+  text-align: center;
+}
+
+.fixedBox .guanbiBox .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 70rpx;
+  /* border: 2rpx solid #fff; *//* border-radius:50%; */
+}
+
+.fixedBox .guige {
+  /* position: absolute; */
+  width: 80%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  bottom: 33%;
+  padding: 10rpx;
+  left: 22%;
+  padding-bottom: 36px;
+  opacity: 0.9;
+  height: 700rpx;
+}
+
+.guige .guanbiBox {
+  background: #dad9d9;
+  border-radius: 50%;
+  color: #fff;
+  width: 50rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 10rpx 10rpx 0 0;
+}
+
+.guige .lookAll {
+  position: absolute;
+  top: 70%;
+  width: 90%;
+}
+
+.guige .lookAll .l1 {
+  color: #fff;
+  padding: 30rpx 0;
+  width: 40%;
+  text-align: center;
+  background: #231815;
+  border-radius: 10rpx;
+}
+
+
+.setVerify {
+  /* border: 2rpx solid #e61717; */
+  color: #e61717;
+  font-size: 28rpx;
+  padding: 18rpx 30rpx;
+}

@@ -1,0 +1,154 @@
+/**app.wxss**/
+@import "/utils/iconfont.wxss";
+
+page {
+  font-family: "微软雅黑";
+  background-color: #fff;
+}
+
+view {
+  font-size: 30rpx;
+}
+
+.mainColor {
+  color: #ffae4f;
+}
+
+.whiteBg {
+  background: #fff;
+}
+
+.b {
+  font-weight: 700;
+}
+
+.white {
+  font-size: #fff;
+}
+
+.borderBottom {
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.borderTop {
+  border-top: 1px solid #f2f2f2;
+}
+
+.x-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.x-col-center {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.x-col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.user_header {
+  /* background: #fe7143; */
+  text-align: center;
+  background-image: url("https://jjwxxcx.sccxbe.com/img/personal.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  position: relative;
+  height: 200rpx;
+}
+
+.user_header .user {
+  padding: 50rpx 0 20rpx 0;
+  position: absolute;
+  top: 13%;
+  width: 100%;
+}
+
+.user_header .head {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.user_header .head image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+}
+
+.user_header .head .user .name, .user_header .head .user .phone {
+  padding-top: 6rpx;
+}
+
+.user_header .head .user .phone {
+  font-size: 32rpx;
+}
+
+.namePhone {
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.noMoreContent {
+  line-height: 80rpx;
+  background: #f8f9f9;
+  color: #999;
+  text-align: center;
+  font-size: 26rpx;
+}
+.konghezi {
+  text-align: center;
+}
+.konghezi image{
+  width: 188rpx;
+  height: 168rpx;
+  margin: 230rpx 0 24rpx 0;
+}
+
+.konghezi .myzd{
+  text-align: center;
+  font-size: 28rpx;
+  color: #ABB2BC;
+}

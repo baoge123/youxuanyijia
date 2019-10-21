@@ -1,0 +1,66 @@
+<!--pages/user/myAssets.wxml-->
+<view style='position:relative;'>
+  <view class="titleBox x-row">
+    <view class='x-col-center ttzrs'>
+      <view class='ttnum num'>{{shopInfo.u_num}}</view>
+      <view class="name">当前拥有U币</view>
+    </view>
+    <view class='x-col-center yifs' catchtap='commissionDetail'>
+      <view class='ttnum num'>{{shopInfo.daihexiao_u}}</view>
+      <view class="name">待核销</view>
+    </view>
+    <view class='x-col-center xian'></view>
+    <view class='x-col x-col-center ejfs'>
+      <view class='ttnum num'>{{shopInfo.dairuzhang_u}}</view>
+      <view class="name">待入账</view>
+    </view>
+  </view>
+  <view class='smBox x-row'>
+    <view class='x-col'></view>
+    <!-- <view class='wen x-col-center'>?</view>
+    <view class='sm x-col-center'>U币说明</view> -->
+  </view>
+</view>
+<view class='yt_types borderBottom'>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='x-col scroll-view-item_H' wx:for="{{types}}" wx:for-item="t" wx:key="" bindtap='selectType' data-id="{{t.id}}">
+      <view class=" {{typeName==t.id?'named':'name'}}">{{t.name}} </view>
+      <view class="{{typeName==t.id?'nearby':'noNearby'}}"></view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='yt_body'>
+  <view class='list borderBottom x-row' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='x-col x-col-center'>
+      <view class='name' wx:if="{{li.status==1}}">折算入账</view>
+      <view class='name' wx:if="{{li.status==0}}">{{li.title}}</view>
+      <view class='time'>{{li.date}}</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num {{li.status==1?"jian":""}}'>{{li.status==1?"-":"+"}}{{li.price}}</view>
+    </view>
+  </view>
+  <!-- <view class='list borderBottom x-row'>
+    <view class='x-col x-col-center'>
+      <view class='name'>分享商品提成</view>
+      <view class='time'>2019.03.16</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num jian'>-18.9</view>
+    </view>
+  </view> -->
+
+</view>
+
+<view class='noMoreContent' wx:if="{{isAllList==1&&list.length>0}}">已加载全部数据了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>
+<view style='height:110rpx;'></view>
+<view class='bomBox x-row borderTop'>
+  <view class='x-col x-col-center item' catchtap='gotoMonyeGet'>申请结算</view>
+  <!-- <view style='width:26rpx;'></view>
+  <view class='x-col x-col-center item cz' catchtap='gotoRecharge'>余额充值</view> -->
+</view>

@@ -1,0 +1,41 @@
+<!--pages/user/my/commissionDetail.wxml-->
+<view class="titleBox x-row">
+  <view class='x-col x-col-center ttzrs'>
+    <view class='ttnum num'>688</view>
+    <view class="name">累计收入佣金(元)</view>
+  </view>
+  <view class='x-col x-col-center yifs'>
+    <view class='ttnum num'>68</view>
+    <view class="name">待结算佣金(元)</view>
+  </view>
+
+</view>
+<view class='yt_types borderBottom'>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='x-col scroll-view-item_H' wx:for="{{types}}" wx:for-item="t" wx:key="" bindtap='selectType' data-id="{{t.id}}" data-type="{{t.type}}" data-tid="{{t.tid}}">
+      <view class=" {{typeName==t.id?'named':'name'}}">{{t.name}} </view>
+      <view class="{{typeName==t.id?'nearby':'noNearby'}}"></view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='yt_body'>
+  <view class='list borderBottom x-row' wx:for="{{2}}" wx:key="" wx:for-item="li">
+    <view class='x-col x-col-center'>
+      <view class='name'>分享商品提成</view>
+      <view class='time'>2019.03.16</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num'>+18.9</view>
+    </view>
+  </view>
+    <view class='list borderBottom x-row' >
+    <view class='x-col x-col-center'>
+      <view class='name'>分享商品提成</view>
+      <view class='time'>2019.03.16</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num jian'>-18.9</view>
+    </view>
+  </view>
+</view>

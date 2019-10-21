@@ -1,0 +1,25 @@
+<view class="box-top">
+    <view>订单编号：{{list.LogisticCode}}</view>
+    <view>快递公司：{{list.ShipperCode}}</view>
+    <view>物流编号：{{list.LogisticCode}}</view>
+</view>
+<!-- <view class="box-top">
+    <view>物流信息</view>
+</view> -->
+<view class="list-box">
+    <view class="list">
+        <view class="item" wx:for="{{list.Traces}}" wx:for-index="idx">
+            <view class="radio"></view>
+            <view class='icon' wx:if="{{idx==0}}">
+              <i class="iconfont iconwuliu1 " />
+            </view>
+            <text class="name">{{item.AcceptStation}}</text>
+            <text class="time">{{item.AcceptTime}}</text>
+        </view>
+        <view class='xian'></view>
+    </view>
+    <!-- <view class='tishi' wx:else>
+      {{list.Reason}}
+    </view> -->
+    
+</view>

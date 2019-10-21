@@ -1,0 +1,186 @@
+   <!--pages/index/index.wxml-->
+
+<view class="all_page">
+<!-- 定位搜索 -->
+
+     <view class="top1">
+           <!-- <view class="addrerss" bindtap="gotoSelectdwAdderss">
+                 <view class="icon"><image src="../../image/icon/dingwei2.png"></image></view>
+                 <view class="name">{{addressName}}</view>
+                <view><b class="bottom"><i class="bottom-arrow1"></i><i class="bottom-arrow2"></i></b></view>
+           </view> -->
+
+           <!-- 搜索 -->
+          <view class="head">
+          
+                <view class='shousuo'>
+                
+        <input class="text" type="text" placeholder='输入商品名搜索' bindinput='keyWordInput' placeholder-style='color:#939AA5;font-size:26rpx;' bindconfirm='gotoSerch'>
+               <view class='icon_so' bindtap='gotoSearch'>
+      <i class="iconfont iconsousuo1" />
+    </view>
+        </input>
+           <view class="sorch" bindtap="gotoSerch">搜索</view>
+      </view>
+          </view>
+     </view>
+<!-- 轮播图  -->
+       <view class="swiper">
+             <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}" wx:key="" wx:for-item="ca" wx:for-index="banidx">
+    <swiper-item>
+      <image src="{{url}}{{ca.img_src}}" bindload='imageLoadItem' data-index="{{banidx}}" bindtap='gotoDetailImg' mode="" data-id='{{ca.u_id}}' data-type='{{ca.status}}' class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+      </view> 
+     <!-- <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots interval="2000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+<block wx:for="{{imgUrls}}" wx:key="{{index}}">
+<swiper-item>
+<image src="{{url}}{{item.img_src}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+</image>
+</swiper-item>
+</block>
+</swiper> -->
+
+<!-- 抽奖 -->
+      <view class="fuli" bindtap='gotoActiveList'>
+            <image src="{{url}}{{goods_img[2].active_img}}"></image>
+      </view>
+     
+       
+      <!-- 分类 -->
+      <view class="fenlei">
+            <view class="fenlei1">
+                  <view class="fenlei2" wx:for="{{goodsClass}}" wx:key="">
+                         <view class="image" ><image src="{{url}}{{item.class_img}}" bindtap="getGoodsClass" data-id="{{item.id}}"  data-uid="{{item.uid}}"></image></view>
+                         <view class="fen_title">{{item.class_name}}</view>
+                  </view>
+
+                  <view class="all">
+                        <view class="button" bindtap="goodAll1">
+                       <image src="../../image/icon/all.png"></image>
+                 </view>
+                       <view class="all_title">全部</view>
+                  </view>
+                 
+            </view>
+      </view>
+
+       <!-- 会员 -->
+      <view class="svip">
+            <view class="vip" bindtap="buyVip1"><image src="../../image/index/ww.png"></image></view>
+            <view class="vip1" bindtap="gethehuo"><image src="../../image/index/she.png"></image></view>
+      </view>
+ 
+      <!-- 活动 -->
+       <view class="suit">
+               
+                <view class="top"  bindtap="gotoActiveList1" data-id="2">
+                      <view class="top_title">
+                            <view class="top_title1">下单抽奔驰</view>
+                            <view class="top_title2">智能科技，点亮生活</view>
+                      </view>
+                      <view class="top_img">
+                            <image src="{{url}}{{goods_img[1].active_img}}"></image>
+                      </view>
+                </view>
+                <view class="bottom1">
+                      <view class="bo_left"  bindtap="good" data-id="1">
+                            <view class="left_title">
+                                 <view class="left_title1">大牌好货</view>
+                            <view class="left_title2">轻奢名品低价购</view>
+                            </view>
+                            <view class="left_img">
+                                  <image src="{{url}}{{jinkou.dapai.img_shouye}}"></image>
+                            </view>
+                      </view>
+                      <view class="bo_zhong" bindtap="jiujiu" data-id="3">
+                            <view class="bo_title1">
+                                 <view class="left_title1">30元封顶</view>
+                            <view class="left_title2">高性价比好物</view>
+                            </view>
+                            <view class="bo_img">
+                                  <image src="{{url}}{{jinkou.zhuanqu.img_shouye}}"></image>
+                            </view>
+                      </view>
+                      <view class="bo_right" bindtap="hot" data-id="4">
+                            <view class="bo_title1">
+                                 <view class="ri_title1">网红爆品</view>
+                            <view class="ri_title2">大家都在买</view>
+                            </view>
+                            <view class="ri_img">
+                                  <image src="{{url}}{{jinkou.rexiao.img_shouye}}"></image>
+                            </view>
+                      </view>
+                </view>
+          </view>
+
+          <!-- 每日必逛 -->
+
+          <!-- <view class="day">
+                <view class="day_title">每日必逛</view>
+                <view class="day_info">
+                     <ul class="stroll_top" >
+                       <li class="stroll" wx:for="{{icon}}" wx:key="index">
+                         <view class="stroll_title">{{item.title}}</view>
+                         <view class="stroll_title1">{{item.title1}}</view>
+                         <view class="stroll_img"><image src=""></image></view>
+                       </li>
+                     </ul>
+              
+                </view>
+          </view> -->
+          <view class="border1"></view>
+
+          <!-- 热门推荐 -->
+           <view class="recom">
+               <view class="recom_top">热门推荐</view>
+               <view class="color">
+               <view class="recom_all" >
+                     <view class="recom_info" wx:for="{{hot}}" wx:key="index"  bindtap="gotoHotProduct"  data-id='{{item.id}}'>
+                           <view class="recom_img"><image src="{{url}}{{item.goods_img_arr}}"></image></view>
+                           <view class="recom_title">
+                                 <view class="recom_title1">{{item.goods_name}}</view>
+                                 <!-- <view class="recom_title2">节能静音NR-W621CG-XN</view> -->
+                                 <view class="all_price">
+                                       <view class="recom_title3">￥{{item.goods_price_now}} </view>
+                                       <view class="recom_title0">￥{{item.goods_price}} </view>
+                                 </view>
+                                 <!-- <view class="recom_title3">￥{{item.goods_price_now}} </view> -->
+                                 <view class="recom_title4">会员 返{{item.u_num}}U币</view>
+
+                           </view>
+                     </view>
+               </view></view>
+               
+         </view>
+</view>
+
+<!-- u币 -->
+<!-- <view class="fixedBox" wx:if="{{fixedBox==1}}">
+  <view style='height:10%;' catchtap='hiddenBox'></view>
+  <view class='x-row'>
+    <view class='x-col' catchtap='hiddenBox'></view>
+    <view class='guige'>
+      <view class='x-row'>
+        <view class='x-col '></view>
+        <view class='guanbiBox' catchtap='gotoLookTips'>
+          <i class="iconfont iconguanbi1" />
+        </view>
+      </view>
+      <view class='tipsData'>
+        <scroll-view style="height:800rpx;text-indent:0rpx;padding:0 40rpx;" scroll-y="true" class="category-left">
+          <view class="box" bindtap='gototkDetail'>
+            <image src='{{url}}{{tkImg}}' mode='widthFix' style='width:100%;border-radius:10rpx;'></image>
+           
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class='x-col' catchtap='hiddenBox'></view>
+  </view>
+  <view style='height:80%;' catchtap='hiddenBox'></view>
+  
+</view> -->

@@ -1,0 +1,6 @@
+/* pages/user/serviceDetail.wxss */
+
+.box image {
+  vertical-align: top;
+  max-width: 100% !important;
+}

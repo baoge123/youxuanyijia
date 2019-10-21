@@ -1,0 +1,101 @@
+<!--pages/category/searchCate.wxml-->
+<view class='x-row searchBox'>
+  <view class='ipt x-col x-col-center'>
+    <input placeholder='输入关键字搜索' value='{{key}}' bindinput='keyInput' placeholder-style='color:#202020;'></input>
+  </view>
+  <view class='name x-col-center' bindtap='gotoSerchGood'>搜索</view>
+</view>
+<view class='konghezi' wx:if="{{list.lenght==0&&isAllList==1}}">
+  <image src='../../image/icon/kongxiangzi.png'></image>
+  <view class='myzd'>没有找到相关产品</view>
+</view>
+<!-- <view class='shopBox' wx:for="{{2}}" wx:key="" wx:for-item="li">
+  <view class='list'>
+    <view class='li1 x-row borderBottom'>
+      <view class='icon'>
+        <image class='img1' src='../../image/icon/Bitmap.png'></image>
+        <image class='img2' src='../../image/icon/youxuan_shop.png'></image>
+      </view>
+      <view class='right x-col x-col-center'>
+        <view class='x-row'>
+          <view class='sname x-col-center ellipsis1'>爱的色放发送
+
+          </view>
+          <view class='ydy'>
+            <image src='../../image/icon/idx_ydy.png'></image>
+          </view>
+        </view>
+        <view class='x-row'>
+          <view class='star x-col-center'>
+            <i wx:for="{{5}}" wx:key="" class="iconfont {{4>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+          </view>
+          <view class='fen' style='padding:0 30rpx;'>4.5分</view>
+          <view class='allzt'>月售 243</view>
+        </view>
+        <view class='x-row'>
+          <view class='allzt x-col x-col-center'>武侯区/环球中心</view>
+          <view class='allzt x-col-center' style='padding:0 30rpx;'>养生</view>
+          <view class='allzt' style='padding-right:30rpx;'>1.2km</view>
+        </view>
+      </view>
+    </view>
+    <view class='ll2 borderBottom'>
+      <view class='x-row item'>
+        <view style='width:94rpx;'></view>
+        <view class='img2 '>
+          <image src='../../image/icon/liren_xx.png' style='width:96rpx;height:96rpx;'></image>
+        </view>
+        <view class='right x-col x-col-center'>
+          <view class='sname'>拉筋松骨套餐</view>
+          <view class='x-row'>
+            <view class='img x-col-center'>
+              <image src='../../image/icon/idx_svip.png' style="width:50rpx;height:26rpx;"></image>
+            </view>
+            <view class='price x-col-center'>￥188.8</view>
+            <view class='x-col-center'>+</view>
+            <view class='uxing x-col-center'>
+              <image src='../../image/icon/idx_uxing.png' style='width:26rpx;height:26rpx;'></image>
+            </view>
+            <view class='sname x-col-center'>15</view>
+            <view class='yjprice x-col-center'>原价:￥299.8</view>
+          </view>
+        </view>
+      </view>
+      <view class='x-row item'>
+        <view style='width:94rpx;'></view>
+        <view class='img2 '>
+          <image src='../../image/icon/liren_xx.png' style='width:96rpx;height:96rpx;'></image>
+        </view>
+        <view class='right x-col x-col-center'>
+          <view class='sname'>拉筋松骨套餐</view>
+          <view class='price x-col-center' style='padding-left:0;'>￥188.8</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='x-row bomAction'>
+    <view class='x-col'></view>
+    <view class='see x-col-center'>查看其他6个项目</view>
+    <view class='icon x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+    <view class='x-col'></view>
+  </view>
+</view> -->
+<view class='yt_body' wx:if="{{list.length>0}}">
+  <view class='list'>
+    <view class='li' wx:for="{{list}}" wx:key="" wx:for-item="li" bindtap='gotoDetail' data-id="{{li.id}}">
+      <view class='item'>
+        <image mode='aspcetFit' src='{{url}}{{li.goods_img}}'></image>
+        <view class='pname ellipsis'>{{li.goods_name}}</view>
+        <view class='pBox x-row'>
+          <view class='yuan'>￥</view>
+          <view class='price x-col'>{{li.goods_price_now}}</view>
+          <view class='fan'>返{{li.u_num}}U币</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='noMoreContent' wx:if="{{list.lenght>0&&isAllList==2}}">没有更多了~</view>

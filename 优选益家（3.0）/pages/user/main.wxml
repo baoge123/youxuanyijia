@@ -1,0 +1,196 @@
+<!--pages/user/main.wxml-->
+<view>
+  <view class='headBox'>
+    <view class='header'>
+      <view class='x-row line'>
+      <view class="himg">
+             <button open-type="getUserInfo" wx:if="{{!userData}}" bindgetuserinfo="bindGetUserInfo" >
+             登录
+             </button>
+              <view class="yuan"  wx:if="{{userData}}"  bindtap="user">
+                     <!-- <view wx:if="{{!userData}}">登录</view>
+                     <view wx:if="{{userData}}"> -->
+                    <image src='{{url}}{{userData.user_img}}'></image>
+             <!-- </view> -->
+             </view>
+              
+             <!-- <view wx:if="{{!userData}}">
+                    <image src='{{url}}{{userData.user_img}}'></image>
+             </view> -->
+            
+      </view>
+          <!-- <view bindtap="op">open</view>
+          <view bindtap="add">add</view>
+          <view bindtap="user">user</view> -->
+        <!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button> -->
+        <view class='x-col x-col-center'>
+          <view class='username x-row'>
+            <view class='x-col-center' id="nikename">{{userData.user_name}}</view>
+            <view class='x-col x-col-center' wx:if="{{userData.status==1}}">
+              <image src='../../image/icon/user_svip.png'></image>
+            </view>
+
+          </view>
+              <view wx:if="{{userData}}">
+                   <view class='uid'  >ID:{{userData.id}} <view class="copy" bindtap="gotoCodeId">复制</view>
+                   <view bindtap="loginout">退出登录</view>
+                   </view>
+        </view>
+              </view>
+          
+      </view>
+    </view>
+    <view style='height:154rpx;'></view>
+    <view class='zcBox'>
+      <view class='zcone x-row'>
+        <view class='x-col'>
+          <view class='wdzc'>我的资产</view>
+          <view class='unum' catchtap='myubi'>{{userData.u_num?userData.u_num:'0'}}</view>
+          <view class='wdub' catchtap='myubi'>我的U币</view>
+        </view>
+        <view class='x-col-center xian'></view>
+        <view class='x-col'>
+          <view class='txBox x-row'>
+            <view class='x-col'></view>
+            <view class='qtx' bindtap='gotoGetMoney'>去提现</view>
+            <view class=' x-col-center'>
+              <i class="iconfont iconyou" />
+            </view>
+          </view>
+          <view class='yenum' catchtap='myAssets'>{{userData.balance?userData.balance:'0'}}</view>
+          <view class='zhye' catchtap='myAssets'>账户余额(元)</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='' style='padding:24rpx;' bindtap='gotoActiveList' wx:if="{{userData.active_img}}">
+    <image src='{{imgurl}}{{userData.active_img}}' mode ="widthFix" style='width:100%;'></image>
+  </view> -->
+  <view class='orderBox'>
+    <view class='x-row r1' bindtap='gotoOrderList' data-type="5">
+      <view class='wddd x-col x-col-center'>我的订单</view>
+      <view class='x-col-center qbdd'>全部订单</view>
+      <view class='x-col-center'>
+        <i class="iconfont iconyou" />
+      </view>
+    </view>
+    <view class='r2'>
+      <view class='li' wx:for="{{list}}" wx:key="" wx:for-item="li" bindtap='gotoOrderList' data-type="{{li.id}}">
+        <view class='img'>
+          <image src='{{li.url}}' style='width:48rpx;' mode='widthFix'></image>
+        </view>
+        <view class='name'>{{li.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view>
+    <image bindtap='gotoShreImg' src='../../image/icon/bb.png' mode='widthFix' style='width:100%;'></image>
+  </view> -->
+  <view class='orderBox'>
+    <!-- <view class='x-row r1' bindtap='gotoMyTeam' wx:if="{{userData.status==1}}">
+      <view class='wddd x-col x-col-center'>我的分销团队</view>
+      <view class='x-col-center qbdd'>粉丝列表</view>
+      <view class='x-col-center'>
+        <i class="iconfont iconyou" />
+      </view>
+    </view> -->
+    <!-- <view class='numBox x-row' bindtap='gotoMyTeam'>
+      <view class='x-col x-col-center'>
+        <view class='num'>{{userData.team_num}}</view>
+        <view class='rs'>总人数</view>
+      </view>
+      <view class='xian2'></view>
+      <view class='x-col x-col-center'>
+        <view class='num' style='font-size:32rpx;'>{{userData.yiji_num}}</view>
+        <view class='rs'>一级粉丝</view>
+      </view>
+      <view class='xian2'></view>
+      <view class='x-col x-col-center'>
+        <view class='num' style='font-size:32rpx;'>{{userData.today}}</view>
+        <view class='rs'>今日新增</view>
+      </view>
+    </view> -->
+    <view class='conBox'>
+      <view class='x-row borderBottom' bindtap='gotoSelectAddress'>
+        <view class='x-col name x-col-center'>收货地址管理</view>
+        <view class='cjshdz x-col-center'>设置默认地址</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+      <view class='x-row borderBottom' bindtap='gotoCommentLi'>
+        <view class='x-col name x-col-center'>我的点评</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+      <view class='x-row borderBottom' bindtap='gotoCjjvLi'>
+        <view class='x-col name x-col-center'>抽奖记录</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+      <button open-type='contact' class='cen_btn'>
+        <view class='x-row borderBottom'>
+          <view class='x-col name x-col-center'>联系客服</view>
+          <view class='icon x-col-center'>
+            <i class="iconfont iconyou" />
+          </view>
+        </view>
+      </button>
+      <view class='x-row borderBottom' bindtap='gotoService' id="fuwu">
+        <view class='x-col name x-col-center'>服务说明</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+     
+      <button open-type='share' class='cen_btn'>
+      <view></view>
+        <view class='x-row borderBottom'>
+          <view class='x-col name x-col-center'>推荐给朋友</view>
+          <view class='icon x-col-center'>
+            <i class="iconfont iconyou" />
+          </view>
+        </view>
+      </button>
+      
+      <view class='x-row borderBottom' bindtap='gotoTsjy'>
+        <view class='x-col name x-col-center'>投诉建议</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+
+      <view class='x-row borderBottom' bindtap='gotoShreImg'>
+        <view class='x-col name x-col-center'>扫码加入</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+
+      <view class='x-row borderBottom' bindtap='gotoshop'>
+        <view class='x-col name x-col-center'>商户登录</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+    
+      <!-- <view class='x-row borderBottom' bindtap='gotoShopLogin'>
+        <view class='x-col name x-col-center'>商家端登陆</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+      <view class='x-row borderBottom' bindtap='gotoWorkLogin'>
+        <view class='x-col name x-col-center'>员工端登陆</view>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>
+
+
+

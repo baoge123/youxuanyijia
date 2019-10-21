@@ -1,0 +1,30 @@
+/* pages/center/getUserInfo.wxss */
+/* //提示框样式 */
+
+.getUserInfo {
+  text-align: center;
+  padding: 20% 10px 10px 10px;
+}
+
+.getUserInfo .used {
+  padding: 50rpx 0 50rpx 0;
+  color: #adadad;
+  font-size: 26rpx;
+}
+
+.user-btn button {
+  background-color: #19ab19;
+  color: #fff;
+  line-height: 2.8;
+  font-size: 34rpx;
+}
+
+.getUserInfo .login-used {
+  position: fixed;
+  bottom: 0;
+  color: #adadad;
+  font-size: 26rpx;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+}

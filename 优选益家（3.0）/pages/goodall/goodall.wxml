@@ -1,0 +1,51 @@
+<view class='topBox topBox2 borderBottom'>
+  
+  <view class='serchBox x-row serchBox2}}'>
+    <view class='icon x-col-center' bindtap='gotoSearch'>
+      <i class="iconfont iconsousuo1" />
+    </view>
+    <view class='ipt x-col-center'>
+      <input placeholder='输入商品名搜索' bindinput='keyInput' placeholder-style='color:#939AA5;font-size:26rpx;'></input>
+    </view>
+  </view>
+</view>
+
+<view class="content">
+  <scroll-view scroll-y="true" style="height:calc(100vh - 200rpx);background-color:#f5f5f5;" class="category-left">
+    <view class="{{item.id == sn ? 'fenlei' : 'fenlei2'}}" wx:for="{{goodsClass}}"  wx:key="index"  bindtap="changeCategory" data-img="{{item.class_lunbo_img}}" data-id="{{item.id}}" data-name='{{type==1?item.class_name:item.store_class_name}}' data-uid="{{type==1?item.uid:item.id}}">
+      <text>{{type==1?item.class_name:item.store_class_name}}</text>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="right" bindscrolltolower="onReachBottom" style="height:{{windowHeight-164}}rpx; width:78.67%;float:left;">
+    <view class="category-box">
+      <view class='gg' wx:if="{{categoryImg}}">
+        <image class="tupian" mode="widthFix" src="{{url}}{{categoryImg}}"></image>
+      </view>
+      <view class='title' wx:if="{{type==1}}">{{categoryName}}</view>
+      <view class='pbox' wx:if="{{type==1}}">
+
+        <view class='list' wx:for="{{twoClass}}" wx:key="index" wx:for-item="li">
+          <view class='item' bindtap='gotoGoodsList' data-id="{{li.id}}" data-name="{{li.class_name}}">
+            <image src='{{url}}{{li.class_img}}' mode='aspectFit'></image>
+            <view class='name ellipsis'>{{li.class_name}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='pbox' wx:if="{{type==2}}">
+        <view class='list' wx:for="{{twoClass}}" wx:key="index" wx:for-item="li">
+          <view class='item' bindtap='gotoShopCenter' data-id="{{li.id}}" data-name="{{li.store_name}}">
+            <image src='{{url}}{{li.store_img}}' mode='aspectFit'></image>
+            <view class='name ellipsis'>{{li.store_name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view style='text-align:center;padding-top:100rpx;' wx:if="{{twoClass.length==0}}">
+      <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+      <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+    </view>
+  </scroll-view>
+
+
+</view>

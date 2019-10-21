@@ -1,0 +1,160 @@
+/* pages/Community/tuanzhang.wxss */
+/* .top_image{
+  width: 100%;
+  height: 307rpx;
+  border: solid 1px red;
+}
+.top_image image{
+  width: 100%;
+  height: 307rpx;
+} */
+.center_page{
+  width: 692rpx;
+  height: 523rpx;
+  border: solid 1px magenta;
+  margin-left: 19rpx;
+}
+.itemView{
+  height: 100rpx;
+  width: 100%;
+  border:  solid 1px red;
+  display: flex;
+  line-height: 100rpx;
+}
+.input_titie{
+  height: 100rpx;
+  width: 75%;
+  border: solid 1px black;
+  line-height: 100rpx;
+  
+}
+.input_titie1{
+  height: 100rpx;
+  width: 50%;
+  border: solid 1px black;
+  line-height: 100rpx;
+}
+.input{
+  height: 100rpx;
+}
+input { 
+  outline: none;
+  border: none;
+  list-style: none;
+  height: 80rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+   }
+
+
+
+.all_page{
+  width: 750rpx;
+  height: 2300rpx;
+  position: relative;
+}
+.all_page image{
+  width: 100%;
+  height: 2800rpx;
+}
+.youshi{
+  width: 646rpx;
+  height: 650rpx;
+  position: absolute;
+  top: 1100rpx;
+  left: 54rpx;
+}
+.youshi image{
+  width: 100%;
+  height: 650rpx;
+}
+.form{
+  width: 646rpx;
+  height: 880rpx;
+  background-color: #FCF8F2FF;
+  position: absolute;
+  top: 1800rpx;
+  left: 50rpx;
+  border-radius: 20rpx;
+  margin: auto;
+}
+page{
+  height: 100%;
+  width: 100%;
+ 
+}
+.changeInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  margin: 50rpx auto;
+}
+.plase{
+    width: 180rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 13pt;
+    color: #7F522DFF;
+    margin: auto;
+    font-weight: bold;
+    margin-top: 20rpx;
+}
+.name{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #B39874FF;
+  width: 120rpx;
+  font-size: PingFang-SC-Medium;
+  font-weight: Medium;
+}
+.changeInfoName{
+  display: flex;
+  position: relative;
+  height: 80rpx; 
+   /* width: 100%; */
+  /* border-radius: 10rpx; */
+  /* background: #fff; */
+  margin-bottom: 20rpx; 
+  /* padding-left: 20rpx; */
+  box-sizing: border-box; 
+} 
+.codeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #bbb;
+  width: 35%;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.changeInfoName1{
+  margin: auto;
+}
+.changeInfoName input{
+  width: 100%;
+  height:100%;
+}
+.changeBtn{
+  width: 60%;
+  height: 100rpx;
+  background: rgb(139, 89, 14);
+  color: #FCF8F2FF;
+  border-radius: 25rpx;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  margin-left: -20%;
+  line-height: 100rpx;
+
+}
+.picker{
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

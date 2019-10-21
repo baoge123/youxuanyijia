@@ -1,0 +1,38 @@
+<!--pages/luckdraw/winningList.wxml-->
+<view class='headBox'>
+  <image src='../../image/icon/zjmdBg.png' style='width:100%;' mode='widthFix'></image>
+  <view class='con'>
+    <view class='n1'>此商品已抽奖 {{list.length}} 次</view>
+    <view class='n2'>活动商品销量每满额则抽奖一次！积极参与吧</view>
+  </view>
+</view>
+<view class='gzBox x-row' bindtap='lookGz'>
+  <view class='name x-col x-col-center'>查看活动规则</view>
+  <view class='xq x-col-center'>详情</view>
+  <view class='icon x-col-center'>
+    <i class="iconfont iconyou" />
+  </view>
+</view>
+<view class='infoBox x-row borderBottom' wx:for="{{list}}" wx:key="" wx:for-item="li">
+  <view class='uhead'>
+    <image src='{{li.user_img}}'></image>
+  </view>
+  <view class='x-col right'>
+    <view class='x-row'>
+      <view class='x-col'>
+        <view class='uname'>{{li.user_name}}</view>
+        <view class='time'>{{li.datetime}}</view>
+      </view>
+      <view class='lun'>第{{li.num}}轮中奖用户</view>
+    </view>
+    <view class='x-row gbox'>
+      <view class='pimg'>
+        <image src='{{url}}{{li.active_img}}' mode='aspectFit'></image>
+      </view>
+      <view class='good'>
+        <view class='name ellipsis1'>{{li.active_name}}</view>
+        <view class='price'>￥{{li.active_price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

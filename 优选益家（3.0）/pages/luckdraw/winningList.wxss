@@ -1,0 +1,96 @@
+/* pages/luckdraw/winningList.wxss */
+
+.headBox {
+  position: relative;
+}
+
+.headBox .con {
+  font-size: 26rxp;
+  color: #fff;
+  position: absolute;
+  top: 14rpx;
+  left: 30rpx;
+}
+
+.headBox .con .n1 {
+  font-size: 36rpx;
+  padding-bottom: 8rpx;
+  font-weight: 600;
+}
+
+.gzBox {
+  padding: 0 30rpx;
+  height: 96rpx;
+  border-bottom: 20rpx solid rgba(245, 247, 249, 1);
+}
+
+.gzBox .name {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(3, 3, 3, 1);
+}
+
+.gzBox .xq {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.gzBox .icon .iconfont {
+  font-size: 30rpx;
+}
+
+.infoBox {
+  margin: 32rpx 34rpx 0 36rpx;
+  padding-bottom: 32rpx;
+}
+
+.infoBox .uhead {
+  padding-right: 20rpx;
+}
+
+.infoBox .uhead image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.infoBox .right .uname {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+
+.infoBox .right .time {
+  font-size: 22rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  padding-top: 8rpx;
+}
+
+.infoBox .right .lun {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: rgba(245, 166, 35, 1);
+  padding-top: 4rpx;
+}
+.infoBox .right .gbox {
+  margin: 24rpx 0 0 0;
+}
+.infoBox .right .pimg image{
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.infoBox .right .good .name {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.infoBox .right .good .price {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  padding-top: 20rpx;
+}

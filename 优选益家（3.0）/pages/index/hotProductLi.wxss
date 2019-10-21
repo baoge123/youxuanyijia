@@ -1,0 +1,53 @@
+/* pages/index/hotProductLi.wxss */
+
+.yt_body .list {
+  overflow: auto;
+  padding: 21rpx;
+}
+
+.yt_body .list .li {
+  width: 50%;
+  float: left;
+}
+
+.yt_body .list .li .item {
+  margin: 9rpx;
+  height: 520rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.list .item image {
+  width: 336rpx;
+  height: 336rpx;
+}
+
+.list .item .pname {
+  margin: 16rpx 20rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666a6f;
+}
+
+.list .pBox {
+  padding: 0 20rpx;
+}
+
+.list .pBox .yuan {
+  align-self: flex-end;
+  font-size: 24rpx;
+  color: #e80000;
+}
+
+.list .pBox .price {
+  align-self: flex-end;
+  font-size: 36rpx;
+  color: #e80000;
+}
+
+.list .pBox .fan {
+  color: #dab876;
+  align-self: flex-end;
+  font-size: 24rpx;
+}

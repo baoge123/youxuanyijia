@@ -1,0 +1,173 @@
+<!--pages/luckdraw/list.wxml-->
+<view class="yt_body" wx:if="{{jiayong.length>0}}">
+  <view class='head'>
+    <image bindtap='gotoGz' src='{{url}}{{active_img}}' style='width:100%;' mode='widthFix'></image>
+  </view>
+  <!-- <view style='height:328rpx;'></view> -->
+  <!-- <view class='list' wx:for="{{list}}" wx:key="" wx:for-item="li" bindtap='gotoDetail' data-id='{{li.goods_id}}'>
+    <view class='x-row info'>
+      <view class='pimg'>
+        <image mode='aspectFit' src='{{url}}{{li.goods_img}}'></image>
+      </view>
+      <view class='right x-col'>
+        <view class='name ellipsis'>{{li.goods_name}}</view>
+        <view class='x-row priceBox'>
+          <view class='x-col'>
+            <view class='price'>
+              <span>￥</span>{{li.goods_price}}</view>
+            <view class='sale'>销量:{{li.num}}</view>
+          </view>
+          <view class='ljcy'>立即参与</view>
+        </view>
+      </view>
+    </view>
+    <view class=''>
+      <scroll-view class="scroll-view_H " scroll-x style="width: 96%">
+        <!-- libaoHui.png -->
+        <!-- <view class='li' wx:for="{{li.active_list}}" wx:key="" wx:for-item="lb" style='width:{{li.active_list.length>5?20:(100/li.active_list.length)}}%'>
+          <view class='x-row' >
+            <view class='xian {{lb.status==1?"xed":""}} x-col'></view>
+            <view class=' lbBox'> -->
+              <!-- <image class='libao' src='../../image/icon/libaoHui.png'></image> -->
+              <!-- <image class='libao' src='../../image/icon/{{lb.status==1?"libao":"libaoHui"}}.png'></image>
+              <view class='num ed'>{{lb.num}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='li' style='width:100rpx;'></view>
+      </scroll-view>
+    </view> -->
+  <!-- </view> -->
+<!-- <view class="page"> -->
+  
+ <!--顶部导航栏-->
+ <!-- <view class="swiper-tab">
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">智能门锁</view>
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav1">扫地机器人</view> -->
+  <!-- <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">Tab3</view> -->
+ <!-- </view>
+  <view>
+           <progress percent="{{jindu}}" show-info color="pink" active/>
+            <view>参与人数{{num}}</view>
+            <view></view>
+      </view> -->
+ <!--内容主体-->
+ <!-- <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+     
+  <swiper-item> -->
+      
+     
+<!-- <progress percent="40" stroke-width="12" />
+<progress percent="60" color="pink" />
+<progress percent="80" active />  -->
+   <!-- <view class="tab1" wx:for="{{jiayong}}" wx:key="index"  bindtap="gotoDetail" data-id="{{item.id}}" data-goods_id="{{item.goods_id}}">
+           <view class="tab_img">
+                 <image src="{{url}}{{item.goods_img}}"></image>
+           </view>
+           <view class="tab_titile">
+                   <view class="titlee">
+                           {{item.goods_name}}
+                        </view>
+                   <view class="tab_title1">
+                          <view class="pri_xiao">
+                                <view class="price">￥{{item.goods_price}}</view>
+                                <view class="xiao">销量:{{item.num}}</view>
+                          </view>
+                          <view class="button">立即参与</view>
+                   </view>
+           </view>
+    </view> 
+  </swiper-item>
+  <swiper-item>
+   <view class="tab1" wx:for="{{jiqi}}" wx:key="index" bindtap="gotoDetail" data-goods_id="{{item.goods_id}}">
+           <view class="tab_img">
+                 <image src="{{url}}{{item.goods_img}}"></image>
+           </view>
+           <view class="tab_titile">
+                   <view class="titlee">
+                           {{item.goods_name}}
+                        </view>
+                   <view class="tab_title1">
+                          <view class="pri_xiao">
+                                <view class="price">￥{{item.goods_price}}</view>
+                                <view class="xiao">销量{{item.num}}</view>
+                          </view>
+                          <view class="button">立即参与</view>
+                   </view>
+           </view>
+    </view> 
+  </swiper-item>
+ 
+ </swiper>
+</view> -->
+
+      
+
+<view class="tab_good">
+      <view class='top_nav'>
+  <view class="nav-name {{item.typeId == currentId ? 'nav-hover':''}}" wx:for="{{section}}" wx:key="id" id='{{item.typeId}}' catchtap='handleTap'>
+    {{item.name}}
+  </view>
+</view>
+
+
+<view class="page_good">
+       <view class="tiao" >
+           <progress percent="{{jindu}}" show-info color="#EF3838" active/>
+            <view>参与人数{{num}}</view>
+            <view></view>
+      </view> 
+      <view hidden='{{currentId!=1}}'>
+  <view class="tab1" wx:for="{{jiayong}}" wx:key="index"  bindtap="gotoDetail" data-id="{{item.id}}" data-goods_id="{{item.goods_id}}">
+           <view class="tab_img">
+                 <image src="{{url}}{{item.goods_img}}"></image>
+           </view>
+           <view class="tab_titile">
+                   <view class="titlee">
+                           {{item.goods_name}}
+                        </view>
+                   <view class="tab_title1">
+                          <view class="pri_xiao">
+                                <view class="price">￥{{item.goods_price}}</view>
+                                <view class="xiao">原价:{{item.goods_price_yuan}}</view>
+                          </view>
+                          <view class="button">立即参与</view>
+                   </view>
+           </view>
+    </view> 
+</view>
+<!-- -->
+<view hidden='{{currentId!=2}}'>
+   <view class="tab1" wx:for="{{jiqi}}" wx:key="index" bindtap="gotoDetail" data-goods_id="{{item.goods_id}}">
+           <view class="tab_img">
+                 <image src="{{url}}{{item.goods_img}}"></image>
+           </view>
+           <view class="tab_titile">
+                   <view class="titlee">
+                           {{item.goods_name}}
+                        </view>
+                   <view class="tab_title1">
+                          <view class="pri_xiao">
+                                <view class="price">￥{{item.goods_price}}</view>
+                                <view class="xiao">原价:{{item.goods_price_yuan}}</view>
+                          </view>
+                          <view class="button">立即参与</view>
+                   </view>
+           </view>
+    </view> 
+</view>
+
+</view> 
+</view>
+</view>
+
+
+
+
+
+
+<!-- <view class='noMoreContent' wx:if="{{isAllList==1&&list.length>0}}">没有更多了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view> -->

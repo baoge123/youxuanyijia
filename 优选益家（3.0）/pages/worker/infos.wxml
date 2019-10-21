@@ -1,0 +1,79 @@
+<!--pages/worker/infos.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='title borderBottom' wx:if="{{info.status==0}}">
+  <view class='img'>
+    <image src='../../image/icon/_icon_success.png'></image>
+  </view>
+  <view class='sending'>提交入驻申请审核中</view>
+  <view class='htsh'>后台急速审核中</view>
+</view>
+<view class='title borderBottom' wx:if="{{info.status==2}}">
+  <view class='img'>
+    <image src='../../image/icon/icon_successWtg.png'></image>
+  </view>
+  <view class='sending'>入驻申请审核未通过</view>
+  <view class='htsh'>{{info.yuanying}}</view>
+</view>
+<view class='infoBox'>
+  <view class='dpname'>店铺入驻信息</view>
+  <view class='name'>店铺名称：
+    <span>{{info.store_name}}</span>
+  </view>
+  <view class='name'>行业类别：
+    <span>{{info.store_class_name}}</span>
+  </view>
+  <view class='name'>负责人/法人姓名：
+    <span>{{info.person}}</span>
+  </view>
+  <view class='name'>联系电话：
+    <span>{{info.phone}}</span>
+  </view>
+  <view class='name'>店铺区域：
+    <span>{{info.quyu}}</span>
+  </view>
+  <view class='name borderBottom' style='padding-bottom:32rpx;'>店铺地址：
+    <span>{{info.address}}</span>
+  </view>
+  <view class="zjBox">
+    <view class='zfzName'>法人身份证正反照:</view>
+    <view class='zfzBox x-row'>
+      <view class='x-col'>
+        <image src='{{url}}{{info.person_zheng}}'></image>
+      </view>
+      <view style='32rpx;'></view>
+      <view class='x-col'>
+        <image src='{{url}}{{info.person_fang}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class="zjBox">
+    <view class='zfzName'>营业执照</view>
+    <view class='zfzBox x-row'>
+      <view class='x-col'>
+        <image src='{{url}}{{info.license}}'></image>
+      </view>
+
+    </view>
+  </view>
+
+</view>
+<view class="zjBox" style='padding-left:40rpx;'>
+  <view class='zfzName'>店铺环境照</view>
+  <view class='dpImgBox '>
+    <view class='dpimg' wx:for="{{info.ambient_arr}}" wx:key="" wx:for-item="img">
+      <image src='{{url}}{{img}}' bindtap='previewImage' data-img='{{url}}{{img}}' data-ary='{{info.ambient_arr}}' ></image>
+    </view>
+
+  </view>
+</view>
+
+<view class="zjBox jynr">
+  <view class='zfzName'>经营内容：</view>
+  <!-- <view class='zfzBox '>
+    {{info.content}}
+
+  </view> -->
+  <view class="box">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+</view>

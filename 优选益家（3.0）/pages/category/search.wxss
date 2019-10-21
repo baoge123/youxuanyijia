@@ -1,0 +1,165 @@
+/* pages/category/searchCate.wxss */
+.searchBox{
+  height: 72rpx;
+  margin: 16rpx 24rpx 24rpx 24rpx;
+}
+.searchBox .ipt input{
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #f8f9f9;
+  padding-left: 38rpx;
+  color: #202020;
+}
+
+.searchBox .name{
+  padding: 0 24rpx;
+}
+
+
+
+
+.yt_body .list {
+  overflow: auto;
+  padding: 21rpx;
+}
+
+.yt_body .list .li {
+  width: 50%;
+  float: left;
+}
+
+.yt_body .list .li .item {
+  margin: 9rpx;
+  height: 520rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.list .item image {
+  width: 336rpx;
+  height: 336rpx;
+}
+
+.list .item .pname {
+  margin: 16rpx 20rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666a6f;
+}
+
+.list .pBox {
+  padding: 0 20rpx;
+}
+
+.list .pBox .yuan {
+  align-self: flex-end;
+  font-size: 24rpx;
+  color: #e80000;
+}
+
+.list .pBox .price {
+  align-self: flex-end;
+  font-size: 36rpx;
+  color: #e80000;
+}
+
+.list .pBox .fan {
+  color: #dab876;
+  align-self: flex-end;
+  font-size: 24rpx;
+}
+
+
+
+/* 
+.star {
+  color: #63c39b;
+}
+
+.star .iconfont {
+  font-size: 34rpx;
+}
+
+.star .icon-select {
+  color: #eba600;
+}
+
+.star .icon-no {
+  color: #eba600;
+}
+
+
+
+.shopBox .list .li1 {
+  padding: 0 0 32rpx 30rpx;
+}
+.shopBox .list .li1 .icon{
+  position: relative;
+}
+.shopBox .list .li1 .icon .img1{
+  width: 160rpx;
+  height: 128rpx;
+}
+.shopBox .list .li1 .icon .img2{
+  width: 104rpx;
+  height:44rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shopBox .list .right{
+  padding: 0 24rpx 0 18rpx;
+}
+.shopBox .list .right .sname{
+  font-size: 28rpx;
+  color: #3C444F;
+}
+
+.shopBox .list .li1 .right .ydy image{
+  width: 96rpx;
+  height: 36rpx;
+  margin: 0 0 0 20rpx;
+}
+
+.shopBox .list .right .allzt{
+  font-size: 22rpx;
+  color:#3C444F;
+}
+.shopBox .li2{
+  padding-bottom: 36rpx;
+}
+.shopBox .ll2 .item{
+  padding: 12rpx 0;
+}
+.shopBox .ll2 .price{
+  padding: 0 12rpx;
+  color:#ED2106;
+  font-size: 26rpx;
+}
+
+.shopBox .ll2 .yjprice{
+  padding: 0 0 0 32rpx;
+  color: #999;
+  font-size: 22rpx;
+
+}
+
+.shopBox .bomAction {
+  height: 96rpx;
+}
+
+.shopBox .bomAction .see{
+  color: #939AA5;
+  font-size: 26rpx;
+}
+.shopBox .bomAction .icon .iconfont{
+  color: #939AA5;
+  font-size: 26rpx;
+  margin: 0 0 0 16rpx;
+}
+
+.shopBox{
+  border-bottom: 16rpx solid #E5E7EB;
+  padding-top: 32rpx;
+} */

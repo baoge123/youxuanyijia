@@ -1,0 +1,77 @@
+/* pages/luckdraw/receive.wxss */
+
+/* http://yjxcx.sccxbe.com/upload/user/120190527173023.png */
+
+page {
+  background: linear-gradient(180deg, rgba(253, 245, 224, 1) 0%, rgba(255, 236, 159, 1) 100%);
+}
+
+.yt_body {
+  background-image: url("https://yjxcx.sccxbe.com/upload/user/120190527173023.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+
+.yt_body .infoBox {
+  /* background:linear-gradient(180deg,rgba(253,197,86,1) 0%,rgba(255,237,160,1) 100%); */
+  padding: 36rpx 40rpx 72rpx 36rpx;
+  margin: 0 40rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12rpx;
+}
+
+.infoBox .good {
+  padding-bottom: 32rpx;
+}
+
+.infoBox .good .pimg image {
+  width: 128rpx;
+  height: 128rpx;
+  background: rgba(216, 216, 216, 1);
+  border-radius: 12rpx;
+  margin-right: 20rpx;
+}
+
+.infoBox .good .pname {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 44rpx;
+}
+
+.infoBox .li {
+  height: 100rpx;
+}
+
+.infoBox .li .name {
+  width: 142rpx;
+}
+
+.iptInfo {
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(204, 204, 204, 1);
+}
+
+.setVerify {
+  /* border: 2rpx solid #e61717; */
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(253, 122, 51, 1);
+  padding: 18rpx 30rpx;
+}
+
+.smBox {
+  background: linear-gradient(180deg, rgba(253, 245, 224, 1) 0%, rgba(255, 236, 159, 1) 100%);
+}
+
+.smBox .ljlq {
+  margin: 64rpx 40rpx 30rpx 40rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  background: linear-gradient(180deg, rgba(250, 108, 56, 1) 0%, rgba(242, 58, 26, 1) 100%);
+  border-radius: 48rpx;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,35 @@
+/* pages/new/detail.wxss */
+
+page {
+  background-color: #f8f9f9;
+}
+
+/* <view class='titleBox'>
+  <view class='name ellipsis'>洗衣机应该如何清洗洗衣机应该如何清洗洗衣机应该如何清洗洗衣机应该如何清洗？</view>
+  <view class='x-row'>
+    <view class='time x-col x-col-center'>2019-02-006发布</view>
+    <view class='num x-col x-col-center'>已阅 733 人</view>
+  </view>
+</view> */
+
+.titleBox {
+  padding: 14rpx 48rpx 30rpx 50rpx;
+}
+
+.titleBox .name {
+  /* height: 108rpx; */
+  line-height: 54rpx;
+  color: #333;
+  font-size: 44rpx;
+  margin: 0 0 34rpx 0;
+}
+
+.titleBox .time {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.box image {
+  vertical-align: top;
+  width: 100% !important;
+}

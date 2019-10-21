@@ -1,0 +1,48 @@
+<!--pages/new/list.wxml-->
+<view class='x-row head'>
+  <view class='x-col x-col-center' bindtap='gotoSelectType' data-id="0">
+    <view class='name {{type==0?"ed":""}}'>最新资讯</view>
+    <view class='xian {{type==0?"bged":""}}'></view>
+  </view>
+  <view class='x-col x-col-center' bindtap='gotoSelectType' data-id="1">
+    <view class='name {{type==1?"ed":""}}'>平台活动</view>
+    <view class='xian  {{type==1?"bged":""}}'></view>
+  </view>
+  <view class='x-col x-col-center' bindtap='gotoSelectType' data-id="2">
+    <view class='name {{type==2?"ed":""}}'>平台公告</view>
+    <view class='xian  {{type==2?"bged":""}}'></view>
+  </view>
+
+</view>
+
+<!-- <view>
+  <image bindtap='gotoShare' src='../../image/icon/shar_join.png' style='width:100%;' mode='widthFix'></image>
+</view> -->
+<view class='yt_body'>
+  <view class='list borderBottom x-row' wx:for="{{list}}" wx:key="" wx:for-item="li" bindtap='gotoDetail' data-id='{{li.id}}'>
+    <view class='x-col '>
+      <view class='name ellipsis'>{{li.title}}</view>
+      <view class='yd'>阅读 {{li.num}}</view>
+    </view>
+    <view class='img' wx:if="{{li.img}}">
+      <image src='{{url}}{{li.img}}' mode='aspectFit'></image>
+    </view>
+  </view>
+  <!-- <view class='list borderBottom x-row'>
+    <view class='x-col '>
+      <view class='name ellipsis'>华为的电视或是一款智能大屏幕设备！</view>
+      <view class='yd'>阅读 231</view>
+    </view>
+
+  </view>
+  <view class='list borderBottom x-row'>
+    <view class='x-col '>
+      <view class='name ellipsis'>华为的电视或是一款智能大屏幕设备！</view>
+      <view class='notice' wx:if="{{type==3}}">这是公共内容介绍</view>
+    </view>
+    <view class='img'>
+      <image src='../../image/icon/Bitmap.png' mode='aspectFit'></image>
+    </view>
+  </view> -->
+  
+</view>

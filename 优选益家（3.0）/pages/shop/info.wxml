@@ -1,0 +1,13 @@
+<!--pages/shop/info.wxml-->
+<view class="yt_body">
+<view class='title'>概况</view>
+<view class='con x-row'>
+  <view class="x-col-center name" >营业时间</view>
+  <view class='x-col x-col-center info'>{{time}}</view>
+</view>
+<view class='title'>营业执照</view>
+  <view class='img' wx:for="{{zizhi}}" wx:key="" wx:for-item="zz">
+    <image src='{{url}}{{zz}}' mode='widthFix' style='width:100%;'></image>
+  </view>
+
+</view>

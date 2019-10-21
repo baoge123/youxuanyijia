@@ -1,0 +1,151 @@
+<!--pages/order/detail.wxml-->
+<view wx:if="{{!type}}">
+  <view class='stateBox' wx:if="{{info.store_id==1}}">
+    <view class='state'>{{info.status==0?'待支付':(info.status==1?'待发货':(info.status==2?'待收货':(info.status==3?'待评价':(info.status==4?'售后':'完成'))))}}</view>
+    <view class='jj'>{{info.status==0?'您还没有付款哦～':(info.status==1?'商家备货中，将尽快为您发货':(info.status==2?'亲爱的顾客，我们已打包好商品发出':(info.status==3?'说说您对商品的评价吧，给优友宝贵的建议':(info.status==4?'售后处理中哦~':'感谢您的信任，我们将做的更好'))))}}</view>
+  </view>
+  <view class='stateBox' wx:if="{{info.store_id!=1}}">
+    <view class='state'>{{info.status==0?'待支付':(info.status==1?'待消费':(info.status==2?'待线下消费':(info.status==3?'待评价':(info.status==4?'售后':'完成'))))}}</view>
+    <view class='jj'>{{info.status==0?'您还没有付款哦～':(info.status==1?'请到店消费时，出示核销二维码':(info.status==2?'请到店消费时，出示核销二维码':(info.status==3?'说说您对商品的评价吧，给优友宝贵的建议':(info.status==4?'售后处理中哦~':'感谢您的信任，我们将做的更好'))))}}</view>
+  </view>
+  <view class='addBox x-row'>
+    <view class='icon x-col-center'>
+      <i class="iconfont icondizhi" />
+    </view>
+    <view class='x-col x-col-center'>
+      <view class='name'>{{info.user_name}}
+        <span>{{info.user_phone}}</span>
+      </view>
+      <view class='address'>{{info.user_address}}</view>
+    </view>
+    <view></view>
+  </view>
+  <!-- <view class='xianImg'> -->
+  <image src='../../image/address-bg.png' mode='widthFix' style='width:100%;'></image>
+  <!-- </view> -->
+  <view class='addBox x-row bomBorder' wx:if="{{info.AcceptStation}}" bindtap='gotoLogistics'>
+    <view class=' x-col-center wl'>
+      <i class="iconfont iconwuliu1 " />
+    </view>
+    <view class='x-col x-col-center'>
+      <view class='wladd'>{{info.AcceptStation}}
+      </view>
+      <view class='wltime'>{{info.AcceptTime}}</view>
+    </view>
+    <view class='x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+  </view>
+</view>
+<view class='list bomBorder'>
+  <view class='product x-row'>
+    <view class='pimg'>
+      <image src='{{url}}{{info.goods_img}}'></image>
+    </view>
+    <view class='x-col x-col-center info'>
+      <view class='pname ellpsis'>{{info.goods_name}}</view>
+      <view class='gg'>{{info.space_name}}</view>
+      <!-- <view class='price'>￥{{info.space_price}}
+        <span>x{{info.goods_num}}</span>
+      </view> -->
+      <view class='price'>
+        <view class='x-row'>
+          <view class=''>￥{{info.space_price}} </view>
+          <view class='x-col'>
+            <span> x{{info.goods_num}}</span>
+          </view>
+          <view class='price'>
+            <span>{{info.order_pay_status==1?'定金支付':''}}</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='jbBox bomBorder'>
+
+  <view class='li x-row'>
+    <view class='x-col x-col-center name'>商品总价</view>
+    <view class='price'>￥{{info.space_price*info.goods_num}}</view>
+  </view>
+  <view class='li x-row'>
+    <view class='x-col x-col-center name'>邮费</view>
+    <view class='price'>￥0</view>
+  </view>
+  <view class='li x-row borderBottom'>
+    <view class='x-col x-col-center name'>使用U币</view>
+    <view class='price'>{{info.u_num}} U币</view>
+  </view>
+  <view class='li x-row borderBottom'>
+    <view class='x-col x-col-center name'>余额支付</view>
+    <view class='price'>￥{{info.balance}}</view>
+  </view>
+  <view class='li x-row'>
+    <view class='x-col x-col-center name sj'>现金支付</view>
+    <view class='price sjjg'>￥{{info.order_price}}</view>
+  </view>
+</view>
+<view class='jbBox' style='padding-top:11rpx;border-bottom:52rpx solid #f8f9f9;'>
+
+  <view class='li x-row'>
+    <view class='x-col x-col-center name hui'>订单号</view>
+    <view class='price hui'>{{info.order_num}}</view>
+  </view>
+  <view class='li x-row'>
+    <view class='x-col x-col-center name hui'>下单时间</view>
+    <view class='price hui'>{{info.date}}</view>
+  </view>
+</view>
+
+<view class='x-row action' wx:if="{{!type}}">
+  <view class='x-col'></view>
+  <view class='btn x-col-center' wx:if="{{info.status==0}}" bindtap='orderDel'>取消订单</view>
+  <view class='btn x-col-center' wx:if="{{info.status==0}}" bindtap='gotoPayOrder'>立即付款</view>
+  <view class='btn x-col-center' wx:if="{{info.status==2}}">申请售后</view>
+  <view class='btn x-col-center' wx:if="{{info.status==2}}" bindtap='gotoSureOrder'>确认收货</view>
+  <view class='btn x-col-center' wx:if="{{info.status==3}}" bindtap='gotoCommentOn'>去评价</view>
+  <view class='btn er x-col-center' wx:if="{{info.status==1||info.status==2}}" bindtap='gotoShowErcode'>出示二维码</view>
+
+</view>
+
+<view class='sureXf' bindtap='sureScanCode' wx:if="{{type=='scanCode'}}">确认消费</view>
+
+<view class="fixedBox" wx:if="{{fixedBox==1}}">
+  <view style='height:10%;' catchtap='hiddenBox'></view>
+  <view class='x-row'>
+    <view class='x-col' catchtap='hiddenBox'></view>
+    <view class='guige'>
+
+      <view class='tipsData'>
+        <view class='name'>
+          <view class='goodName'>{{info.goods_name}}</view>
+          <view>消费二维码</view>
+        </view>
+        <scroll-view style="height:auto;text-indent:0rpx;padding:0 40rpx;text-align:center;" scroll-y="true" class="category-left">
+
+          <image src='{{url}}{{info.erweima}}' style='width:320rpx;height:320rpx;' mode=''></image>
+
+        </scroll-view>
+        <view class='usedWx'>此码为您的消费凭证，使用后即无效</view>
+      </view>
+      <!-- <view class='lookAll'>
+        <view class='x-row' >
+          <view class='x-col'></view>
+          <view class='l1'>查看全部</view>
+          <view class='x-col'></view>
+        </view>
+      </view> -->
+    </view>
+
+    <view class='x-col' catchtap='hiddenBox'></view>
+  </view>
+  <view class='x-row'>
+    <view class='x-col '></view>
+    <view class='guanbiBox' catchtap='hiddenBox'>
+      <i class="iconfont iconguanbi" />
+    </view>
+    <view class='x-col '></view>
+  </view>
+  <view style='height:80%;' catchtap='hiddenBox'></view>
+</view>

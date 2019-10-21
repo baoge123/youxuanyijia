@@ -1,0 +1,53 @@
+/* pages/user/paySvip.wxss */
+page{
+  background: #f8f9f9;
+}
+.list{
+  height: 114rpx;
+  margin: 0 0 0 32rpx;
+  padding-right: 32rpx;
+  font-size: 30rpx;
+  color: #202020;
+  background: #fff;
+}
+
+.list .wxzxzf{
+  color: #999;
+  font-size: 28rpx;
+}
+
+
+
+
+.snedOrder {
+  font-size: 16px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.snedOrder .text-right {
+  font-size: 32rpx;
+  color: #202020;
+  padding-right: 48rpx;
+  font-weight: 600;
+}
+
+.snedOrder .result {
+  display: inline-block;
+  color: #ED2106;
+  
+}
+
+.yesSend {
+  background-color: #ED2106;
+  color: #fff;
+  font-size: 32rpx; 
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 240rpx;
+  text-align: center;
+}

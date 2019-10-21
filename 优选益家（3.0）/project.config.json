@@ -1,0 +1,286 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.1",
+	"appid": "wxdbe909a95291a74e",
+	"projectname": "%E4%BC%98%E9%80%89%E7%9B%8A%E5%AE%B6%EF%BC%883.0%EF%BC%89",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/user/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "商品详情",
+					"pathName": "pages/good/detail",
+					"query": "id=39",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的资产",
+					"pathName": "pages/user/myAssets",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "评论",
+					"pathName": "pages/order/comment",
+					"query": "store_id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评论列表",
+					"pathName": "pages/order/commentLi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/order/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/order/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家中心",
+					"pathName": "pages/shop/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "员工中心",
+					"pathName": "pages/worker/worke",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交订单",
+					"pathName": "pages/order/createOrder",
+					"query": "id=39",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商铺详情",
+					"pathName": "pages/shop/shop",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家登陆",
+					"pathName": "pages/shop/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家主页",
+					"pathName": "pages/shop/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "员工登陆",
+					"pathName": "pages/worker/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "客户信息",
+					"pathName": "pages/worker/infos",
+					"query": "id=4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "满购抽奖",
+					"pathName": "pages/luckdraw/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交订单",
+					"pathName": "pages/order/createOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "结算",
+					"pathName": "pages/order/createOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "幸运365",
+					"pathName": "pages/luckdraw/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购买会员",
+					"pathName": "pages/user/buySvip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "供应商",
+					"pathName": "pages/supplier/supplier",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "本地生活",
+					"pathName": "pages/category1/category1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/category1/category1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品分类",
+					"pathName": "pages/goodall/goodall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "全部商品",
+					"pathName": "pages/category/all",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商户分类",
+					"pathName": "pages/category1/storeall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优选自营",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家",
+					"pathName": "pages/shop/shop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商户商品",
+					"pathName": "pages/shop/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "合伙人申请",
+					"pathName": "pages/Community/tuanzhang",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

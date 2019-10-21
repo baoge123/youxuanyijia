@@ -1,0 +1,20 @@
+<!--pages/index/goods.wxml-->
+     <view class="page">
+          <view class="page1">
+                 <image src="{{url}}{{img.img}}"></image>
+          </view>
+     </view>
+
+<view class="recom_all" >
+                     <view class="recom_info" wx:for="{{hotgoods}}" wx:key="index"  bindtap="gotoHotProduct"  data-id='{{item.id}}'>
+                           <view class="recom_img"><image src="{{url}}{{item.goods_img_arr}}"></image></view>
+                           <view class="recom_title">
+                                 <view class="recom_title1">{{item.goods_name}}</view>
+                                 <!-- <view class="recom_title2">节能静音NR-W621CG-XN</view> -->
+                                 <view class="recom_title3">￥{{item.goods_price_now}} </view>
+                                <view class="recom_title4">会员 返{{item.u_num}}U币</view>
+
+                           </view>
+                     </view>
+                     </view>
+                     

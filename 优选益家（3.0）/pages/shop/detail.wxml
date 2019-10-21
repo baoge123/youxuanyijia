@@ -1,0 +1,132 @@
+<!--pages/good/detail.wxml-->
+<view class="all">
+      
+<view class='swiper_box'>
+  <swiper style="height:{{swiperHeight}}rpx;" indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange">
+    <block wx:for="{{good.goods_img_arr}}" wx:key="img" wx:for-item="ca" wx:key="">
+      <swiper-item>
+        <image src="{{url}}{{ca}}" bindload='imageLoad' data-index="{{index}}" mode="widthFix" class="slide-image" bindtap='gotoIndexOr' data-id="{{ca.value}}" data-event="{{ca.event}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='dianBox'>
+    <view class="d {{current==idx?'ded':''}}" wx:for="{{advertisement}}" wx:key="" wx:for-item="d" wx:for-index="idx"></view>
+  </view>
+</view>
+
+
+
+<view class='x-row nameBox'>
+  <view class='x-col x-col-center name' id="title">
+    <view>[{{good.goods_name}}]</view>
+    
+    <view class="yuanjia_title">原价:{{good.yuanjia}}元</view>
+  </view>
+   
+  <view class='fxBox' bindtap='gotoShowModelTwo'>
+    <view class='x-row'>
+      <view class='icon x-col-center'>
+        <i class="iconfont iconfenxiang4" />
+      </view>
+      <view class='zt x-col-center'>
+        <view class='fxg'>分享给</view>
+        <view class='fxg'>好友</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="buy_title">
+<import src="../../wxParse/wxParse.wxml" />
+      <view class="box">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+
+       <view class="title1">购买须知</view>
+      <view class="buy_one">
+                 <view class="title">有效期</view>
+                 <view class="buy_zi">即日起至2019年12月31日00:00有效，逾期作废，一经出售概不退换，请注意使用时间！</view>
+                 <!-- <view class="buy_zi1">节假日除外</view> -->
+      </view>
+      
+      <view class="buy_one">
+                 <view class="title">预约信息</view>
+                        <view class="buy_zi">
+                            1.为了您更好的消费体验，建议您以优选益家会员名义提前预约，尊享VIP礼遇（注：家政需提前1天，丽人、蛋糕类需提前3小时）。
+                        </view>
+                        <view lass="buy_zi">
+                              2.消费高峰期可能需要等位，敬请谅解。
+                        </view>
+
+                 
+      </view>
+         
+           <view class="buy_one">
+                 <view class="title">适用人群</view>
+                        <view class="buy_zi">
+                            每张券最多1人使用
+                        </view>                 
+      </view>
+
+      <view class="buy_one">
+                 <view class="title">服务流程</view>
+                 <view class="buy_zi">到店出示此服务订单二维码，经工作人员核销后即可使用。<span class="span3">(关注优选益家，左下角“会员商城—我的—待发货消费订单”)。</span></view>
+                 
+      </view>
+
+      <view class="buy_one">
+                 <view class="title">温馨提示</view>
+                 <view class="buy_zi">1.此券核销后不可退，不可叠加使用。</view>
+                 <view class="buy_zi">2.此券不找零不兑现，不与店内其他优惠同享。</view>
+                 <view class="buy_zi">3.如因商家特殊原因导致此券不能使用，具体事宜请与店内协商。</view>
+                 <view class="buy_zi">4.如有其他疑问，请联系商家，工作时间：周一至周六，9:00-18:00，非工作时间回复不及时请见谅！</view>
+                 <view class="buy_zi">5.最终解释权归商家所有，如有疑问咨询店内人员。</view>
+      </view>
+</view>
+
+<view class="er_img">
+      <view class="xiaou">有问题添加客服微信</view>
+
+<view class="shaoma">
+      <image src="../../image/index/xiaou.png"></image>
+</view>
+</view>
+
+</view>
+
+<!-- <import src="../../wxParse/wxParse.wxml" />
+      <view class="box">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view> -->
+
+<view class="bottom">
+       <view class="left22">
+             <view class="vip_price">
+                 <span class="sp1">会员价</span>
+                 <span class="tuan">￥{{good.goods_price}}</span>
+             </view>
+             <view wx:if="{{userData.status==1}}">
+                   <view class="left1" >(您是会员  使用U币可抵扣{{good.goods_u}}元)</view>
+             </view>
+             <view wx:if="{{userData.status==0}}">
+                   <view class="left1" >(您还不是会员哦! 开通会员可使用U币抵扣!)</view>
+             </view>
+             <view wx:if="{{userData.status==2}}">
+                   <view class="left1" >(您是超级会员 使用U币可抵扣{{good.goods_u}}元)</view>
+             </view>
+             <!-- <view class="left1" wx:if="{{user.status}}== '1' ">(您是黄金会员  使用U币立减{{good.goods_u}}元)</view> -->
+       </view>
+      
+      <view class="right" bindtap="sureProductShop">
+            <view class="yuan">券后专享</view>
+      <view class="button">￥{{good.huiyuan}}</view>
+
+      </view>
+      
+      
+      
+</view>
+
+

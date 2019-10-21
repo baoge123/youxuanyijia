@@ -1,0 +1,21 @@
+<!--pages/luckdraw/play/play.wxml-->
+
+<view>
+      <view class="all_img">
+            <image src="{{url}}{{goods_img[5].active_img}}" ></image>
+            <view class="svip" bindtap="getsvip"></view>
+            <view class="fenx" bindtap="getfenxiang"></view>
+      </view>
+</view>
+
+<view class="bottom">
+       <view class="kefu">
+           <image src="{{url}}{{goods_img[7].active_img}}" data-src='{{url}}{{goods_img[7].active_img}}' bindtap='previewImage' ></image>
+       </view>
+       <view class="gongz">
+              <image src="{{url}}{{goods_img[6].active_img}}" data-src='{{url}}{{goods_img[6].active_img}}' bindtap='previewImage' ></image>
+       </view>
+</view>
+ 
+
+

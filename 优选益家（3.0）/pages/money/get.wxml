@@ -1,0 +1,29 @@
+<!--pages/money/get.wxml-->
+<view class='head x-row' >
+  <view class='x-col x-col-center'>
+    <view class='num'>{{balance}}</view>
+    <view class='ktxje'>可提现金额(元)</view>
+  </view>
+  <view class='txjl' catchtap='gotoTxjl'>提现记录</view>
+  <view class='you '><i class="iconfont iconyou"/></view>
+</view>
+
+<view class='yt_body'>
+  <view class='li x-row borderBottom'>
+    <view class='name x-col-center'>￥</view>
+    <view class='x-col x-col-center'>
+      <input class='ipt' placeholder='输入转出金额' placeholder-class='ipt' bindinput='allMoneyIpt' value='{{allMoney}}'></input>
+    </view>
+    <view class='type x-col-center' bindtap='allMoney'>全部</view>
+  </view>
+  <view class='txje'>本次提现需扣除服务费{{biliPrice}}元(费率0.6%)</view>
+  <button class='sure {{allMoney>0?"bg":""}}' bindtap="gotoSureAction">确认转出</button>
+  <view class='zrsm'>提示：
+    <view>· 余额提现需审核到账，您可在提现记录中查看进度</view>
+    <view>· 提现审核到账不超过3个工作日，请耐心等待</view>
+    <view>· 当可提现金额高于10元时，方可提现。提现金额上限20000元</view>
+    <view>· 每日只可申请提现1次</view>
+    <!-- <view>· 操作提现暂不收取手续费(以后根据政策调整)</view> -->
+  </view>
+    
+</view>

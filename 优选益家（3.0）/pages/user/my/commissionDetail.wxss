@@ -1,0 +1,121 @@
+/* pages/user/my/commissionDetail.wxss */
+
+.titleBox {
+  height: 200rpx;
+  background: linear-gradient(180deg, rgba(245, 227, 195, 1) 0%, rgba(235, 207, 159, 1) 100%);
+  width: 100%;
+}
+
+.titleBox .ttzrs {
+  /* width: 31.4%; */
+  text-align: center;
+  /* padding-left: 68rpx; */
+}
+
+.titleBox .num {
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #674313;
+  font-size: 36rpx;
+}
+
+.titleBox .ttzrs .ttnum {
+  color: #674313;
+  font-size: 40rpx;
+}
+
+.titleBox .name {
+  font-size: 22rpx;
+  color: #674313;
+  /* opacity: 0.4; */
+}
+
+.titleBox .yifs {
+  text-align: center;
+}
+
+.titleBox .xian {
+  width: 4rpx;
+  height: 64rpx;
+  background: #674313;
+}
+
+.titleBox .ejfs {
+  padding-left: 50rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+}
+
+.yt_types {
+  text-align: center;
+  padding: 20rpx 20rpx 0 20rpx;
+  background-color: #fff;
+  border-top: 16rpx solid #f7f7f9;
+}
+
+.yt_types .nearby {
+  width: 48rpx;
+  height: 4rpx;
+  background: #323c58;
+  border-radius: 4rpx 4rpx 0rpx 0rpx;
+  margin: 0 auto;
+  /* padding-top: 14rpx; */
+  margin-top: 14rpx;
+}
+
+.yt_types .name {
+  font-size: 32rpx;
+  /* padding-bottom: 10rpx; */
+  color: #3c444f;
+}
+
+.yt_types .named {
+  font-size: 32rpx;
+  /* padding-bottom: 10rpx; */
+  color: #323c58;
+  font-weight: 600;
+}
+
+.yt_types .noNearby {
+  padding-top: 10rpx;
+  /* border-bottom: 6rpx solid #fff; */
+  background: #fff;
+}
+
+.yt_body {
+  padding: 0 0 110rpx 48rpx;
+  box-shadow: 0 0 30rpx #e9eaec;
+}
+
+.yt_body .list {
+  height: 124rpx;
+}
+
+.yt_body .list .name {
+  color: #3c444f;
+  padding-top: 6rpx;
+}
+
+.yt_body .list .time {
+  color: #abb2bc;
+  font-size: 24rpx;
+}
+
+.yt_body .list .num {
+  color: #c4a171;
+  font-size: 32rpx;
+  padding: 0 42rpx;
+}
+
+.yt_body .list .jian {
+  color: #3c444f;
+  font-size: 30rpx;
+}

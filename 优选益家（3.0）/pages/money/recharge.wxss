@@ -1,0 +1,41 @@
+/* pages/money/recharge.wxss */
+.yt_body{
+  padding: 80rpx 52rpx;
+}
+
+.yt_body .priceBox{
+  height: 112rpx;
+}
+.yt_body .priceBox .rmb{
+  font-size: 60rpx;
+}
+.ipt{
+  color: #CDD2DA;
+  font-size: 32rpx;
+  padding-left:15rpx;
+}
+
+.yt_body .sure {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  /* background: rgba(229, 231, 235, 1); */
+background:rgba(50,60,88,1);
+  border-radius: 40rpx;
+  margin: 106rpx 0;
+  font-size: 32rpx;
+}
+
+.yt_body .bg{
+  background:#323C58;
+
+}
+
+
+.yt_body .sured {
+  background: #000;
+}
+
+button::after {
+  border: none;
+}

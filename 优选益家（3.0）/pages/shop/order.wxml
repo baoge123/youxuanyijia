@@ -1,0 +1,52 @@
+<!--pages/shop/order.wxml-->
+<view class='yt_types borderBottom'>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='x-col scroll-view-item_H' wx:for="{{types}}" wx:for-item="t" wx:key="" bindtap='selectType' data-id="{{t.id}}" data-name="{{t.name}}">
+      <view class=" {{typeName==t.id?'named':'name'}}">{{t.name}} </view>
+      <view class="{{typeName==t.id?'nearby':'noNearby'}}"></view>
+    </view>
+  </scroll-view>
+</view>
+<view class='yt_body'>
+
+  <view class='list' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='title x-row'>
+
+      <view class='x-col x-col-center shopName'>订单编号:{{li.order_num}}</view>
+      <view class='state'>{{li.date}}</view>
+    </view>
+    <view class='product x-row'>
+      <view class='pimg'>
+        <image src='{{url}}{{li.goods_img}}'></image>
+      </view>
+      <view class='x-col x-col-center info'>
+        <view class='x-row'>
+          <view class='pname x-col x-col-center ellpsis'>{{li.goods_name}}</view>
+          <view class='x-col-center'> <image style='width:50rpx;height:50rpx;margin:0 10rpx;border-radius:50%;' src='{{li.user_img}}'></image> </view>
+          <view class='x-col-center pname'>{{li.user_name}}</view>
+        </view>
+
+        <view class='gg'>{{li.space_name}}</view>
+        <view class='price'>￥{{li.space_price}}
+          <span wx:if="{{li.u_num}}"> 使用U币:{{li.u_num}}</span>
+
+          <span> 现金:{{li.order_price}}元</span>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='x-row'>
+      <view class='x-col'></view>
+      <view class='total x-col-center'>共1件商品 合计：¥1200.00</view>
+    </view> -->
+    <!-- <view class='x-row action'>
+      <view class='x-col'></view>
+      <view class='btn x-col-center'>取消订单</view>
+      <view class='btn ed x-col-center'>立即付款</view>
+    </view> -->
+  </view>
+</view>
+<view class='noMoreContent' wx:if="{{isAllList==1&&list.length>0}}">已加载全部数据了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>

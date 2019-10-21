@@ -1,0 +1,80 @@
+<!--pages/worker/login.wxml-->
+
+<view class='ulogo'>
+  <image src='../../image/icon/u_logo.png'></image>
+</view>
+<view class='sjd'>优选益家员工端</view>
+<view class='iptBox'>
+  <view class='x-row'>
+    <view class='phoneIcon'>
+      <image src='../../image/icon/shop_mobile.png' mode=''></image>
+    </view>
+    <view class='x-col x-col-center name'>手机号码</view>
+  </view>
+  <view class='phoneBox x-row borderBottom'>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入手机号码' bindinput='phoneIpt' value='{{phone}}' placeholder-class='phdIpt'></input>
+    </view>
+    <view class='x-col-center cha' bindtap='gotoDeletePhone'>
+      <i class="iconfont iconguanbi1" />
+    </view>
+  </view>
+
+  <view class='x-row' style='padding-top:40rpx;'>
+    <view class='phoneIcon'>
+      <image src='../../image/icon/shop_mobile.png' mode=''></image>
+    </view>
+    <view class='x-col x-col-center name'>登录密码</view>
+  </view>
+  <view class='phoneBox x-row borderBottom'>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入登录密码' bindinput='passwordIpt' value='{{password}}' password='true' placeholder-class='phdIpt'></input>
+    </view>
+  </view>
+  <!-- <view class='shsqrz' catchtap='gotoJoinShop'>商户申请入驻</view> -->
+  <view class='btnSure' bindtap='btnSureSend'>确认登录</view>
+  <view class='wjmm' bindtap="gotoOpenModel">忘记密码？</view>
+  <view class='wjmm' bindtap="gotoIndex" style='padding-top:0;'>优选商城</view>
+  <!-- <view class='wyydbty'>我已阅读并同意<span>《优选益家平台协议》</span></view> -->
+</view>
+
+
+
+<view class="fixedBox" wx:if="{{fixedBox==2}}">
+  <view style='height:10%;' catchtap='hiddenBox'></view>
+  <view class='x-row'>
+    <view class='x-col' catchtap='hiddenBox'></view>
+    <view class='guige' style='height:520rpx;'>
+        <view class='yzBox'>
+          <view class='sfName'>身份验证</view>
+          <view class='borderBottom yzli'>
+            <input placeholder='请输入手机号' bindinput='yzPhoneIpt' placeholder-class='phdIpt'> </input>
+          </view>
+          <view class='borderBottom yzli x-row'>
+            <view class='x-col x-col-center'>
+              <input placeholder='请输入验证码' bindinput='smsIpt' placeholder-class='phdIpt'> </input>
+            </view>
+            <view class="x-col-center setVerify" bindtap="setVerify">{{VerifyCode}}</view>
+          </view>
+          <view class='sureBtn' bindtap='smsSure'>确定</view>
+          
+        </view>
+
+
+      <!-- <view class='lookAll'>
+        <view class='x-row' >
+          <view class='x-col'></view>
+          <view class='l1'>查看全部</view>
+          <view class='x-col'></view>
+        </view>
+      </view> -->
+    </view>
+
+    <view class='x-col' catchtap='hiddenBox'></view>
+  </view>
+  <view style="height:100rpx;"></view>
+  <view class='guanbiBox' catchtap='hiddenBox'>
+    <i class="iconfont iconguanbi" />
+  </view>
+  <view style='height:80%;' catchtap='hiddenBox'></view>
+</view>

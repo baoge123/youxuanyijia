@@ -1,0 +1,161 @@
+<!--pages/shop/index.wxml-->
+<block wx:if="{{bomType==1}}">
+  <shopCenter store_id='{{store_id}}' latitude="{{latitude}}" longitude="{{longitude}}"></shopCenter>
+  <view style='heigh:192rpx;'></view>
+  <!-- {{store_id}} -->
+</block>
+<block wx:if="{{bomType==2}}">
+  <view class='x-row shopTitel'>
+    <view class='shopLo x-col-center'>
+      <image src='../../image/icon/u_logo.png'></image>
+    </view>
+    <view class='x-col-center'>
+      <view class='phone'>{{shopInfo.phone}}</view>
+      <view class='yxsh' wx:if="{{shopInfo.svip==1}}">
+        <image src='../../image/icon/shp_yxsh2.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{shopType==1}}">
+  <view class='x-row wdzcBox' catchtap='gotoMyassets'>
+    <view class='name x-col x-col-center'>我的资产</view>
+    <view class='zhmx x-col-center'>账户明细</view>
+    <view class='x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+  </view>
+  <view class="titleBox x-row">
+    <view class='x-col-center ttzrs'  catchtap='gotoMyassets'>
+      <view class='ttnum num'>{{shopInfo.blance}}</view>
+      <view class="name">账户余额(元)</view>
+    </view>
+    <view class='x-col-center yifs' catchtap='gotoMyassets'>
+      <view class='ttnum num'>{{shopInfo.daihexiao_balacn}}</view>
+      <view class="name">待核销金额</view>
+    </view>
+    <view class='x-col-center xian'></view>
+    <view class='x-col x-col-center ejfs'  catchtap='gotoMyassets'>
+      <view class='ttnum num'>{{shopInfo.dairuzhang_balacn}}</view>
+      <view class="name">待入帐金额</view>
+    </view>
+  </view>
+  <view class='x-row wdzcBox' bindtap='gotoMyUbi'>
+    <view class='name x-col x-col-center'>我的U币</view>
+    <view class='zhmx x-col-center'>U币明细</view>
+    <view class='x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+  </view>
+  <view class="titleBox x-row" bindtap='gotoMyUbi'>
+    <view class='x-col-center ttzrs'>
+      <view class='ttnum num'>{{shopInfo.u_num}}</view>
+      <view class="name">总U币(枚)</view>
+    </view>
+    <view class='x-col-center yifs' >
+      <view class='ttnum num'>{{shopInfo.daihexiao_u}}</view>
+      <view class="name">待核销U币</view>
+    </view>
+    <view class='x-col-center xian'></view>
+    <view class='x-col x-col-center ejfs'>
+      <view class='ttnum num'>{{shopInfo.dairuzhang_u}}</view>
+      <view class="name">待入帐U币</view>
+    </view>
+  </view>
+  </view>
+  <view class='woline'>
+    <navigator url='order' hover-class='none'>
+      <view class='x-row lin borderTop'>
+        <view class='name x-col x-col-center'>我的订单</view>
+        <view class='x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='contacts?phone={{shopInfo.lianxi_phone}}&name={{shopInfo.lianxi_name}}' >
+      <view class='x-row lin borderTop'>
+        <view class='name x-col x-col-center'>平台联系人</view>
+        <view class='tglxr x-col-center'>{{shopInfo.svip==1?"我的客户经理":"通过联系人申请成为会员"}}</view>
+        <view class='x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+    </navigator>
+    <!-- <navigator url='editPassword' hover-class='none' > -->
+      <view class='x-row lin borderTop' wx:if="{{shopType==1}}" bindtap='gotoEditPassword'>
+        <view class='name x-col x-col-center'>修改账户密码</view>
+        <view class='x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+    <!-- </navigator> -->
+  </view>
+  <view style='heigh:192rpx;'></view>
+
+</block>
+<view class='bomBtn'>
+  <view class='x-row'>
+    <view class='x-col shadow' bindtap='seletBomType' data-type='1'>
+      <view class='icon '>
+        <image src='../../image/icon/shop_idx{{bomType==1?1:2}}.png' mode='aspectFit'></image>
+        <view class='name {{bomType==1?"nameed":""}}'>主页</view>
+      </view>
+
+    </view>
+    <view class='center' catchtap='scanCode'>
+      <view class='smhx'>
+        <i class="iconfont iconsaomahexiao" />
+      </view>
+      <view class='smname'>扫码核销</view>
+    </view>
+    <view class='x-col shadow' bindtap='seletBomType' data-type='2'>
+      <view class='x-row'>
+        <view class='x-col'></view>
+        <view class='icon '>
+          <image src='../../image/icon/shop_idx{{bomType==2?3:4}}.png' mode='aspectFit'></image>
+          <view class='name {{bomType==2?"nameed":""}} '>我的</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class="fixedBox" wx:if="{{fixedBox==2}}">
+  <view style='height:10%;' catchtap='hiddenBox'></view>
+  <view class='x-row'>
+    <view class='x-col' catchtap='hiddenBox'></view>
+    <view class='guige' style='height:520rpx;'>
+        <view class='yzBox'>
+          <view class='sfName'>身份验证</view>
+          <view class='borderBottom yzli'>
+            <input placeholder='请输入手机号' bindinput='yzPhoneIpt' placeholder-class='phdIpt'> </input>
+          </view>
+          <view class='borderBottom yzli x-row'>
+            <view class='x-col x-col-center'>
+              <input placeholder='请输入验证码' bindinput='smsIpt' placeholder-class='phdIpt'> </input>
+            </view>
+            <view class="x-col-center setVerify" bindtap="setVerify">{{VerifyCode}}</view>
+          </view>
+          <view class='sureBtn' bindtap='smsSure'>确定</view>
+          
+        </view>
+
+
+      <!-- <view class='lookAll'>
+        <view class='x-row' >
+          <view class='x-col'></view>
+          <view class='l1'>查看全部</view>
+          <view class='x-col'></view>
+        </view>
+      </view> -->
+    </view>
+
+    <view class='x-col' catchtap='hiddenBox'></view>
+  </view>
+  <view style="height:100rpx;"></view>
+  <view class='guanbiBox' catchtap='hiddenBox'>
+    <i class="iconfont iconguanbi" />
+  </view>
+  <view style='height:80%;' catchtap='hiddenBox'></view>
+</view>

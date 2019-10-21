@@ -1,0 +1,252 @@
+/* pages/user/main.wxss */
+.header{
+  height: 296rpx;
+  background: linear-gradient(#3a4664, #2e3753);
+  padding-top: 32rpx;
+}
+.header .line{
+  height: 128rpx;
+}
+ .himg{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin:0 24rpx 0 48rpx;
+  border:  solid 1px forestgreen;
+}
+button{
+  width: 100%;
+  height: 128rpx;
+  border-radius: 50%;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 128rpx;
+}
+.himg image{
+  width: 100%;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.x-col-center{
+  /* border: solid 1px red; */
+}
+#nikename{
+  /* border:  solid 1px red; */
+}
+.login{
+  width: 50rpx;
+  height: 50rpx;
+  border:  solid 1px brown;
+}
+.header .username{
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.header .username image{
+  width: 90rpx;
+  height: 44rpx;
+  margin: 0 0 0 16rpx;
+}
+
+.header .uid{
+  font-size:22rpx;
+  padding-top: 10rpx;
+  color: #fff;
+}
+.header .uid .copy{
+  font-size:22rpx;
+color:#f3f3f3;
+display:inline-block;
+padding:0rpx 10rpx;
+/* background:rgb(171, 178, 188); */
+margin:0 0 0 30rpx;
+border-radius:10rpx;
+border:1rpx solid #fff;
+
+}
+.headBox{
+  position: relative;
+}
+.headBox .zcBox{
+  position: absolute;
+  /* padding: 24rpx; */
+  width: 100%;
+  bottom:0;
+}
+.zcBox .zcone{
+  height: 260rpx;
+  width: 93.6%;
+  margin: 0 3.2%;
+  background:linear-gradient(#f5e3c3, #ebcfa0);
+  border-radius:15rpx;
+
+
+}
+
+.zcBox .zcone .xian{
+  width: 4rpx;
+  height: 168rpx;
+  background: #DAB876;
+}
+
+.zcBox .zcone .wdzc{
+  color: #674313;
+  font-size: 36rpx;
+  padding: 52rpx 0 0 32rpx;
+}
+.zcBox .zcone .unum{
+  color: #674313;
+  font-size: 56rpx;
+  padding: 19rpx 0 0 52rpx;
+  font-weight: 600;
+}
+.zcBox .zcone .wdub{
+  color: #623E0E;
+  font-size: 26rpx;
+  padding: 0 0 0 52rpx;
+}
+.zcBox .txBox {
+  padding: 60rpx 34rpx 0 0;
+}
+.zcBox .txBox .qtx{
+  font-size: 24rpx;
+  color: #674313;
+}
+
+.zcBox .txBox .iconfont{
+  font-size: 30rpx;
+  color: #674313;
+}
+.zcBox .yenum{
+  padding: 18rpx  0 0 46rpx;
+  font-size: 56rpx;
+  color: #674313;
+  font-weight: 600;
+}
+
+.zcBox .zhye{
+  font-size: 26rpx;
+  padding: 0 0 0 46rpx;
+  color: #623E0E;
+  
+}
+.orderBox .r1{
+  height: 50rpx;
+  margin: 28rpx 0 50rpx 0;
+  padding-right:48rpx;
+}
+.orderBox .r1 .wddd{
+  font-size: 36rpx;
+  color: #313336;
+  padding: 0 48rpx;
+  font-weight: 600;
+}
+
+.orderBox .r1 .qbxx{
+  font-size: 24rpx;
+  color: #666A6F;
+  padding-right: 10rpx;
+}
+
+.orderBox .r1 .iconfont {
+  font-size: 30rpx;
+}
+
+.orderBox .r2{
+  overflow: auto;
+  padding-bottom: 34rpx;
+  border-bottom: 20rpx solid #f6f7f9;
+}
+
+.orderBox .r2 .li{
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.orderBox .li .img{
+  height: 50rpx;
+  align-self: flex-end;
+}
+
+.orderBox .li .name{
+  font-size: 24rpx;
+  color: #333;
+  padding-top: 10rpx;
+}
+
+.numBox{
+  text-align: center;
+  border-bottom: 16rpx solid #f6f7f9;
+  padding-bottom: 32rpx;
+}
+.numBox .num{
+  font-size: 56rpx;
+  color: #313336;
+  font-weight: 600;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.numBox .rs{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.conBox{
+  padding: 0 0 0 48rpx;
+}
+
+.conBox .x-row{
+  height: 98rpx;
+  padding-right: 48rpx;
+}
+
+.conBox .x-row .name{
+  font-size: 32rpx;
+  color: #202020;
+}
+
+.conBox .cjshdz {
+  color: #FF5D26;
+  font-size: 26rpx;
+  padding: 0 16rpx;
+}
+.conBox .icon .iconfont {
+  /* color: #FF5D26; */
+  font-size: 30rpx;
+  padding: 0 16rpx;
+}
+
+button::after{
+  border: none;
+}
+.cen_btn{
+  width: 700rpx;
+  line-height: 1;
+  padding: 0;
+  /* margin-left: -30rpx; */
+  background: #fff;
+  text-align: left;
+  font-size: 30rpx;
+}
+
+
+
+
+.yuan{
+  width: 100%;
+  height: 128rpx;
+  border-radius: 50%;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 128rpx;
+  background: whitesmoke;
+}
+#fuwu{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+
+

@@ -1,0 +1,31 @@
+<!--pages/order/paySucces.wxml-->
+<view class='yt_body'>
+  <view class='cg'>支付成功!</view>
+  <view class='ycgzf'>
+    已成功支付，请您注意核销查收商品</view>
+
+  <view class='wxzf'>
+    微信支付：
+    <span>¥156.00</span>
+  </view>
+
+  <view class='yyh'>
+    已优惠：
+    <span>¥56.00</span>
+  </view>
+  <view class='yyh'>
+    得U币：
+    <span>32</span>
+  </view>
+
+  <view class='ewmBox'>
+    <view class='xfewm'>消费二维码</view>
+    <view class='ewmImg'>
+      <image></image>
+    </view>
+    <view class='xfs'>消费时，请将该取货码出示给商家</view>
+  </view>
+
+  <view class='ygxa'>已购线下商品可在“订单-待收货订单”中查看</view>
+   <view class='ygxa'>·已订购商品可在“订单-待发货订单”中查看</view>
+</view>

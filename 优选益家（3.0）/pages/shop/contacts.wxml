@@ -1,0 +1,19 @@
+<!--pages/shop/contacts.wxml-->
+<view class='nBox x-row'>
+  <view class='name  x-col-center'>{{name}}</view>
+  <view class='  x-col-center'>{{phone}}</view>
+</view>
+<view class='sm'>
+  联系人说明：
+  <view>
+    您可以通过联系人反馈任何信息，包括申请成为商家会员，购买广告位、资讯平台政策等相关事宜。
+  </view>
+</view>
+<view class='cellBox x-row'>
+  <view class='x-col'></view>
+  <view class='x-col-center'>
+    <i class="iconfont icondianhua2" />
+  </view>
+  <view class='x-col-center cell' bindtap='cellPhone'>拨打电话</view>
+  <view class='x-col'></view>
+</view>

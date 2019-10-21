@@ -1,0 +1,77 @@
+<!--pages/category/searchCate.wxml-->
+<view class='x-row searchBox'>
+  <view class='ipt x-col x-col-center'>
+    <input placeholder='输入店铺名称' bindinput='keyInput' value='{{key}}' placeholder-style='color:#202020;'></input>
+  </view>
+  <view class='name x-col-center' bindtap='gotoSerchShop'>搜索</view>
+</view>
+<view class='konghezi' wx:if="{{list.length==0&&isAllList==1}}">
+  <image src='../../image/icon/kongxiangzi.png'></image>
+  <view class='myzd'>没有找到相关产品</view>
+</view>
+<view class='shopBox' wx:for="{{list}}" wx:key="" wx:for-item="li">
+  <view class='list' bindtap='gotoShopDetail' data-id='{{li.id}}'>
+    <view class='li1 x-row borderBottom'>
+      <view class='icon'>
+        <image class='img1' src='{{url}}{{li.store_img}}'></image>
+        <image class='img2' src='../../image/icon/youxuan_shop.png' wx:if="{{li.svip==1}}"></image>
+      </view>
+      <view class='right x-col x-col-center'>
+        <view class='x-row'>
+          <view class='sname x-col-center ellipsis1'>{{li.store_name}}
+
+          </view>
+          <!-- <view class='ydy'>
+            <image src='../../image/icon/idx_ydy.png'></image>
+          </view> -->
+        </view>
+        <view class='x-row'>
+          <view class='star x-col-center'>
+            <i wx:for="{{5}}" wx:key="" class="iconfont {{li.score>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+          </view>
+          <view class='fen' style='padding:0 30rpx;'>{{li.score}}分</view>
+          <view class='allzt'>销量 {{li.xiaoliang}}</view>
+        </view>
+        <view class='x-row'>
+          <view class='allzt x-col x-col-center'>{{li.address}}</view>
+          <view class='allzt x-col-center' style='padding:0 30rpx;'>{{li.store_class_name}}</view>
+          <!-- <view class='allzt' style='padding-right:30rpx;'>1.2km</view> -->
+        </view>
+      </view>
+    </view>
+    <view class='ll2 borderBottom'>
+      <view class='x-row item' wx:for="{{li.goods}}" wx:key="" wx:for-item="good">
+        <view style='width:94rpx;'></view>
+        <view class='img2 '>
+          <image mode='widthFix' src='{{url}}{{good.goods_img}}'></image>
+        </view>
+        <view class='right x-col x-col-center'>
+          <view class='sname'>{{good.goods_name}}</view>
+          <view class='x-row'>
+            <view class='img x-col-center'>
+              <image src='../../image/icon/idx_svip.png' style="width:50rpx;height:26rpx;"></image>
+            </view>
+            <view class='price x-col-center'>￥{{good.goods_price_now}}</view>
+            <view class='x-col-center' wx:if="{{good.goods_u_status==1}}">+</view>
+            <view class='uxing x-col-center' wx:if="{{good.goods_u_status==1}}">
+              <image src='../../image/icon/idx_uxing.png' style='width:26rpx;height:26rpx;'></image>
+            </view>
+            <view class='sname x-col-center' wx:if="{{good.goods_u_status==1}}">{{good.goods_u}}</view>
+            <view class='yjprice x-col-center'>原价:￥{{good.goods_price}}</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+  <view class='x-row bomAction'>
+    <view class='x-col'></view>
+    <view class='see x-col-center'>查看其他项目</view>
+    <view class='icon x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+    <view class='x-col'></view>
+  </view>
+</view>
+<view class='noMoreContent'  wx:if="{{list.length>0&&isAllList==2}}">没有更多了~</view>

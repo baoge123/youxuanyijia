@@ -1,0 +1,28 @@
+<!--pages/supplier/apply.wxml-->
+<view class='changeInfo'>
+<view class='changeInfoName'>
+
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      选择社区：{{array[index]}}
+    </view>
+  </picker>
+</view>
+ 
+<view class='changeInfoName'>
+    <input placeholder='请输入小区名字' bindinput='getxiaoqu' value='{{xiaoqu}}'/> 
+  </view>
+  <view class='changeInfoName'>
+     <input placeholder='请输入姓名' bindinput='getNameValue' value='{{name}}'/> 
+  </view>
+  
+  <view class='changeInfoName'>
+     <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}'/> 
+  </view>
+  <view class='changeInfoName'>
+     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:70%;'/> 
+     <button class='codeBtn' bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</button>
+  </view>
+  <button class='changeBtn' bindtap='save'>保存</button>
+  <button class='changeBtn1' bindtap='save1'>保存2</button>
+</view>

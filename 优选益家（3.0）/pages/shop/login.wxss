@@ -1,0 +1,220 @@
+/* pages/shop/login.wxss */
+
+/* u_logo.png shop_mobile.png */
+
+.ulogo {
+  padding: 52rpx 0 10rpx 0;
+  text-align: center;
+}
+
+.ulogo image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.sjd {
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(3, 3, 3, 1);
+  line-height: 50rpx;
+  text-align: center;
+}
+
+.iptBox {
+  padding: 80rpx 76rpx;
+}
+
+.iptBox .phoneIcon {
+  height: 48rpx;
+}
+
+.iptBox .phoneIcon image {
+  width: 28rpx;
+  height: 48rpx;
+  padding-top: 7rpx;
+  margin-right: 26rpx;
+}
+
+.iptBox .name {
+  color: #666;
+}
+
+.phoneBox {
+  padding: 20rpx 0;
+}
+
+.phdIpt {
+  color: #ccc;
+  font-size: 32rpx;
+}
+
+.phoneBox input {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.phoneBox .cha {
+  background: rgb(216, 216, 216);
+  border-radius: 50%;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+
+.phoneBox .iconfont {
+  color: #fff;
+}
+
+.iptBox .shsqrz {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(50, 60, 88, 1);
+  line-height: 40rpx;
+  /* text-align: right; */
+  padding: 28rpx 0 78rpx 0;
+}
+
+.iptBox .btnSure {
+  width: 100%;
+  height: 96rpx;
+  text-align: center;
+  line-height: 96rpx;
+  color: #fff;
+  font-size: 36rpx;
+  background: rgba(50, 60, 88, 1);
+  border-radius: 4rpx;
+}
+
+.iptBox .wjmm {
+  font-size: 28rpx;
+  color: #323c58;
+  text-align: center;
+  padding: 32rpx 0 154rpx 0;
+  text-decoration: underline;
+}
+
+.iptBox .wyydbty {
+  font-size: 28rpx;
+  color: #030303;
+  text-align: center;
+  padding-bottom: 60rpx;
+}
+
+.iptBox .wyydbty span {
+  color: #f5a623;
+}
+
+.fixedBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* background-color: #4c4c4c; */
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.fixedBox .yzBox {
+  margin: 48rpx 46rpx 54rpx 38rpx;
+}
+
+.fixedBox .yzBox .sfName {
+  font-size: 48rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 66rpx;
+}
+
+.fixedBox .sureBtn {
+  font-size: 36rpx;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  height:84rpx;
+  line-height: 84rpx;
+  background:rgba(229,231,235,1);
+}
+
+.fixedBox .yzBox .yzli {
+  padding: 58rpx 0 34rpx 0;
+}
+
+.fixedBox .guanbiBox {
+  text-align: center;
+}
+
+.fixedBox .guanbiBox .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 70rpx;
+  /* border: 2rpx solid #fff; *//* border-radius:50%; */
+}
+
+.fixedBox .guige {
+  /* position: absolute; */
+  width: 80%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  bottom: 33%;
+  padding: 10rpx;
+  left: 22%;
+  padding-bottom: 36px;
+  opacity: 0.9;
+  height: 700rpx;
+}
+
+.guige .guanbiBox {
+  background: #dad9d9;
+  border-radius: 50%;
+  color: #fff;
+  width: 50rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0rpx 10rpx 0 0;
+}
+
+.guige .lookAll {
+  position: absolute;
+  top: 70%;
+  width: 90%;
+}
+
+.guige .lookAll .l1 {
+  color: #fff;
+  padding: 30rpx 0;
+  width: 40%;
+  text-align: center;
+  background: #231815;
+  border-radius: 10rpx;
+}
+
+.guige .tipsData {
+  /* text-indent: 50rpx; */
+  padding-top:20rpx;
+
+}
+
+scroll-view {
+  width: auto;
+}
+
+.box image {
+  vertical-align: top;
+  width: 100% !important;
+}
+
+.setVerify {
+  /* border: 2rpx solid #e61717; */
+  color: #e61717;
+  font-size: 28rpx;
+  padding: 18rpx 30rpx;
+}

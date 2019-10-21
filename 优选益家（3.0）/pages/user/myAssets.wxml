@@ -1,0 +1,53 @@
+<!--pages/user/myAssets.wxml-->
+<view class="titleBox x-row">
+  <view class='x-col-center ttzrs'>
+    <view class='ttnum num'>{{userData.balance}}</view>
+    <view class="name">账户余额(元)</view>
+  </view>
+  <view class='x-col-center yifs' catchtap='commissionDetail'>
+    <view class='ttnum num'>{{userData.fenxiao}}</view>
+    <view class="name">分销佣金(元)</view>
+  </view>
+  <!-- <view class='x-col-center xian'></view>
+  <view class='x-col x-col-center ejfs'>
+    <view class='ttnum num'>88</view>
+    <view class="name">可提现(元)</view>
+  </view> -->
+</view>
+<view class='yt_types borderBottom'>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='x-col scroll-view-item_H' wx:for="{{types}}" wx:for-item="t" wx:key="" bindtap='selectType' data-id="{{t.id}}" data-type="{{t.type}}" data-tid="{{t.tid}}">
+      <view class=" {{typeName==t.id?'named':'name'}}">{{t.name}} </view>
+      <view class="{{typeName==t.id?'nearby':'noNearby'}}"></view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='yt_body'>
+  <view class='list borderBottom x-row' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='x-col x-col-center'>
+      <view class='name'>
+      <!-- "status": "3", 0 用户分销所获得佣金,1 退款, 2 充值,3 提现, 4 U折算入账,5 用户使用购买商品,6 用户购买商品商户获得 -->
+      {{li.status_name}}
+      </view>
+      <view class='time'>{{li.date}}</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num {{li.type==1?"jian":""}}'>{{li.type==1?'-':'+'}}{{li.price}}</view>
+    </view>
+  </view>
+  <!-- <view class='list borderBottom x-row'>
+    <view class='x-col x-col-center'>
+      <view class='name'>分享商品提成</view>
+      <view class='time'>2019.03.16</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num jian'>-18.9</view>
+    </view>
+  </view> -->
+</view>
+<view class='bomBox x-row borderTop'>
+  <view class='x-col x-col-center item' catchtap='gotoMonyeGet'>资产提现</view>
+  <view style='width:26rpx;' wx:if="{{userData.chongzhi==0}}"></view>
+  <view class='x-col x-col-center item cz' catchtap='gotoRecharge'  wx:if="{{userData.chongzhi==0}}">余额充值</view>
+</view>

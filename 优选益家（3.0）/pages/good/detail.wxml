@@ -1,0 +1,373 @@
+<!--pages/good/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='yt_body'>
+  <view class='swiper_box'>
+    <swiper style="height:{{swiperHeight}}rpx;" indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange">
+      <block wx:for="{{good.goods_img_arr}}" wx:key="img" wx:for-item="ca" wx:key="">
+        <swiper-item>
+          <image src="{{url}}{{ca}}" bindload='imageLoad' data-index="{{index}}" mode="widthFix" class="slide-image" bindtap='gotoIndexOr' data-id="{{ca.value}}" data-event="{{ca.event}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='dianBox'>
+      <view class="d {{current==idx?'ded':''}}" wx:for="{{good.goods_img_arr}}" wx:key="" wx:for-item="d" wx:for-index="idx"></view>
+    </view>
+  </view>
+  <view class='hdBox' wx:if="{{good.active_list.length>0}}" bindtap="gotoActiveGz">
+    <!-- <image src='{{url}}{{good.active_img}}' style='width:100%;' mode='widthFix'></image> -->
+    <scroll-view class="scroll-view_H " scroll-x style="width: 96%">
+      <view class='li' wx:for="{{good.active_list}}" wx:for-item="lb" wx:key=""  style='width:{{good.active_list.length>5?20:(100/good.active_list.length)}}%'>
+        <view class='x-row'>
+          <!-- <view class='xian {{lb.active_list_status==1?"xed":""}} x-col'></view> -->
+          <!-- <view class=' lbBox'>
+            <image class='libao' src='../../image/icon/{{lb.active_list_status==1?"libao":"libaoHui"}}.png'></image>
+            <view class='num ed'>{{lb.num}}</view>
+          </view> -->
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='x-row nameBox'>
+    <view class='x-col x-col-center name'>
+      {{good.goods_name}}
+    </view>
+    <view class='fxBox x-col-center'>
+
+      <view class='x-row' wx:if="{{good.store_id!=1}}" bindtap='gotoShowModelTwo'>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconfenxiang4" />
+        </view>
+        <view class='zt x-col-center'>
+          <view class='fxg'>分享给</view>
+          <view class='fxg'>好友</view>
+        </view>
+      </view>
+      <view class='x-row' wx:if="{{good.store_id==1&&!good.fen_price}}" bindtap='gotoShowModelTwo'>
+        <view class='icon x-col-center'>
+          <i class="iconfont iconfenxiang4" />
+        </view>
+        <view class='zt x-col-center'>
+          <view class='fxg'>分享给</view>
+          <view class='fxg'>好友</view>
+        </view>
+      </view>
+      <view class='x-row' wx:if="{{good.store_id==1&&good.fen_price}}" bindtap='gotoShowModelTwo'>
+        <view class='icon x-col-center'>
+          <!-- <i class="iconfont iconfenxiang4" /> -->
+          <span>分享</span>
+        </view>
+        <view class='zt x-col-center'>
+          <view class='fxg'>可再得</view>
+          <view class='fxg'>{{good.fenxiang}} U币</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='priceBox x-row'>
+    <view class='x-col x-col-center price'>
+      <span>￥</span>{{good.goods_price_now}}  <span class="oldPrice">￥{{good.goods_price}} </span></view>
+    <view class='xl x-col-center'>销量：{{good.goods_sales}}</view>
+  </view>
+  <view class='' wx:if="{{good.store_id==1}}">
+    <view class='vipBox x-row' wx:if="{{userData.status==0}}">
+      <view class='x-col x-col-center'>
+        <view class='x-row' style='height:32rpx;'>
+          <view class=''>
+            <image src='../../image/index/vip.png'></image>
+          </view>
+          <view class='cjhy x-col-center'>会员下单预计可获得
+            <span>{{good.u_num}}</span> U币</view>
+        </view>
+        <view class='ubi'>U币可用于本地生活优选商户的SVIP项目</view>
+      </view>
+      <view class='right x-col-center' bindtap='gotoBuyVip'>
+        <view class='x-row'>
+          <view class='x-col x-col-center'>
+            <view class='kt'>开通</view>
+            <view class='kt'>会员</view>
+          </view>
+          <view class='tutiao x-col-center'>
+            <i class="iconfont iconyou" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='vipBox x-row' style='background-color:#f3eee3;' wx:if="{{userData.status==1}}">
+      <view class='x-col x-col-center'>
+        <view class='x-row' style='height:32rpx;'>
+          <view class=''>
+            <image src='../../image/index/vip.png'></image>
+          </view>
+          <view class='cjhy x-col-center'>您是超级会员下单预计可获得
+            <span>{{good.u_num}}</span> U币</view>
+        </view>
+        <view class='ubi'>U币可用于本地生活优选商户的SVIP项目</view>
+      </view>
+
+    </view>
+  </view>
+  <view class='lizjBox' wx:if="{{good.active_user.user_name}}">
+    <view class='yhpjBox x-row borderBottom' bindtap='gotoHistory' data-aid='{{good.active_user.active_id}}'>
+      <image class='x-col-center' src='../../image/icon/libao.png' style='width:40rpx;height:40rpx;'></image>
+      <view class='x-col x-col-center' style='padding-left:16rpx;'>历史中奖名单</view>
+      <view class='hpl x-col-center'>更多</view>
+      <view class='tubiao x-col-center'>
+        <i class="iconfont iconyou" />
+      </view>
+    </view>
+    <view class='zjItem x-row'>
+      <view class='zjImg'>
+        <image src='{{good.active_user.user_img}}'></image>
+      </view>
+      <view class='x-col zjInfo'>
+        <view class="x-row">
+          <view class='x-col x-col-center zjName ellipsis1'>{{good.active_user.user_name}}</view>
+          <view class='x-col-center dlun'>第{{good.active_user.num}}轮中奖用户</view>
+        </view>
+        <view class='time'>{{good.active_user.datetime}}</view>
+        <view class='jpms'>恭喜获得奖品</view>
+      </view>
+    </view>
+  </view>
+ 
+
+
+
+<view class="navbar" style=" z-index:50">
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+    <!--<text  bindtap="navbarTap">{{item}}</text>-->
+  </view>
+</view>
+<!-- 商品简介 -->
+<view hidden="{{currentTab !== 0}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+   <view class="box">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+</view>
+<!-- 用户评价 -->
+<view hidden="{{currentTab !== 1}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+      <view class='yhpjBox x-row borderBottom' bindtap='gotoCommentLi'>
+    <view class='x-col x-col-center'>用户评价({{good.pinlun_num}})</view>
+    <view class='hpl x-col-center'>
+      <span>{{good.haopinglu}}%</span>好评率</view>
+    <view class='tubiao x-col-center'>
+      <i class="iconfont iconyou" />
+    </view>
+  </view>
+     <view class='commentBox'>
+    <view class='wupjBox' wx:if="{{!good.comment.user_img}}">
+      <view class='img'>
+        <image src='../../image/icon/detail_zwpj.png'></image>
+      </view>
+      <view class='zwpjName'>暂无评价</view>
+    </view>
+    <view class='comment' wx:if="{{good.comment.user_img}}">
+      <view class='user x-row'>
+        <view class='img x-col-center'>
+          <image src='{{good.comment.user_img}}'></image>
+        </view>
+        <view class='x-col x-col-center'>
+          <view class='name'>{{good.comment.user_name}}</view>
+          <view class='time'>{{good.comment.date}}</view>
+        </view>
+        <view class='star x-col-center'>
+          <i wx:for="{{5}}" wx:key="" class="iconfont {{good.comment.goods_xing>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+        </view>
+      </view>
+      <view class='con'>{{good.comment.content}}</view>
+    </view>
+  </view>
+</view>
+
+<!--半年维保-->
+<!-- <view hidden="{{currentTab !== 2}}" id="one">
+  <template is="list" data="{{maintainRecordlist}}" />
+</view> -->
+
+
+
+
+
+
+  <!-- <view class='commentBox'>
+    <view class='wupjBox' wx:if="{{!good.comment.user_img}}">
+      <view class='img'>
+        <image src='../../image/icon/detail_zwpj.png'></image>
+      </view>
+      <view class='zwpjName'>暂无评价</view>
+    </view>
+    <view class='comment' wx:if="{{good.comment.user_img}}">
+      <view class='user x-row'>
+        <view class='img x-col-center'>
+          <image src='{{good.comment.user_img}}'></image>
+        </view>
+        <view class='x-col x-col-center'>
+          <view class='name'>{{good.comment.user_name}}</view>
+          <view class='time'>{{good.comment.date}}</view>
+        </view>
+        <view class='star x-col-center'>
+          <i wx:for="{{5}}" wx:key="" class="iconfont {{good.comment.goods_xing>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+        </view>
+      </view>
+      <view class='con'>{{good.comment.content}}</view>
+    </view>
+  </view> -->
+  <!-- <view class='shopAddressBox x-row'>
+  <view class='x-col-center x-col'>
+    <view class='shopName'>尊尚柏丽没法SALON（环球中心店）</view>
+    <view class='add ellipsis1'>天府大道北段1700号新世纪环球中心一楼N1出口旁</view>
+    <view class='x-row'>
+      <view class='icon x-col-center'>
+        <i class="iconfont icondizhi" />
+      </view>
+      <view class='x-col-center add'>480m</view>
+    </view>
+
+  </view>
+  <view class='xian x-col-center'></view>
+  <view class='shopPhone x-col-center'>
+    <image src='../../image/icon/dianhua.png' mode='widthFix'></image>
+  </view>
+</view> -->
+  <view>
+    
+
+    <!-- <view class="box">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view> -->
+  </view>
+  <view style='height:180rpx;'></view>
+</view>
+<view class='bomBox x-row'>
+  <view class='cart ' bindtap='gotoCart'>
+    <view class='icon'>
+      <i class="iconfont iconcart-copy" />
+    </view>
+    <view class='name'>购物车</view>
+    <view class='num' wx:if="{num}}">{{num}}</view>
+  </view>
+  
+  <view class='buy x-col x-col-center' bindtap='gotoOpenAddModel' data-type='add'>加入购物车</view>
+  <view class='buy now x-col x-col-center' bindtap='gotoOpenAddModel' data-type='buy'>立即购买</view>
+</view>
+
+<!--  规格模态框  -->
+<view class="fixedBox" wx:if="{{showModel == 1 }}">
+  <view class="guige">
+    <view class=' guanbi'>
+      <i bindtap="closeModel" class="iconfont iconguanbi"></i>
+    </view>
+    <scroll-view scroll-y style="height:{{windowHeight-80}}px;">
+      <view class="guigeTop x-row">
+        <view class="guigeImg">
+          <image src="{{url}}{{skuItem?skuItem.space_img:good.goods_img}}" mode='aspectFit'></image>
+        </view>
+        <view class="p-body x-col">
+          <view class="price">
+
+            <!-- <view class='x-row'>
+            <view class='x-col x-col-center'>
+            </view>
+
+          </view> -->
+            <view class='x-row'>
+              <view class='x-col-center p'>
+                <text>￥{{skuItem?skuItem.space_price:good.goods_price_now}}</text>
+              </view>
+
+              <view class='fan x-col-center' wx:if="{{good.store_id==1}}">返</view>
+              <view class='fub x-col-center' wx:if="{{good.store_id==1}}">{{good.u_num}}U币</view>
+            </view>
+
+          </view>
+          <!-- <view class="text ellipsis1">123123123123</view> -->
+          <view class='kucun'>库存 {{skuItem?skuItem.space_num:good.goods_num}} 件</view>
+          <view class='selected' wx:if="{{skuItem}}">已选:"{{skuItem.space_one_name}}" "{{skuItem.space_two_name}}"</view>
+        </view>
+      </view>
+      <view style='padding:48rpx 0 20rpx 30rpx;font-size:32rpx;color:#333;' wx:if="{{good.store_id==1}}">U币</view>
+      <view class='fubBox x-row borderBottom' wx:if="{{good.store_id==1}}">
+        <view class='fitem {{isFub==1?"ed":""}}' bindtap='gotoIsFub' data-id="1">返U币</view>
+        <view class='fitem no {{isFub==0?"ed":""}}' bindtap='gotoIsFub' data-id="0">不返U币</view>
+
+      </view>
+      <view style='padding:48rpx 0 20rpx 30rpx;font-size:32rpx;color:#333;' wx:if="{{buyType=='buy'&&good.store_id==1 &&good.goods_pay_status==1}}">支付方式</view>
+      <view class='fubBox x-row borderBottom' wx:if="{{buyType=='buy'&&good.store_id==1 &&good.goods_pay_status==1}}">
+        <view class='fitem no {{payType==0?"ed":""}}' bindtap='gotoPayType' data-id="0">全款</view>
+        <view class='fitem {{payType==1?"ed":""}}' bindtap='gotoPayType' data-id="1">定金</view>
+      </view>
+      <!-- wx:for="{{good.guige_name_none}}" wx:for-item="gg" wx:key="" -->
+      <view class='borderBottom' style='margin:0 30rpx;' wx:if="{{good.store_id==1}}">
+        <view class="number">{{good.guige_name_none[0].name}}</view>
+        <view class="itemBox">
+
+          <text bindtap='sureShopping' data-idx="0" data-id="{{sku.id}}" data-price="{{sku.price}}" data-stock="{{sku.stock}}" wx:for="{{good.guige_name_none[0].space}}" wx:for-item="sku" wx:key="" class="{{sku.stock<=0?'noStock':(skuids[0]==sku.id?'selected':'')}}">{{sku.space_name}}</text>
+        </view>
+      </view>
+      <view class='borderBottom' style='margin:0 30rpx;' wx:if="{{good.store_id==1}}">
+        <view class="number">{{good.guige_name_none[1].name}}</view>
+        <view class="itemBox">
+
+          <text bindtap='sureShopping' data-idx="1" data-id="{{sku.id}}" data-price="{{sku.price}}" data-stock="{{sku.stock}}" wx:for="{{good.guige_name_none[1].space}}" wx:for-item="sku" wx:key="" class="{{sku.stock<=0?'noStock':(skuids[1]==sku.id?'selected':'')}}">{{sku.space_name?sku.space_name:sku.space_two_name}}</text>
+        </view>
+      </view>
+      <!-- <view class="number">数量</view> -->
+      <view class="x-row number-box">
+        <view class="x-col x-col-center">数量</view>
+        <view class="x-row">
+          <view class="x-col number-item" bindtap="jianNumber">
+            <i class="iconfont iconjian"></i>
+          </view>
+          <view class="number-item ipt">
+            <input type="number" bindinput="editCount" value="{{cartNumber}}" />
+          </view>
+          <view class="number-item" bindtap="addNumber">
+            <i class="iconfont iconjia"></i>
+          </view>
+        </view>
+        <!-- <view class='kucun x-col x-col-center'>库存：{{stock}}</view> -->
+      </view>
+    </scroll-view>
+  </view>
+
+  <!--  确定按钮  -->
+  <view class="btns sure" bindtap='sureProductShop'>
+    <!-- <button class="tail1" bindtap="addAction">确定</button> -->
+    确定
+  </view>
+</view>
+<!-- 分享二维码图片 -->
+<block wx:if="{{showModel == 2}}">
+  <view class="fixedBox">
+    <view class='sharBox'>
+      <view wx:if="{{showModel == 2 }}" catchtap='closeModel'>
+        <!-- style='display:{{shareImg?"none":""}}' -->
+        <!-- style="position: fixed;top: -10000px;z-index:9;" -->
+        <canvas class="canvas" canvas-id="myCanvas"></canvas>
+      </view>
+      <!-- <view style='text-align:center;' catchtap='closeModel' wx:if="{{shareImg}}">
+      <image class='shareImg' src='{{shareImg}}' mode='widthFix'></image>
+    </view> -->
+      <view class='x-row fxActionBox'>
+        <view class='x-col x-col-center'>
+          <view style='text-align:center;'>
+            <image src='../../image/icon/wechat.png'></image>
+          </view>
+          分享好友
+        </view>
+        <view class='x-col x-col-center'>
+          <view style='text-align:center;'>
+            <image src='../../image/icon/upload.png'></image>
+          </view>
+          保存图片
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

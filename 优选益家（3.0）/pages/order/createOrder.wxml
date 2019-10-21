@@ -1,0 +1,114 @@
+<view>
+  <!--  收货地址  -->
+  <view class="x-row address" bindtap="gotoAddress">
+    <view class="x-col">
+      <view class="x-row" wx:if="{{addressInfo}}">
+        <view class="x-col-center namePhones ellipsis1">{{addressInfo.userName}}</view>
+        <view class="x-col-center namePhones" style='width:auto;'>{{addressInfo.telNumber}}</view>
+      </view>
+      <view class="x-row" wx:if="{{!addressInfo}}">
+        <view class="x-col-center  " style='font-size:34rpx;'>请选择收货地址</view>
+      </view>
+      <view class="x-row address-text" wx:if="{{addressInfo}}">
+        <text class="x-col">{{addressInfo.provinceName}} {{addressInfo.cityName}} {{addressInfo.countyName}} {{addressInfo.detailInfo}}</text>
+      </view>
+      <view class="x-row address-text" wx:if="{{!addressInfo}}">
+        <text class="x-col">暂无地址、立即新增收货地址</text>
+
+      </view>
+    </view>
+    <view class=" x-col-center icon-right">
+      <i class="iconfont iconyou"></i>
+    </view>
+  </view>
+  <view class="address-line">
+    <image src="../../image/address-bg.png" mode="widthFix" style="width:100%;height:30rpx;"></image>
+  </view>
+
+  <!--  订单信息  -->
+  <view class="orderBox">
+    <view class="order-item" wx:for="{{order_param}}" wx:key="" wx:for-item="p">
+      <view class='shopBox'>
+        <view class='shopName borderBottom'>{{p.store_name}}</view>
+
+        <view >
+          <view class="order-content x-row">
+            <view class="x-col-fixed order-image">
+              <image src="{{url}}{{p.space_img}}" mode='aspectFit'></image>
+            </view>
+            <view class="x-col order-body">
+              <view class="order-title ellipsis">
+               {{p.goods_name}}
+              </view>
+              <view class='guige order-bottom'>{{p.space_name}}</view>
+              <view class="x-row ">
+                <view class="x-col x-col-center order-price">￥
+                  <text style='margin-right:20rpx;'>{{p.space_price}}</text>
+                </view>
+                <view class='x-row'>
+                  <view class='x-col'></view>
+                  <view class='number-item ipt"'>X{{p.guige_num}}</view>
+                </view>
+              </view>
+
+            </view>
+          </view>
+          <view class='fubBox' wx:if="{{p.fan_u==1}}">
+            <view class='f1 '>
+              返U币：{{p.u_num}}枚
+            </view>
+            <view class='f1 f2'>
+              注意：若允许获得U币则该商品不可申请退货
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='x-row gjBox x-row'>
+      <view class='x-col'></view>
+      <view class='gjNum x-col-center'>共{{number}}件商品</view>
+      <view class='xj x-col-center'>小计：￥{{total}}</view>
+    </view>
+
+  </view>
+  <!-- 商品支付方式 -->
+  <view class='payBox'>
+    <view class='list x-row borderBottom'>
+      <view class='name x-col-center x-col'>商品总价</view>
+      <view class='x-col-center'>￥{{total}}</view>
+    </view>
+    <view class='list x-row borderBottom' bindtap='isdkuNum'>
+      <view class='name x-col-center x-col'>U币抵扣(仅在优选商户消费抵扣使用)</view>
+      <view class='kdk x-col-center'>可抵扣 </view>
+      <view class='gou x-col-center'><i class="iconfont icongou1 {{isdku_num==1?'':'white'}}"/></view>
+      <view class='price x-col-center'>￥{{dku_num_s>=0?dku_num_s:dku_num}}</view>
+    </view>
+    <view class='list x-row borderBottom' bindtap='isdkBalance'>
+      <view class='name x-col-center x-col'>余额支付</view>
+      <view class='gou x-col-center'>
+      <i class="iconfont icongou1 {{isdk_balance==1?'':'white'}}"/>
+      </view>
+      <view class='price x-col-center'>￥{{dk_balance_s>=0?dk_balance_s:dk_balance}}</view>
+    </view>
+
+    <view class='list x-row borderBottom'>
+      <view class='name x-col-center x-col'>支付方式</view>
+      <view class='x-col-center wxzxzf' style='color:#999999;'>微信在线支付</view>
+    </view>
+  </view>
+  <!--  提交订单  -->
+  <view class="snedOrder x-row" >
+    <view class='x-col'></view>
+    <view class=" x-col-center text-right">
+      <text>实际支付：</text>
+      <view class="result" >￥
+        <text>{{sjTotal?sjTotal:total}}</text>
+      </view>
+    </view>
+    <view class="" bindtap="sendOrder">
+      <!-- <view wx:if="{{!address_id}}" class="notSend">提交订单</view> -->
+
+      <view  class="yesSend">提交订单</view>
+    </view>
+  </view>
+</view>

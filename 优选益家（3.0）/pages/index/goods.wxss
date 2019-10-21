@@ -1,0 +1,74 @@
+/* pages/index/goods.wxss */
+.recom_all{
+    /**/
+    width: 720rpx;
+    height: 500rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50rpx;
+    /* border: solid 1px  deeppink; */
+  }
+  .recom_info{
+    width: 345rpx;
+    height: 500rpx;
+    margin-top: 20rpx;
+    margin: 5rpx;
+    border: solid 1px #F2F2F2FF;
+  }
+.recom_img{
+  width: 300rpx;
+  height: 300rpx;
+  margin:auto;
+  /* border: solid 1px gold; */
+  
+}
+.recom_img image{
+  width: 100%;
+  height: 300rpx;
+}
+.recom_title{
+  margin-top: 40rpx;
+  width: 300rpx;
+  margin: auto;
+}
+  .recom_title1{
+    color: #3F3F3F;
+    font-size: 26rpx;
+    font-weight: bold;
+    text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 20rpx;
+  height: 70rpx;
+  }
+.recom_title2{
+  color: #7F8699;
+  font-size: 22rpx;
+  font-weight: Medium;
+}
+.recom_title3{
+  color: #FF4C4C;
+  font-size: 30rpx;
+  font-weight: Medium;
+  margin-top: 15rpx;
+}
+.recom_title4{
+   color: #dab876;
+  font-size: 24rpx;
+  font-weight: Medium;
+}
+  .page1{
+    width: 100%;
+    height: 352rpx;
+  }
+  .page1 image{
+    width: 100%;
+    height: 352rpx;
+   }
+
+ 

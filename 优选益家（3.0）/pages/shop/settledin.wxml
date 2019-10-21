@@ -1,0 +1,205 @@
+<!--pages/shop/settledin.wxml-->
+<view class='box'>
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>店铺名称:</view>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入店铺名称' bindinput='store_nameIpt' placeholder-class='phdIpt' maxlength="40"></input>
+    </view>
+  </view>
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>行业类别:</view>
+    <view class='x-col x-col-center'>
+      <picker mode="selector" bindchange="hylbPickerChange" range-key="store_class_name" value="{{index}}" range="{{storeClass}}">
+        <view class='x-row'>
+          <view class="picker x-col x-col-center">
+            {{hylbItem}}
+          </view>
+          <view class='x-col-center'>
+            <i class="iconfont iconyou" />
+          </view>
+        </view>
+
+      </picker>
+    </view>
+  </view>
+
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>负责人/法人姓名:</view>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入店铺名称' bindinput='personIpt' placeholder-class='phdIpt'></input>
+    </view>
+  </view>
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>法人电话:</view>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入联系电话' bindinput='phoneIpt' placeholder-class='phdIpt' maxlength="11"></input>
+    </view>
+  </view>
+</view>
+<view class='box'>
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>店铺区域:</view>
+    <view class='x-col x-col-center'>
+      <!-- <input placeholder='请输入店铺名称' placeholder-class='phdIpt'></input> -->
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="">
+        <view class="picker x-row">
+          <view class='x-col x-col-center'>{{region[0]}}</view>
+          <view class='x-col x-col-center'>{{region[1]}}</view>
+          <view class='x-col x-col-center'>{{region[2]}}</view>
+          <!-- {{region[0]}}，{{region[1]}}，{{region[2]}} -->
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>店铺地址:</view>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入店铺地址' bindinput='store_addressDetailIpt' placeholder-class='phdIpt'></input>
+    </view>
+  </view>
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>服务电话:</view>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入联系电话' bindinput='servicePhoneIpt' placeholder-class='phdIpt' maxlength="20"></input>
+    </view>
+  </view>
+  <view class='line x-row '>
+    <view class='name x-col-center'>营业时间:</view>
+    <view class='x-col x-col-center'>
+      <picker mode="time" bindchange="timeStartChange" value="{{starTime}}" start="00:00" end="24:00">
+        <view class="phdIpt ">{{startTime}}</view>
+      </picker>
+    </view>
+    <view class='x-col-center' style="width:140rpx">~</view>
+    <view class='x-col x-col-center'>
+      <picker mode="time" bindchange="timeEndChange" value="{{endTime}}" start="00:00" end="24:00">
+        <view class="phdIpt">{{endTime}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+<view class='box'>
+  <view class='line x-row'>
+    <view class='name x-col-center'>法人身份证正反照:</view>
+  </view>
+  <view class="uploadS x-row" style='overflow:visible'>
+    <view class="uitem" wx:key="" style="width:304rpx;height:192rpx;">
+      <!-- style="background-image:url({{url}}{{person_zheng}})" -->
+      <view class="zoomImage" wx:if="{{person_zheng}}" style='height:192rpx;' bindtap="upload" data-id="1" data-img="{{item}}">
+        <image mode='' src='{{url}}{{person_zheng}}' style='width:100%;height:100%;'></image>
+      </view>
+      <view class='x-row' wx:if="{{!person_zheng}}" bindtap="upload" data-id="1" style="height:220rpx;">
+        <view class='x-col x-col-center'>
+          <view class='icon'>
+            <i class="iconfont iconxiaozhaoxiangji"></i>
+          </view>
+          <view class='name'>身份证正面</view>
+        </view>
+      </view>
+    </view>
+    <view style='width:32rpx;'></view>
+    <view class="uitem" wx:key="" style="width:304rpx;height:192rpx;">
+      <!-- style="background-image:url({{url}}{{person_fang}})" -->
+      <view class="zoomImage" wx:if="{{person_fang}}" style='height:192rpx;' bindtap="upload" data-id="2" data-img="{{item}}">
+        <image mode='' src='{{url}}{{person_fang}}' style='width:100%;height:100%;'></image>
+      </view>
+
+      <view class='x-row' wx:if="{{!person_fang}}" bindtap="upload" data-id="2" style=" height:220rpx;">
+        <view class='x-col x-col-center'>
+          <view class='icon'>
+            <i class="iconfont iconxiaozhaoxiangji"></i>
+          </view>
+          <view class='name'>身份证反面</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='line x-row'>
+    <view class='name  x-col-center' style='width:312rpx;'>
+      <span>*</span> 营业执照</view>
+  </view>
+  <view class="uploadS">
+    <view class="item" wx:for="{{licenseAry}}" style="width:{{imgWidth}}px; height:{{imgWidth}}px;">
+      <view class="zoomImage" style="background-image:url({{url}}{{item}})" bindtap="preview" bindtap="deleteImg" data-img="{{item}}" data-len="2"></view>
+    </view>
+    <view class="item" style="width:{{imgWidth}}px; height:{{imgWidth}}px;">
+      <view class="upload-img">
+        <view class="icon" style="width:{{imgWidth*0.96}}px;height:{{imgWidth*0.96}}px;line-height:{{imgWidth*0.96}}px;" bindtap="uploadDpmtz" data-len="2">
+          <i class="iconfont iconxiaozhaoxiangji"></i>
+          <text class="uploadNumber">{{uploads.length}}/5</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='line x-row'>
+    <view class='name  x-col-center' style='width:312rpx;'>
+      <span>*</span> 店招/环境照</view>
+  </view>
+  <view class="uploadS">
+    <view class="item" wx:for="{{uploads}}" style="width:{{imgWidth}}px; height:{{imgWidth}}px;">
+      <view class="zoomImage" style="background-image:url({{url}}{{item}})" bindtap="preview" bindtap="deleteImg" data-img="{{item}}" data-len="1"></view>
+    </view>
+    <view class="item" style="width:{{imgWidth}}px; height:{{imgWidth}}px;">
+      <view class="upload-img">
+        <view class="icon" style="width:{{imgWidth*0.96}}px;height:{{imgWidth*0.96}}px;line-height:{{imgWidth*0.96}}px;" bindtap="uploadDpmtz" data-len="1">
+          <i class="iconfont iconxiaozhaoxiangji"></i>
+          <text class="uploadNumber">{{uploads.length}}/5</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='line x-row'>
+    <view class='name  x-col-center' style='width:312rpx;'>
+      <span>*</span> 店铺logo</view>
+    <view class='shili x-col x-col-center'></view>
+  </view>
+  <view class="uploadS x-row" style='overflow:visible'>
+    <view class="uitem" wx:key="" style="width:304rpx;height:192rpx;">
+      <view class="zoomImage" wx:if="{{store_img}}" style='height:192rpx;' bindtap="storeImgUpload" data-id="1" data-img="{{item}}">
+        <image src='{{url}}{{store_img}}' style='width:100%;height:100%;'></image>
+      </view>
+      <view class='x-row' wx:if="{{!store_img}}" bindtap="storeImgUpload" data-id="1" style="height:220rpx;">
+        <view class='x-col x-col-center'>
+          <view class='icon'>
+            <i class="iconfont iconxiaozhaoxiangji"></i>
+          </view>
+          <view class='name'>点击上传图片</view>
+        </view>
+      </view>
+    </view>
+    <view style='width:32rpx;'></view>
+    <view class="" wx:key="" style="width:304rpx;height:192rpx;">
+      <!-- <image src='../../image/icon/yezz_shop.png' style='width:100%;height:100%;'></image> -->
+    </view>
+  </view>
+</view>
+
+<view class='box jynrBox'>
+  <view class='line x-row'>
+    <view class='name x-col-center'>经营内容:</view>
+  </view>
+  <textarea class='yynr' bindinput='contentIpt' placeholder='请输入内容描述' placeholder-class='phdIpt'></textarea>
+</view>
+<!-- <view class='box' style='border-bottom:92rpx solid rgb(247, 247, 249);'>
+  <view class='line x-row borderBottom'>
+    <view class='name x-col-center'>U币转换比例:</view>
+    <view class='x-col x-col-center'>
+      <input placeholder='请输入收益转换比例' bindinput='u_bilieIpt' placeholder-class='phdIpt'></input>
+    </view>
+    <view class='x-col-center' style='padding-right:30rpx;'>%</view>
+  </view>
+</view> -->
+<view style="height:100rpx;"></view>
+<view class='joinBtn' bindtap='gotoSureJoin'>立即申请商家入驻</view>
+<!-- fixedBox .guige -->
+<view class='fixedBox' wx:if="{{shwoModel==1}}">
+  <view class='guige'>
+    <view class='rzxz'>商户入驻须知</view>
+    <scroll-view scroll-y style="height:780rpx;"></scroll-view>
+    <view class='tyBtn'>同意入驻</view>
+  </view>
+</view>

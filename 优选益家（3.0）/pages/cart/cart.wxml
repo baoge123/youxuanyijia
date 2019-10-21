@@ -1,0 +1,94 @@
+<!--pages/cart/cart.wxml-->
+
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&model.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>
+<view class="classname" wx:if="{{model.length>0}}">
+  <view wx:if="{{model!=''}}">
+  </view>
+  <view class="list" wx:for="{{model}}" wx:for-item="cart" wx:key="" wx:for-index="widx" >
+    <view class='x-row shopBox borderBottom'>
+      <view class='group x-col-center'>
+        <checkbox-group bindchange="changeRadioShop"  data-index="{{widx}}">
+          <checkbox class="choice" checked="{{cart.selected}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <view class='sname x-col-center'>{{cart.store_name}}</view>
+    </view>
+    <view class="list-item x-row" wx:for="{{cart.data}}" wx:key="" wx:for-item="cartItem"  data-widx="{{widx}}" data-index='{{index}}'  bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{cartItem.right}}rpx">
+      <view class="x-col-center">
+        <checkbox-group bindchange="changeRadio"  data-widx="{{widx}}" data-index='{{index}}'>
+          <checkbox class="choice" checked="{{cartItem.selected}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <view class="left x-col-center"  bindtap="gotoProduct" data-id="{{cartItem.product.pid}}">
+        <image class="tupian" src="{{url}}{{cartItem.goods_img}}" mode='aspectFit'></image>
+      </view>
+      <view class="right x-col x-col-center">
+        <view class="p-body">
+          <view class='head' bindtap="gotoProduct" data-id="{{cartItem.product.pid}}">
+            <view class='x-row'>
+            <view class="title x-col ellipsis x-col-center">{{cartItem.goods_name}}</view>
+            <view class='attribute'>{{cartItem.goods_status==1?'上架中':(cartItem.goods_status==2?'下架中':(cartItem.goods_status==3?'库存不足':(cartItem.goods_status==4?'未审核':'未通过')))}}</view>
+            </view>
+            <view class="attribute">{{cartItem.guige_name}}</view>
+          </view>
+          <view class="bottom x-row">
+            <view class="x-col x-col-center">
+              <!-- 价格 -->
+              <text class="price " bindtap="gotoProduct" data-id="{{cartItem.product.pid}}">￥{{cartItem.guige_price}}</text>
+              <!-- <text class="th-price">￥{{cartItem.productMarketPrice}}</text> -->
+            </view>
+            <!-- <view class='attribute' wx:if="{{editFlag == 0}}">X{{cartItem.num}}</view> -->
+            <view class="count">
+              <view class='x-row'>
+                <view class="jian {{cartItem.num - 1 < 1 ? 'desiblad' : ''}}" bindtap="jianCount" data-widx="{{widx}}" data-index='{{index}}'>
+                  <i class="iconfont  iconjian"></i>
+                </view>
+                <view class="count1">
+                  {{cartItem.guige_num}}
+                </view>
+                <view class="add" bindtap="addCount" data-widx="{{widx}}" data-index='{{index}}'>
+                  <i class="iconfont iconjia"></i>
+                </view>
+              </view>
+              <!-- <view catchtap='deleteCart' data-id="{{cartItem.line_item_id}}" style='padding:0 20rpx;'><i class="iconfont iconshanchu"/></view> -->
+            </view>
+          </view>
+          <!-- <view class='dj'>定金</view> -->
+        </view>
+      </view>
+      <view class="remove" bindtap="deleteCart"  data-widx="{{widx}}" data-index='{{index}}' >删除 </view>
+    </view>
+    
+  </view>
+  <view class='noMoreContent' wx:if="{{isAllList==2&&model.length>0}}">小提醒：左滑删除商品</view>
+  <view wx:if="{{model.length>0}}">
+    <view class="pay x-row">
+      <view class="x-col x-col-center center">
+        <checkbox-group bindchange="checkAll">
+          <checkbox checked="{{checkAll}}" class="choice">全选</checkbox>
+        </checkbox-group>
+      </view>
+      <view class="jiage x-col-center">合计:
+        <span class="price">￥{{total}}</span>
+      </view>
+      <view class=" jiesuan " bindtap="checkOut">
+        <text>结算({{selectItem.length}})</text>
+      </view>
+
+      <view></view>
+    </view>
+  </view>
+</view>
+
+<!-- scroll-y="{{isScroll}}" -->
+<!-- <scroll-view scroll-y style='height:{{windowHeight}}px'> 
+     <block wx:key="item" wx:for="{{data}}">
+    <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+        <view class="content">{{item.content}}</view>
+        <view class="remove" bindtap="delItem">删除 </view>
+    </view>
+    </block> 
+ </scroll-view> -->

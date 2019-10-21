@@ -1,0 +1,57 @@
+<!--pages/order/commentLi.wxml-->
+<view class='noMoreContent' wx:if="{{isAllList==1&&list.length>0}}">已加载全部数据了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>
+<view wx:if="{{list.length>0}}">
+  <view class="allBox borderBottom">
+    全部评价({{count}})
+  </view>
+  <view class="yt_body">
+    <view class="list" wx:for="{{list}}" wx:key="" wx:for-item="li">
+      <view class='x-row uinfo'>
+        <view class='x-col-center'>
+          <image class='userHead' src='{{li.user_img}}'></image>
+        </view>
+        <view class='nameBox x-col x-col-center'>
+          <view class='name'>{{li.user_name}}</view>
+          <view class="time">{{li.date}}</view>
+        </view>
+        <view class='star x-col-center'>
+          <i wx:for="{{5}}" wx:key="" class="iconfont {{li.goods_xing>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+        </view>
+      </view>
+      <view class='con'>
+        {{li.content}}
+      </view>
+      <view class='imgBox borderBottom' wx:if="{{li.img_arr.length>0}}">
+        <view class='imgli' wx:for="{{li.img_arr}}" wx:key="" wx:for-item="img">
+          <view class='item'>
+            <image src='{{url}}{{img}}' bindtap='gotoSeeBigImg' data-img="{{img}}" data-arr="{{li.img_arr}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class='hfBox' wx:if="{{li.huifu.length>0}}">
+        <view class='x-row uinfo'>
+          <view class='x-col-center'>
+            <image class='userHead' src='../../image/icon/good.png'></image>
+          </view>
+          <view class='nameBox x-col x-col-center'>
+            <view class='name'>里斯</view>
+            <view class="time">2019.02.03</view>
+          </view>
+        </view>
+        <view class='con'>这把狗虐的我～、我也要趁着七夕前找个女朋友。给她买999朵玫瑰，哈哈</view>
+        <view class='hf x-row'>
+          <view class='x-col'>
+            <input placeholder='' focus="{{liFocus}}"></input>
+          </view>
+          <view class='x-col-center ipt' bindtap='gotoFocus'>
+            <!-- <input placeholder='回复'></input> -->回复
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

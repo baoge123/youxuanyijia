@@ -1,0 +1,59 @@
+/* pages/new/list.wxss */
+
+.head {
+  height: 88rpx;
+  text-align: center;
+}
+
+.head .name {
+  color: #3c444f;
+  font-size: 28rpx;
+  padding-bottom: 14rpx;
+}
+
+.head .xian {
+  width: 40rpx;
+  height: 6rpx;
+  /* background: #ED2106; */
+  margin: 0 auto;
+  background: #fff;
+}
+
+.head .ed {
+  color: #333;
+}
+
+.head .bged {
+  background: #ed2106;
+}
+
+.yt_body{
+  padding: 0 42rpx 0 38rpx;
+}
+
+.yt_body .list{
+  padding: 32rpx 0;
+}
+.yt_body .list .name {
+  min-height: 84rpx;
+  line-height: 42rpx;
+  color: #333333;
+  
+}
+.yt_body .list .img image{
+  width: 280rpx;
+  height: 176rpx;
+  margin: 0 0 0 32rpx;
+}
+
+.yt_body .list .yd{
+  font-size: 26rpx;
+  color: #666;
+  margin:56rpx 0 0  0;
+}
+
+.yt_body .list .notice{
+  font-size: 26rpx;
+  color: #999;
+  margin:24rpx 0 0  0;
+}

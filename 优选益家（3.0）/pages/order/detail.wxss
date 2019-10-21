@@ -1,0 +1,258 @@
+/* pages/order/detail.wxss */
+
+.stateBox {
+  height: 152rpx;
+  background: rgba(245, 166, 35, 1);
+  color: #fff;
+  padding-left: 48rpx;
+}
+
+.stateBox .state {
+  font-size: 34rpx;
+  padding-top: 28rpx;
+  font-weight: 600;
+}
+
+.stateBox .jj {
+  font-size: 26rpx;
+  padding-top: 12rpx;
+}
+
+.addBox {
+  padding: 40rpx 0 12rpx 0;
+}
+
+.addBox .icon {
+  padding: 0 22rpx 0 30rpx;
+}
+
+.addBox .icon .iconfont {
+  font-size: 45rpx;
+  color: #323c58;
+}
+
+.addBox .name {
+  color: #030303;
+}
+
+.addBox .adderss {
+  padding-top: 4rpx;
+  color: #313336;
+}
+
+.xianImg {
+  display: inline-block;
+  width: 100%;
+  top: 240rpx;
+  position: absolute;
+}
+
+.addBox .wl {
+  width: 48rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  margin: 0 16rpx 0 28rpx;
+  background: rgba(52, 128, 240, 1);
+  border-radius: 50%;
+}
+
+.addBox .wl .iconfont {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.addBox .wladd {
+  font-size: 28rpx;
+  color: #109bf7;
+  padding-right: 20rpx;
+}
+
+.bomBorder {
+  border-bottom: 18rpx solid #f8f9f9;
+}
+
+.addBox .wltime {
+  font-size: 24rpx;
+  color: #939aa5;
+  padding-top: 8rpx;
+}
+
+.list {
+  padding: 12rpx 0;
+}
+
+.list .product {
+  padding: 12rpx 20rpx;
+}
+
+.product .pimg image {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 0 20rpx 0 0;
+}
+
+.list .product .info .pname {
+  font-size: 24rpx;
+  color: #3c444f;
+}
+
+.list .product .info .gg {
+  color: #666a6f;
+  font-size: 24rpx;
+  padding: 12rpx 0 32rpx 0;
+}
+
+.list .product .info .price {
+  color: #313336;
+}
+
+.list .product .info .price span {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.jbBox {
+  padding: 28rpx 0 0 32rpx;
+}
+
+.jbBox .li {
+  padding: 16rpx 32rpx 16rpx 0;
+}
+
+.jbBox .li .name {
+  font-size: 26rpx;
+  color: #202020;
+}
+
+.jbBox .li .price {
+  color: #333;
+}
+
+.jbBox .li .sj {
+  font-size: 30rpx;
+}
+
+.jbBox .li .sjjg {
+  color: #ee2929;
+  font-size: 32rpx;
+}
+
+.jbBox .li .hui {
+  color: #939aa5;
+}
+
+.action {
+  padding: 12rpx 0;
+}
+
+.action .btn {
+  padding: 10rpx 30rpx;
+  font-size: 26rpx;
+  color: #313336;
+  border-radius: 40rpx;
+  border: 2rpx solid #cdd2da;
+  margin: 0 24rpx 0 0;
+}
+
+.action .er {
+  color: #fff;
+  background: rgba(245, 166, 35, 1);
+  border-radius: 40rpx;
+}
+
+.action .ed {
+  color: #ed2106;
+  border: 2rpx solid rgba(237, 33, 6, 1);
+}
+
+.fixedBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* background-color: #4c4c4c; */
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.fixedBox .guige {
+  /* position: absolute; */
+  width: 70%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  bottom: 33%;
+  padding: 10rpx;
+  left: 22%;
+  /* padding-bottom: 36px; */
+  opacity: 0.9;
+  /* height: 700rpx; */
+}
+
+.fixedBox .guanbiBox {
+  padding-top: 100rpx;
+}
+
+.fixedBox .guanbiBox .iconfont {
+  font-size: 70rpx;
+  color: #fff;
+}
+
+.guige .lookAll {
+  position: absolute;
+  top: 70%;
+  width: 90%;
+}
+
+.guige .lookAll .l1 {
+  color: #fff;
+  padding: 30rpx 0;
+  width: 40%;
+  text-align: center;
+  background: #231815;
+  border-radius: 10rpx;
+}
+
+.guige .tipsData {
+  /* text-indent: 50rpx; */
+}
+
+.guige .tipsData .name {
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  padding: 58rpx 0 38rpx 0;
+  text-align: center;
+}
+.guige .tipsData .name .goodName{
+  padding-bottom: 20rpx;
+}
+.guige .tipsData .usedWx {
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  font-size: 26rpx;
+  padding: 30rpx 0 128rpx 0;
+  text-align: center;
+}
+
+scroll-view {
+  width: auto;
+}
+
+.box image {
+  vertical-align: top;
+  width: 100% !important;
+}
+
+.sureXf {
+  height: 96rpx;
+  background: rgba(245, 166, 35, 1);
+  box-shadow: 0rpx -4rpx 20rpx 0px rgba(0, 0, 0, 0.04);
+  line-height: 96rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 50rpx;
+  position: fixed;
+  /* bottom: 0rpx; */
+  width: 100%;
+} 

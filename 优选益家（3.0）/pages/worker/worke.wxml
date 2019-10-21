@@ -1,0 +1,89 @@
+<!--pages/worker/worke.wxml-->
+<view class='header'>
+  <view class='x-row title'>
+    <image src='../../image/icon/u_logo.png'></image>
+    <view class='x-col '>
+      <view class='name'>{{workInfo.staff_name}}</view>
+      <view class='phone'>{{workInfo.staff_phone}}</view>
+    </view>
+  </view>
+  <view class='kehuBox' bindtap='gotoCustomer'>
+    <view class='neiBox'>
+      <view class='head x-row'>
+        <view class='name x-col x-col-center'>我的客户</view>
+        <view class='qbkh x-col-center'>全部客户</view>
+        <view class='x-col-center'>
+          <i class="iconfont iconyou" />
+        </view>
+      </view>
+      <view class='x-row'>
+        <view class='one'>
+          <view class='num'>{{workInfo.count}}</view>
+          <view class='named'>总客户数</view>
+        </view>
+        <view class=' two'>
+          <view class='num2'>{{workInfo.vip}}</view>
+          <view class='named'>会员客户</view>
+        </view>
+        <view class="xian "></view>
+        <view class='x-col there'>
+          <view class='num2'>{{workInfo.apply}}</view>
+          <view class='named'>审核中客户</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view style="height:252rpx;"></view>
+<view class='editBox x-row borderBottom' bindtap='gotoEditPassword'>
+  <view class='xg x-col-center x-col'>修改账户密码</view>
+  <view class='x-col-center'><i class="iconfont iconyou"/></view>
+</view>
+
+<view class='newBox' bindtap='gotoAddcustomer'>
+  <view class='add x-row'>
+    <view class='x-col'></view>
+    <view class='x-col-center'><i class="iconfont iconjia"/></view>
+    <view class='x-col-center' >新增客户</view>
+    <view class='x-col'></view>
+  </view>
+</view>
+
+<view class="fixedBox" wx:if="{{fixedBox==2}}">
+  <view style='height:10%;' catchtap='hiddenBox'></view>
+  <view class='x-row'>
+    <view class='x-col' catchtap='hiddenBox'></view>
+    <view class='guige' style='height:520rpx;'>
+        <view class='yzBox'>
+          <view class='sfName'>身份验证</view>
+          <view class='borderBottom yzli'>
+            <input placeholder='请输入手机号' bindinput='yzPhoneIpt' placeholder-class='phdIpt'> </input>
+          </view>
+          <view class='borderBottom yzli x-row'>
+            <view class='x-col x-col-center'>
+              <input placeholder='请输入验证码' bindinput='smsIpt' placeholder-class='phdIpt'> </input>
+            </view>
+            <view class="x-col-center setVerify" bindtap="setVerify">{{VerifyCode}}</view>
+          </view>
+          <view class='sureBtn' bindtap='smsSure'>确定</view>
+          
+        </view>
+
+
+      <!-- <view class='lookAll'>
+        <view class='x-row' >
+          <view class='x-col'></view>
+          <view class='l1'>查看全部</view>
+          <view class='x-col'></view>
+        </view>
+      </view> -->
+    </view>
+
+    <view class='x-col' catchtap='hiddenBox'></view>
+  </view>
+  <view style="height:100rpx;"></view>
+  <view class='guanbiBox' catchtap='hiddenBox'>
+    <i class="iconfont iconguanbi" />
+  </view>
+  <view style='height:80%;' catchtap='hiddenBox'></view>
+</view>

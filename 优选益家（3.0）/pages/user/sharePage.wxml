@@ -1,0 +1,35 @@
+<!--pages/user/sharePage.wxml-->
+
+<view class="fixedBox">
+  <view class='sharBox'>
+    <view catchtap='closeModel'>
+      <!-- style='display:{{shareImg?"none":""}}' -->
+      <!-- style="position: fixed;top: -10000px;z-index:9;" -->
+      <view class="can">
+            <canvas class="canvas" canvas-id="myCanvas"></canvas>
+      </view>
+      
+    </view>
+    <!-- <view style='text-align:center;' catchtap='closeModel' wx:if="{{shareImg}}">
+      <image class='shareImg' src='{{shareImg}}' mode='widthFix'></image>
+    </view> -->
+    <view class='x-row fxActionBox' id="bottom">
+      <view class='x-col x-col-center'>
+        <button open-type='share'>
+          <view style='text-align:center;'>
+            <image src='../../image/icon/wechat.png'></image>
+          </view>
+          分享好友
+        </button>
+      </view>
+      <view class='x-col x-col-center'>
+        <button bindtap='gotoSaveImg'>
+          <view style='text-align:center;'>
+            <image src='../../image/icon/upload.png'></image>
+          </view>
+          保存图片
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

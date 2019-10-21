@@ -1,0 +1,128 @@
+<!--pages/category1/storeall.wxml-->
+<!-- <view style='text-align:center;padding-top:100rpx;' wx:if="{{twoClass.length==0}}">
+      <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+      <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+    </view> -->
+ 
+<wxs module="m1">
+ var getEvery = function(totle,each) {
+   var eachPrice=(totle/each).toFixed(2);
+   return eachPrice;
+ }
+ module.exports.getEvery = getEvery;
+</wxs> 
+
+
+
+    <view class='serchBox x-row serchBox2'>
+    <view class='icon x-col-center' bindtap='gotoSearch'>
+      <i class="iconfont iconsousuo1" />
+    </view>
+    <view class='ipt x-col-center'>
+      <input placeholder='输入商户名搜索' bindinput='keyInput' placeholder-style='color:#939AA5;font-size:26rpx;'  bindconfirm='gotoSerch'></input>
+      
+    </view>
+     <view class="sorch" bindtap="gotoSearch">搜索</view>
+  </view>
+
+
+<view class="tabTit box">
+  <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+    <text>{{item}}</text>
+    <!-- <image src="/img/arrow.png"></image> -->
+  </view>
+</view>
+<!--筛选项-->
+<view class="tabLayer" hidden="{{tab[0]}}">
+    <text class="{{pinpai_id==0?'active':''}}" data-id="0" data-index="0" data-txt="商户" bindtap="">不限</text>
+    <text class="{{pinpai_id==item.id?'active':''}}" wx:for="{{pinpaiList}}" wx:key="index" wx:for-item="item" data-id="{{item.id}}"  data-index="0" data-txt="{{item.store_class_name}}" bindtap="filter">{{item.store_class_name}}</text>
+</view>
+<view class="tabLayer" hidden="{{tab[1]}}">
+    <text class="{{jiage_id==0?'active':''}}" data-id="0" data-index="1" data-txt="评分" data-status="0" bindtap="filter1">由高到低</text>
+    <!-- <!-- <text class="{{jiage_id==1?'active':''}}" data-id="1" data-index="1" data-txt="58-88" bindtap="filter">58-88</text> -->
+    <!-- <text class="{{jiage_id==2?'active':''}}" data-id="2" data-index="1" data-txt="88-108" bindtap="filter">88-108</text>
+    <text class="{{jiage_id==3?'active':''}}" data-id="3" data-index="1" data-txt="108-188" bindtap="filter">108-188</text>  -->
+</view>
+<view class="tabLayer" hidden="{{tab[2]}}">
+    <text class="{{xiaoliang_id==0?'active':''}}" data-id="0" data-index="2" data-txt="销量" data-status="2" bindtap="filter2">不限</text>
+    <!-- <text class="{{xiaoliang_id==1?'active':''}}" data-id="1" data-index="2" data-txt="从高到低" bindtap="filter">从高到低</text>
+    <text class="{{xiaoliang_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从低到高" bindtap="filter">从低到高</text> -->
+</view>
+ 
+<view class='list'>
+  <view class="all_business" wx:for="{{dataList}}" wx:key="index" >
+      <view class="business" bindtap="gotoShopIndex" data-id='{{item.id}}'>
+        <view class="b_imgtitle"  >
+          <view class="img_title">
+            <view class="t_img">
+                 <image src="{{url}}{{item.store_img}}"></image>
+            </view>
+                 <view class="svip_shop" wx:if="{{item.svip==1}}">
+                       <image src="../../image/icon/youxuan_shop.png"></image>
+                       
+                 </view>
+            <view class="b_title">
+              <view class="b_title1">{{item.store_name}}</view>
+              <view class="b_title2">
+                  <view class="xiaoxinxin">
+                         <view class="start">
+                      <block wx:for="{{item.score}}" wx:key="item">
+  <image src='../../image/icon/star1.png'></image>
+ </block>
+ <block wx:for="{{two_1}}" wx:key="item">
+  <!-- <image src='../../image/icon/star2.png'></image> -->
+ </block>
+                 </view>
+                  
+                  </view>
+                 
+                <view class="fen">{{item.store_class_name}}</view>
+              </view>
+              <!-- <view class="b_title3">{{item.store_class_name}}</view> -->
+              <view class="address">
+            <view class="address1">{{item.address}}</view>
+            <view class="juli">{{item.km}}km</view>
+          </view>
+            </view>
+          </view>
+          <!-- <view class="address">
+            <view class="address1">{{item.address}}</view>
+            <view class="juli">{{item.km}}km</view>
+          </view> -->
+        </view>
+
+        <!--        文字-->
+        <view class="u_title" wx:for="{{item.goods}}" wx:key="index1" wx:for-item="good">
+          <view class="u_title1" >
+            <!-- <view class="u_price">￥{{good.goods_price_now}}+{{good.goods_u}}U币</view> -->
+            
+            <view class="u_price1">{{good.goods_name}}</view>
+            <view class="u_chushou1">原价￥{{good.goods_price_yuan}}</view>
+          </view>
+          <view class="u_title2">
+            <view class="p_title"></view>
+            <view class="p_title1">
+                  <view class="sp3">会员￥{{good.goods_price}}</view>
+                  <view class="sp1">券后￥{{good.goods_price_now}}</view>
+                  <!-- <div class="sp2">+{{good.goods_u}}U币</div> -->
+                  <!-- <div class="sp3">团购价￥{{good.goods_price_now}}</div> -->
+                  <view class="u_chushou">销量{{good.goods_sales}}</view>
+            </view>
+          </view>
+        </view>
+       <!-- <view class="more">查看更多商户信息</view> -->
+
+      </view>
+      <view class="border1"></view>
+    </view>
+</view>
+
+
+   <view class="top">
+      <view class="goodsfenlei">
+            <view class="good" wx:for="{{storeClass}}" wx:key="" wx:for-item="li" bindtap="gotoShopCenter" data-id="{{li.id}}" data-name="{{li.class_name}}">
+                  <view class="img" ><image src="{{url}}{{li.store_img}}"></image></view>
+                  <view class="title">{{li.store_name}}</view>
+            </view>
+      </view>
+</view>

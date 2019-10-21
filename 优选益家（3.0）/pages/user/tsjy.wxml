@@ -1,0 +1,40 @@
+<!--pages/user/tsjy.wxml-->
+<view class='yt_body'>
+  <view class='content'>
+    <view class='titleIpt borderBottom'>
+      <input placeholder='请输入投诉或建议的标题' bindinput='titleInput' placeholder-class='placeStyle'></input>
+    </view>
+    <view class='text'>
+      <textarea placeholder='写下你的建议，我们将积极处理确保为您提供更好的服务' placeholder-style='font-size:26rpx;' placeholder-class='placeStyle' bindinput='textInput'></textarea>
+    </view>
+    <view class="uploadS">
+      <view class="item" wx:for="{{uploads}}" wx:key="" style="width:{{imgWidth}}px; height:{{imgWidth}}px;">
+        <view class="zoomImage" style="background-image:url({{url}}{{item}})" bindtap="preview" bindlongtap="deleteImg" data-img="{{item}}"></view>
+      </view>
+    </view>
+    <view class="x-row upload-img box-item">
+      <view class="icon" style="width:{{imgWidth*0.96}}px;height:{{imgWidth*0.96}}px;line-height:{{imgWidth}}px;" bindtap="upload">
+        <i class="iconfont iconjia"></i>
+        <text class="uploadNumber">{{uploads.length}}/5</text>
+      </view>
+      <view class="x-col x-col-center">
+        <!-- <view class="tips size16">您可以上传5张图片</view> -->
+      </view>
+    </view>
+  </view>
+    <view class='phoneBox'>
+    <view class='lx borderBottom'>留下您的姓名</view>
+    <view class='pipt'>
+      <input placeholder='请输入您的姓名' bindinput='nameInput' placeholder-class='placeStyle'></input>
+    </view>
+  </view>
+  <view class='phoneBox'>
+    <view class='lx borderBottom'>留下您的联系方式</view>
+    <view class='pipt'>
+      <input placeholder='请输入有效手机号或邮箱' bindinput='phoneInput' placeholder-class='placeStyle'></input>
+    </view>
+  </view>
+</view>
+<view class='sendSure' bindtap='sendInfo'>
+  <view class='s1'>提交建议</view>
+</view>

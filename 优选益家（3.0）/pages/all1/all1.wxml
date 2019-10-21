@@ -1,0 +1,60 @@
+<!--pages/all1/all1.wxml-->
+<!--pages/category/all.wxml-->
+<view class='x-row head borderBottom borderTop'>
+  <view class='x-col x-col-center zh {{type==0?"ed":""}}' bindtap='selectType' data-id="0">
+
+    综合
+    <i class="iconfont iconxiasanjiao" />
+  </view>
+  <view class='x-col x-col-center zh {{type==2?"ed":""}}' bindtap='selectType' data-id="2">
+    销量
+  </view>
+  <view class='x-col x-col-center price'>
+
+    <view class='x-row {{type==3?"ed":""}}' bindtap='selectType' data-id="3">
+      <view class='x-col'></view>
+      <view class='jg x-col-center'>价格</view>
+      <view class='x-col-center'>
+        <view>
+          <i class="iconfont icontriangle-left {{isPrice==1?'':'no'}}" />
+        </view>
+        <view>
+          <i class="iconfont iconxiajiantou-copy {{isPrice==2?'':'no'}}" />
+        </view>
+      </view>
+      <view class='x-col'></view>
+    </view>
+
+  </view>
+
+</view>
+<view class='zhBox' wx:if="{{isZh==1}}">
+  <view class='x-row' wx:for="{{1}}" wx:key="" wx:for-item="px" bindtap='gotoPxNum' data-idx="{{index}}">
+    <view class='name x-col-center {{index==pxNum?"ed":""}}'>评论数量从高到低</view>
+    <view class='x-col'></view>
+    <view class='gou {{index==pxNum?"ed":""}}'>
+      <i class="iconfont icongou" />
+    </view>
+  </view>
+</view>
+
+<view class='yt_body'>
+  <view class='list'>
+    <view class='li' wx:for="{{list}}" wx:key="" wx:for-item="li" bindtap='gotoDetail' data-id="{{li.id}}">
+      <view class='item'>
+        <image mode='aspcetFit' src='{{url}}{{li.goods_img}}'></image>
+        <view class='pname ellipsis'>{{li.goods_name}}</view>
+        <view class='pBox x-row'>
+          <view class='yuan'>￥</view>
+          <view class='price x-col'>{{li.goods_price_now}}</view>
+          <view class='fan'>会员+{{li.u_num}}U币</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='noMoreContent' wx:if="{{isAllList==2&&list.length>0}}">没有更多了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>

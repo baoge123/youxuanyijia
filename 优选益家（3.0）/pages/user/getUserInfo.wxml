@@ -1,0 +1,11 @@
+<!--pages/center/getUserInfo.wxml-->
+<view class='getUserInfo' wx:if="{{isUser==1}}">
+  <view class='wechat'>微信授权登录</view>
+  <view class='used'>使用当前微信账号登录</view>
+  <view class='user-btn'>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确认登录</button>
+  </view>
+  <view class='login-used'>
+    登录操作将仅使用到您的微信头像、昵称等信息
+  </view>
+</view>

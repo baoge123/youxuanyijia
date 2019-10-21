@@ -1,0 +1,112 @@
+/* pages/user/history.wxss */
+
+page {
+  background: #fafafa;
+}
+
+.head {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  height: 88rpx;
+}
+
+.head .name {
+  padding: 30rpx 0 0 0;
+  color: #3c444f;
+  font-size: 28rpx;
+}
+
+.head .ed {
+  font-size: #333;
+}
+
+.head .xian {
+  width: 40rpx;
+  height: 6rpx;
+  display: inline-block;
+  background: #fff;
+}
+
+.head .xed {
+  background: rgba(237, 33, 6, 1);
+}
+
+.list {
+  margin: 32rpx 24rpx 0 24rpx;
+  padding: 0 34rpx 0 24rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16rpx;
+}
+
+.list .title {
+  height: 110rpx;
+}
+
+.list .title .time {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(171, 178, 188, 1);
+}
+
+.list .title .zjl {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgba(253, 122, 51, 1);
+}
+
+.list .pimg image {
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 20rpx;
+}
+
+.list .right .pname {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(60, 68, 79, 1);
+}
+
+.list .right .gg {
+  font-size: 24rpx;
+  padding-top: 12rpx;
+  font-weight: 400;
+  color: rgba(102, 106, 111, 1);
+}
+
+.list .lun {
+  height: 64rpx;
+  padding: 0 22rpx;
+  background: rgba(255, 247, 227, 1);
+}
+
+.list .lun .di {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(245, 166, 35, 1);
+}
+
+.list .lun .uimg image {
+  width: 32rpx;
+  height: 31rpx;
+  border-radius: 50%;
+}
+
+.list .lun .uname {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+
+.list .ljlq {
+  margin: 30rpx;
+  border-radius: 40rpx;
+  width: 160rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border: 1rpx solid rgba(253, 122, 51, 1);
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(253, 122, 51, 1);
+}

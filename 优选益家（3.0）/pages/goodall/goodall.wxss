@@ -1,0 +1,184 @@
+/* pages/goodall/goodall.wxss */
+.topBox {
+  background: linear-gradient(#3a4664, #2e3753);
+}
+
+.topBox2 {
+  background: #fff;
+  padding-bottom: 34rpx;
+}
+
+.topBox .head {
+  height: 96rpx;
+  padding: 0 44rpx 0 64rpx;
+}
+
+.topBox .add_icon image {
+  width: 32rpx;
+  height: 36rpx;
+}
+
+.topBox .head .address_name {
+  color: #fff;
+  padding: 0 8rpx 0 16rpx;
+  max-width:260rpx;
+}
+
+.topBox .head .address_name2 {
+  color: #333;
+}
+
+.topBox .head .xia {
+  padding-bottom: 16rpx;
+}
+
+.topBox .head .xia .iconfont {
+  font-size: 26rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.topBox .head .xia2 .iconfont {
+  color: #333;
+}
+
+.topBox .head .type .t_name {
+  color: #333;
+  opacity: 0.2;
+}
+
+.topBox .head .type {
+  text-align: center;
+}
+
+.topBox .head .type .ed {
+  opacity: 1;
+}
+
+.topBox .head .type .no {
+  opacity: 1;
+  color: #ddd;
+}
+
+.topBox .head .noed {
+  background-color: #fff;
+}
+
+.topBox .head .type .fff {
+  background-color: #333;
+}
+
+.topBox .head .type .ed2 {
+  opacity: 1;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.topBox .head .type .fff2 {
+  background-color: #333;
+}
+
+.topBox .head .xian {
+  width: 40rpx;
+  height: 6rpx;
+  margin: 4rpx auto;
+  border-radius: 6rpx;
+}
+
+.serchBox {
+  margin: 0 30rpx;
+  height: 68rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 0 34rpx;
+}
+
+.serchBox2 {
+  background: rgba(244, 244, 244, 0.8);
+}
+
+.serchBox .icon {
+  color: #939aa5;
+  padding: 0 14rpx 5rpx 0;
+}
+
+.serchBox .icon .iconfont {
+  font-size: 32rpx;
+}
+
+.serchBox .ipt input {
+  color: #939aa5;
+  font-size: 26rpx;
+}
+
+.content .category-left {
+  background: #f5f5f5;
+  width: 21.33%;
+  text-align: center;
+  float: left;
+  background: #fff;
+}
+
+.content .category-left text {
+  font-size: 30rpx;
+}
+
+.content .fenlei {
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ed2106;
+}
+
+.content .fenlei2 {
+  font-size: 28rpx;
+  text-align: center;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #f8f8f7;
+}
+.category-box .gg {
+  padding: 20rpx;
+}
+
+.category-box .gg image{
+  width: 100%;
+  height: 100%;
+}
+
+
+.right .title{
+  padding: 12rpx 20rpx 31rpx 20rpx;
+  color: #666;
+}
+
+.right .pbox{
+  padding: 2rpx 14rpx;
+  overflow: auto;
+}
+
+.right .pbox .list{
+  width: 33.3%;
+  float: left;
+}
+
+.right .pbox .list .item{
+  margin: 7rpx 32rpx;
+}
+
+.right .pbox .list .item image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.right .pbox .list .item .name{
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  padding-top: 14rpx;
+  min-height: 70rpx;
+  line-height: 35rpx;
+}

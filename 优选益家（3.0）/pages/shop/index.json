@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "shopCenter": "shopCenter"
+  },
+  "navigationBarTitleText": "商家中心"
+}

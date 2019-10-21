@@ -1,0 +1,44 @@
+<!--pages/user/team.wxml-->
+<view class="titleBox x-row">
+  <view class='x-col-center ttzrs' bindtap='gotoSelectType' data-type='0'>
+    <view class='ttnum num'>{{count}}</view>
+    <view class="name {{type==0?'ed':''}}">团队总人数</view>
+  </view>
+  <view class='x-col-center yifs' bindtap='gotoSelectType' data-type='1'>
+    <view class='ttnum num'>{{yiji}}</view>
+    <view class="name {{type==1?'ed':''}}">一级粉丝</view>
+  </view>
+  <view class='x-col-center xian'></view>
+  <view class='x-col-center ejfs' bindtap='gotoSelectType' data-type='2'>
+    <view class='ttnum num'>{{erji}}</view>
+    <view class="name {{type==2?'ed':''}}">二级粉丝</view>
+  </view>
+    <view class='x-col-center xian'></view>
+  <view class='x-col-center ejfs' bindtap='gotoSelectType' data-type='3'>
+    <view class='ttnum num'>{{san}}</view>
+    <view class="name {{type==3?'ed':''}}">三级粉丝</view>
+  </view>
+</view>
+
+<view class='liBox'>
+  <view class='list x-row borderBottom' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='img'>
+      <image src='{{li.user_img}}'></image>
+    </view>
+    <view class='x-col x-col-center'>
+      <view class='nameBox x-row'>
+        <view class="uname x-col-center">{{li.user_name}}</view>
+        <view class='svip x-col-center'>
+          <!-- <image src='../../image/icon/idx_svip.png'></image> -->
+          <image src='../../image/icon/{{li.status==1?"team_svipIcon":"team_vip"}}.png' mode='widthFix'></image>
+        </view>
+      </view>
+      <view class='time'>{{li.date}}</view>
+    </view>
+    <view class='fsnum x-col-center'>
+      <view class='num'>{{li.yiji_num}}</view>
+      <view class='yyfs'>拥有粉丝</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,194 @@
+<!--pages/category1/category1.wxml-->
+
+
+<!-- 定位 -->
+
+
+
+<view class="addso">
+      <view class="addrerss" bindtap="gotoSelectdwAdderss">
+                 <view class="icon1"><image src="../../image/icon/dingwei2.png"></image></view>
+                 <view class="name">{{addressName}}</view>
+                <view><b class="bottom"><i class="bottom-arrow1"></i><i class="bottom-arrow2"></i></b></view>
+           </view> 
+
+           <view class='shousuo'>
+                
+        <input class="text" type="text" placeholder='输入商户名搜索' bindinput='keyWordInput' placeholder-style='color:#939AA5;font-size:26rpx;' bindconfirm='gotoSerch'>
+               <view class='icon_so' bindtap='gotoSearch'>
+      <i class="iconfont iconsousuo1" />
+    </view>
+        </input>
+           <view class="sorch" bindtap="gotoSerch">搜索</view>
+           <!-- <view id="box">
+        <input type="text" name="search" placeholder="请输入关键字"/>
+        <view id="search">搜索</view> 
+    </view> -->
+      </view>
+</view>
+
+         
+<!-- 轮播图 -->
+      <view class="swiper">
+             <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}" wx:key="" wx:for-item="ca">
+    <swiper-item>
+      <image src="{{url}}{{ca.img_src}}" bindtap="gotoDetailImg" id="slide-image" data-id='{{ca.u_id}}' data-type='{{ca.status}}' width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 新用户领U币 -->
+ <view class="fuli" bindtap='gototkDetail'>
+            <image src="../../image/index/lin_u.png"></image>
+            <view class="u_ren">{{fen}}</view>
+            <view class="xin">{{xin}}</view>
+      </view>
+<!-- 分类 -->
+   <view class="play">
+         <view class="play1" >
+               <view class="play1_1" wx:for="{{storeClass}}" wx:if="{{xxAction==1?(index<5):(index<=storeClass.length)}}" wx:key="" wx:for-item="ca" bindtap="getstore" data-id='{{ca.id}}'>
+                     <view class="icon"><image src="{{url}}{{ca.store_class_img}}"></image></view>
+                     <view class="title">{{ca.store_class_name}}</view>
+               </view>
+                <!-- <view class="button" bindtap="getstore">全部</view> -->
+                <block wx:if="{{storeClass.length>5}}">
+    <view class='x-row caozuo' bindtap='goXxAction'>
+      <view class='x-col'></view>
+      <view class='x-col-center zhankai'>{{xxAction==1?'展开':'收起'}}</view>
+      <view class='x-col-center sx'>
+        <i class="iconfont {{xxAction==1?'iconxiangxia':'iconxiangshang'}}" />
+      </view>
+      <!-- <view class='x-col-center'><i class="iconfont iconyou"/></view> -->
+    </view>
+  </block>
+  <view class="vip" bindtap="buyVip">
+             <image src="../../image/sh/hy.png"></image>
+        </view>
+          </view>
+          
+          
+   </view>
+   <!-- 会员 -->
+    <!-- <view class="vip" bindtap="buyVip">
+             <image src="../../image/sh/hy.png"></image>
+        </view> -->
+         <view class="border"></view>
+
+         <!-- 热门推荐 -->
+         <!-- <view class="hot_title">
+              <view class="hot_title1">热门推荐</view>
+              <view class="hot_title2">
+                     <view class="hot_title3">更多好货</view>
+                     <view class="hot_img"><image src=""></image></view>
+             </view>
+             </view> -->
+             <!-- 滚动 -->
+             <!-- <view class="swiper-home">
+      <scroll-view scroll-x="true" style="width: 100%" >
+        <view class="swiper-item" wx:for="{{good}}" wx:key="index" >
+          <view class="left">
+            <view class="recommend"><image src="item"></image></view>
+            <view class="recommend_title">
+              <view class="recommend_title1">洗吹</view>
+              <view class="recommend_title2">【剪发】单人资深造型师洗剪吹gggg</view>
+              <view class="recommend_title3">
+                   <view class="r_title">￥109</view>
+                   <view class="r_title1">￥139</view>
+              </view>
+              <view class="recommend_title4">本周热门推荐</view>
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </view> -->
+      
+
+
+    <!-- 推荐商家 -->
+          <view class="good_title">
+         <span class="y_title">推荐</span>
+         <span class="y_title1">商家</span>
+     </view>
+
+     <!-- 优质商家信息 -->
+      <view class='list'>
+  <view class="all_business" wx:for="{{store}}" wx:key="index" >
+      <view class="business" bindtap="gotoShopIndex" data-id='{{item.id}}'>
+        <view class="b_imgtitle"  >
+          <view class="img_title">
+            <view class="t_img">
+                 <image src="{{url}}{{item.store_img}}"></image>
+                 <view class='uxuan'><image src='../../image/icon/youxuan_shop.png'></image></view>
+            </view>
+            <view class="b_title">
+               <view class="name_sh">
+                     <view class="b_title1">{{item.store_name}}</view>
+                     <!-- <view class="b_title3">{{item.store_class_name}}</view> -->
+               </view>
+              
+  
+              <view class="b_title2">
+                <view class="xinxin">
+        <view class="startxin">
+                      <block wx:for="{{5}}" wx:key="item">
+  <image src='../../image/icon/star1.png'></image>
+ </block>
+ <block wx:for="{{two_1}}" wx:key="item">
+  <!-- <image src='../../image/icon/star2.png'></image> -->
+ </block>
+  
+                 </view>
+                
+</view>
+                <view class="b_title3">{{item.store_class_name}}</view>
+                <!-- <view class="b_title3">{{item.store_class_name}}</view> -->
+                
+              </view>
+                 <view class="address">
+            <view class="address1">{{item.address}}</view>
+            <view class="juli" wx:if="{{item.km>=0.5}}">{{item.km}}km</view>
+            <view class="juli" wx:if="{{item.km<0.5}}">{{item.juli}}m</view>
+          </view>
+            </view>
+          </view>
+          <!-- <view class="address">
+            <view class="address1">{{item.address}}</view>
+            <view class="juli" wx:if="{{item.km>=0.5}}">{{item.km}}km</view>
+            <view class="juli" wx:if="{{item.km<0.5}}">{{item.juli}}m</view>
+          </view> -->
+        </view>
+
+        <!--        文字-->
+        <view class="u_title" wx:for="{{item.goods}}" wx:key="index1" wx:for-item="good" >
+          <view class="u_title1" >
+            <!-- <view class="u_price">￥{{good.goods_price_now}}+{{good.goods_u}}U币</view> -->
+            <view class="vip1"></view>
+            <view class="u_price1">{{good.goods_name}}</view>
+            <view class="u_chushou">原价￥{{good.goods_price_yuan}}</view>
+          </view>
+          <view class="u_title2">
+            <view class="p_title"></view>
+            <view class="p_title1">
+                  <view class="hui_u">
+                       
+                        <!-- <span class="sp1">会员￥{{good.goods_price_now}}</span>
+                        <span class="sp2">+{{good.goods_u}}U币</span> -->
+                       <view class="sp2">会员￥{{good.goods_price}}</view> 
+                       <view class="sp1">券后￥{{good.goods_price_now}}</view>
+                        
+                  </view>
+                  
+                  <!-- <span class="sp3">团购价￥{{good.goods_price}}</span> -->
+                  <span class="u_chushou1">销量 {{good.goods_sales}}</span>
+            </view>
+          </view>
+        </view>
+      
+
+      </view>
+      <view class="border1"></view>
+    </view>
+</view>
+</view>

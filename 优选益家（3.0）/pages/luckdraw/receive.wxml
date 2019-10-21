@@ -1,0 +1,50 @@
+<!--pages/luckdraw/receive.wxml-->
+<view class='yt_body'>
+  <view style='height:554rpx;'></view>
+  <view class='infoBox'>
+    <view class='good x-row borderBottom'>
+      <view class='pimg'>
+        <image src='{{url}}{{pimg}}' mode='aspectFit'></image>
+      </view>
+      <view class='pname ellipsis'>{{pname}}</view>
+    </view>
+    <view class='x-row li borderBottom'>
+      <view class='name x-col-center'>收货人</view>
+      <view class='ipt x-col x-col-center'>
+        <input placeholder-class='iptInfo' bindinput='nameIpt' placeholder='请输入姓名'></input>
+      </view>
+    </view>
+    <view class='x-row li borderBottom'>
+      <view class='name x-col-center'>身份证</view>
+      <view class='ipt x-col x-col-center'>
+        <input placeholder-class='iptInfo' bindinput='idCodeIpt' placeholder='请输入身份证后6位'></input>
+      </view>
+    </view>
+    <view class='x-row li borderBottom'>
+      <view class='name x-col-center'>手机号</view>
+      <view class='ipt x-col x-col-center'>
+        <input placeholder-class='iptInfo' bindinput='phoneIpt' placeholder='请输入手机号'></input>
+      </view>
+    </view>
+    <view class='x-row li borderBottom'>
+      <view class='name x-col-center'>验证码</view>
+      <view class='ipt x-col x-col-center'>
+        <input placeholder-class='iptInfo' bindinput='smsIpt' placeholder='输入手机验证码'></input>
+      </view>
+      <view class="x-col-center setVerify" bindtap="setVerify">{{VerifyCode}}</view>
+    </view>
+    <view class='x-row li '>
+      <view class='name x-col-center'>详细地址</view>
+      <view class='ipt x-col x-col-center'>
+        <input placeholder-class='iptInfo' bindinput='addressIpt' placeholder='请输入省市区详细地址'></input>
+      </view>
+    </view>
+  </view>
+  <view class='smBox'>
+  <view class='ljlq' bindtap="sureSend">立即领取</view>
+  <view class='ljsmLi'>
+    <view class="name">领奖说明</view>
+    <view class='li'></view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/user/my/ubiTurn.wxml-->
+<view class='title'>
+  <view class='num'>{{num}}</view>
+  <view class='can'>可转让U币</view>
+</view>
+<view class='yt_body'>
+  <view class='li x-row borderBottom'>
+    <view class='name x-col-center'>输入数量：</view>
+    <view class='x-col x-col-center'>
+      <input class='ipt' value='{{iptNum}}' bindinput='iptNumber' placeholder='输入转让U币' placeholder-class='ipt'></input>
+    </view>
+    <view class='type x-col-center' bindtap='gotoZRall'>全部</view>
+  </view>
+  <view class='li x-row borderBottom'>
+    <view class='name x-col-center'>赠与好友：</view>
+    <view class='x-col x-col-center'>
+      <input class='ipt' bindinput='userIdInput' value='{{userId}}' placeholder='输入好友ID' placeholder-class='ipt'></input>
+    </view>
+    <view class='type x-col-center' bindtap='selectFrend' wx:if="{{list.length>0}}">选择</view>
+  </view>
+  <button class='sure sured' bindtap="gotoSureSend">确认转让</button>
+  <view class='zrsm'>转让说明：
+    <view>· U币转让后，您的所属U币将归入转让用户名下 </view>
+    <view>· 转让U币的数量无限制</view>
+    <view>· 转让U币后，您在购买线下商品时将不享受抵扣现金</view>
+  </view>
+
+</view>
+
+<view class='fixedBox' wx:if="{{showModel==1}}">
+  <view class='guige'>
+    <view class='x-row ftitle'>
+      <view class='x-col x-col-center'>历史转让记录</view>
+      <view class='guanbi' catchtap='gotoHiddenModel'>
+        <i class="iconfont iconguanbi1" />
+      </view>
+    </view>
+    <scroll-view scroll-y style="height: 600rpx;">
+      <view class="box">
+        <view class='list x-row borderBottom' wx:for="{{list}}" wx:key="" wx:for-item="li">
+          <view class='img x-col-center'>
+            <image src='{{li.user_img}}'></image>
+          </view>
+          <view class='name x-col-center {{li.status==1?"":"x-col"}}'>{{li.user_name}}</view>
+          <view class='vip x-col-center x-col' wx:if="{{li.status==1}}">
+          <!-- team_vip.png -->
+            <image src='../../../image/icon/idx_svip.png' mode='aspectFit'></image>
+          </view>
+          <view class='select x-col-center' bindtap='gotoSelectUser' data-id="{{li.id}}">选择</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

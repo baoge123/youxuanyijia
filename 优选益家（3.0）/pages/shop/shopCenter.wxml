@@ -1,0 +1,154 @@
+<!--pages/shop/shop.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='swiper_box'>
+  <swiper wx:if="{{advertisement&&advertisement.length>0}}" style="height:{{swiperHeight}}rpx;" indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange">
+    <block wx:for="{{good.img_array}}" wx:key="img" wx:for-item="ca" wx:key="">
+      <swiper-item>
+        <image src="{{url}}{{ca}}" bindload='imageLoad' data-index="{{index}}" mode="widthFix" class="slide-image" bindtap='gotoIndexOr' data-id="{{ca.value}}" data-event="{{ca.event}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='dianBox'>
+    <view class="d {{current==idx?'ded':''}}" wx:for="{{good.img_array}}" wx:key="" wx:for-item="d" wx:for-index="idx"></view>
+  </view>
+  <view class='yxsp  x-col-center' wx:if="{{good.svip==1}}">
+          <view class="vshop">
+                <image src="../../image/index/youxuansh.png"></image>
+          </view>
+      </view>
+</view>
+<view class='yt_body'>
+  <view class='info'>
+    <view class='shopName'>
+      {{good.store_name}}
+      
+      <span class='x-col-center slx x-col' class='zheng' >{{good.store_class_name}}</span>
+    </view>
+   
+    <view class='zhengBox x-row' bindtap='gotoZhengBox'>
+      
+      
+      <span class='zheng'>证</span>
+    </view>
+    <view class='timeBox borderBottom x-row'>
+      <view class='x-col '>
+        <view class='star x-col-center'>
+          <i wx:for="{{5}}" wx:key="" class="iconfont {{good.score>=index+1? 'iconxingxing1 icon-select iconxingxing icon-no': 'iconxingxing icon-no'}} "></i>
+          <span class="fen">{{good.score}}分</span>
+        </view>
+        <view class='time'>营业时间：{{good.time}}</view>
+      </view>
+      <view class='x-col-center'>
+        <view class='cell1' bindtap='cellShop'>
+              <image src="../../image/icon/lx.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class='addBox x-row'>
+      <view class='adicon x-col-center' bindtap='gotoOpenMap'>
+        <i class="iconfont icondizhi" />
+      </view>
+      <view class='x-col-center x-col' bindtap='gotoOpenMap'>
+        {{good.address}}
+      </view>
+      <view class='copy x-col-center'>
+        <view class='mi' wx:if="{{good.km}}">{{good.km}}km</view>
+        <view class='fz' bindtap='copyAddress'>复制</view>
+      </view>
+    </view>
+  </view>
+  <view class='yt_types ' wx:if="{{store_goods_class.length>0}}">
+    <scroll-view class="scroll-view_H borderBottom" scroll-x>
+      <view class='x-col scroll-view-item_H' wx:for="{{store_goods_class}}" wx:for-item="t" wx:key="" bindtap='selectClass' data-id="{{t.id}}">
+        <view class="name">{{t.goods_class}}</view>
+        <view class="{{tid==t.id?'nearby':'noNearby'}}"></view>
+      </view>
+    </scroll-view>
+    <view class='shopBox' >
+      <view class='ll2' >
+        <view class='x-row item' id="shopBox"  wx:for="{{goodList}}" wx:key="" wx:for-item="good" bindtap='{{store_id!=shop_id?"gotoDetail":"" }}' data-id='{{good.id}}'>
+          <!-- <view style='width:94rpx;'></view> -->
+          <view class='img2 ' >
+            <image src='{{url}}{{good.goods_img_arr}}' mode='widthFix'></image>
+          </view>
+          <view class='right x-col'>
+             <view class="goodsy">
+                   <view  id="goods_name">{{good.goods_name}} </view>
+                   <span class="yuan_price">原价￥{{good.goods_price_yuan}}</span>
+             </view>
+            
+             
+            <view class='x-row' id="hy_tg">
+              <view class='img x-col-center' wx:if="{{good.goods_u_status==1}}">
+              <view class="title1">
+              <view class="price_g">会员￥{{good.goods_price}}</view>
+              <view class="huiyuan">券后</view>
+              <view class="price_now">￥{{good.goods_price_now}}</view>
+              </view>
+                <!-- <image src='../../image/icon/idx_svip.png' style="width:50rpx;height:26rpx;"></image> -->
+              </view>
+              
+              <view class='x-col-center' id="jia" wx:if="{{good.goods_u_status==1}}"></view>
+              <view class='uxing x-col-center' wx:if="{{good.goods_u_status==1}}">
+                <!-- <image src='../../image/icon/idx_uxing.png' style='width:26rpx;height:26rpx;'></image> -->
+              </view>
+              <!-- <view class='sname x-col-center' id="font" wx:if="{{good.goods_u_status==1}}">{{good.goods_u}}U币</view> -->
+              <!-- <view class='yjprice x-col-center' id="price">团购价:￥{{good.goods_price}}</view> -->
+            </view>
+              
+          </view>
+          <view class='buyBox'>
+           <!-- shop_id:{{shop_id}} store_id:{{store_id}} -->
+            <view class='yxl'>销量 {{good.goods_sales}}</view>
+            <view class='ljgm' wx:if="{{store_id!=shop_id}}" bindtap="buy1">立即购买</view>
+          </view>
+        </view>
+        <!-- <view class='x-row item'>
+              <view style='width:94rpx;'></view>
+              <view class='img2 '>
+                <image src='{{url}}{{good.goods_img}}' style='width:96rpx;height:96rpx;'></image>
+              </view>
+              <view class='right x-col x-col-center'>
+                <view class='sname'>拉筋松骨套餐</view>
+                <view class='price x-col-center' style='padding-left:0;'>￥188.8</view>
+              </view>
+            </view> -->
+      </view>
+    </view>
+  </view>
+  <!-- <view class="box">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view> -->
+  <!-- 视频：{{url}}{{good.video}} -->
+ <!-- <video wx:if="{{good.video}}" src='{{url}}{{good.video}}' controls ></video> -->
+
+ <!-- 评论 -->
+
+    <view class="pinjia">
+          <view  class="pinjia1">用户评价（{{pinjia}}）</view>
+          <view class="pinjia2"></view>
+    </view>
+    <view class="start">
+          <view class="start1">{{good.score}}.0</view>
+          <view class="start2"> 
+            <view class="zhonghe">综合评分</view>
+           <view class='star x-col-center'>
+          <i wx:for="{{5}}" wx:key="" class="iconfont {{good.score>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+        </view>
+          </view>
+          <view class="start3">好评率100%</view>
+    </view>
+
+
+    <view class="us_title" wx:for="{{comment}}" wx:key="">
+           <view class="user_img"><image src="{{item.user_img}}"></image></view>
+           <view class="zhong">
+                <view>{{item.user_name}}</view>
+                <view class='star x-col-center'>
+          <i wx:for="{{5}}" wx:key="" class="iconfont {{good.score>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} "></i>
+        </view>
+                <view class="date">{{item.content}}</view>
+           </view>
+           <view class="right1">{{item.date}}</view>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/worker/customer.wxml-->
+<view class="serchBox x-row">
+  <view class='icon x-col-center'>
+    <i class="iconfont iconsousuo1" />
+  </view>
+  <view class='x-col x-col-center'>
+    <input placeholder='输入商户名检索' bindinput='shopNameIpt'></input>
+  </view>
+</view>
+<view class='yt_types '>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='x-col scroll-view-item_H' wx:for="{{types}}" wx:for-item="t" wx:key="" bindtap='selectType' data-id="{{t.id}}">
+      <view class=" {{typeName==t.id?'named':'name'}}">{{t.name}} </view>
+      <view class="{{typeName==t.id?'nearby':'noNearby'}}"></view>
+    </view>
+  </scroll-view>
+</view>
+<view class='shadow'></view>
+
+<view class='list x-row borderBottom' wx:for="{{list}}" wx:key="" wx:for-item="li" bindtap='gotoCustomer' data-id='{{li.id}}'>
+  <view class='x-col-center head'>
+    <image src='{{url}}{{li.store_class_img}}'></image>
+  </view>
+  <view class='x-col x-col-center'>
+    <view class='x-row'>
+      <view class='sname x-col-center {{li.svip!=1?"x-col":""}}'>{{li.store_name}}</view>
+      <view class='x-col-center x-col yxsh' wx:if="{{li.svip==1}}">
+        <image src='../../image/icon/shp_yxsh2.png'></image>
+      </view>
+      <!-- //0审核中 1通过 2拒绝 3快到期-->
+      <view class='jjdq'>{{li.status==0?'审核中':(li.status==1?'通过':(li.status==2?'拒绝':(li.status==3?'快到期':'已过期')))}}</view>
+    </view>
+    <view class=' lxr'>联系人：{{li.person}} {{li.phone}}</view>
+  </view>
+</view>
+<view class='noMoreContent' wx:if="{{isAllList==1&&list.length>0}}">已加载全部数据了~</view>
+<view style='text-align:center;padding-top:100rpx;' wx:if="{{isAllList==1&&list.length==0}}">
+  <image src='../../image/icon/detail_zwpj.png' mode='widthFix' style='width:150rpx;'></image>
+  <view style='padding-top:30rpx;color:#cdcdcd;'>暂无数据</view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/shop/info.wxss */
+
+.yt_body {
+  padding: 40rpx 42rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(3, 3, 3, 1);
+  line-height: 48rpx;
+  padding-bottom: 20rpx;
+}
+.con{
+  padding-bottom: 58rpx;
+}
+.con .name {
+  font-weight: 400;
+  color: rgba(147, 154, 165, 1);
+  line-height: 42rpx;
+  width: 150rpx;
+}
+
+.con .info {
+  color: rgba(50, 60, 88, 1);
+}

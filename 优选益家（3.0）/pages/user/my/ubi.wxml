@@ -1,0 +1,61 @@
+<!--pages/user/my/ubi.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class='head x-row'>
+  <view class='x-col x-col-center'>
+    <view class='num'>{{userData.u_num}}</view>
+    <view class='dq'>当前拥有U币</view>
+  </view>
+  <view class='zyBox'>
+    <view class='x-row' bindtap='gotoShowMode'>
+      <view class='x-col'></view>
+      <view class='wenhao x-col-center'>?</view>
+      <view class='x-col-center sm'>U币说明</view>
+    </view>
+    <view class='zyhy' catchtap='ubiTurn' >赠与好友</view>
+  </view>
+</view>
+<view class='yt_types borderBottom'>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='x-col scroll-view-item_H' wx:for="{{types}}" wx:for-item="t" wx:key="" bindtap='selectType' data-id="{{t.id}}" data-type="{{t.type}}" data-tid="{{t.tid}}">
+      <view class=" {{typeName==t.id?'named':'name'}}">{{t.name}} </view>
+      <view class="{{typeName==t.id?'nearby':'noNearby'}}"></view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='yt_body'>
+  <view class='list borderBottom x-row' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='x-col x-col-center'>
+      <view class='name'>{{li.title}}</view>
+      <view class='time'>{{li.date}}</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num {{li.status==1?"jian":""}}'>{{li.status==1?"-":"+"}}{{li.price}}</view>
+    </view>
+  </view>
+  <!-- <view class='list borderBottom x-row'>
+    <view class='x-col x-col-center'>
+      <view class='name'>分享商品提成</view>
+      <view class='time'>2019.03.16</view>
+    </view>
+    <view class='x-col-center'>
+      <view class='num jian'>-18.9</view>
+    </view>
+  </view> -->
+</view>
+
+<view class='fixedBox' wx:if="{{showModel==1}}">
+  <view class='guige'>
+    <view class='x-row ftitle'>
+      <view class='x-col x-col-center'>关于U币的说明</view>
+      <view class='guanbi' catchtap='gotoHiddenModel'>
+        <i class="iconfont iconguanbi1" />
+      </view>
+    </view>
+    <scroll-view scroll-y style="height: 500rpx;">
+      <view class="box">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </scroll-view>
+  </view>
+</view>

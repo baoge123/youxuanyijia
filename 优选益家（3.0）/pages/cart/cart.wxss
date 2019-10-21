@@ -1,0 +1,286 @@
+/* pages/cart/cart.wxss */
+
+/* *  重写 checkbox 样式  */
+
+/* 未选中的 背景样式 */
+
+checkbox-group {
+  /* width: 60rpx; */
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  /* border: 2rpx solid #298afd; */
+  background: #ed2106;
+  color: #fff;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.list {
+  /* border-bottom:1px solid #f0f0f0; */
+  background-color: #fff;
+  /* padding-bottom:100rpx; */
+  /* border-bottom: 18rpx solid #fafafa; */
+}
+
+.list .shopBox {
+  height: 80rpx;
+  padding: 0 30rpx;
+}
+
+.tupian {
+  width: 192rpx;
+  height: 192rpx;
+  /* margin: 0 16rpx; */
+}
+
+.list .right {
+  padding: 14rpx 0 10rpx 24rpx;
+  position: relative;
+}
+
+.list .title {
+  min-height: 72rpx;
+  color: #313336;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  padding-right: 10rpx;
+}
+
+.list .head {
+  min-height: 80rpx;
+}
+
+.list .attribute {
+  /* padding: 1px 0; */
+  font-size: 24rpx;
+  color: #999;
+}
+
+.list .price {
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.th-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 5px;
+  font-size: 30rpx;
+}
+
+.right .bottom {
+  padding: 18rpx 0 0 0;
+  font-size: 24rpx;
+}
+
+.list .right .dj {
+  width: 72rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #bc9343;
+}
+
+.count {
+  border-bottom: 1px solid #fff;
+  overflow: auto;
+}
+
+.count .jian, .count .add {
+  width: 64rpx;
+  text-align: center;
+  /* float: left; */
+  height: 40rpx;
+  line-height: 40rpx;
+  background: #f8f8f8;
+}
+
+.count .iconfont {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.count .count1 {
+  width: 72rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  float: left;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  background: #eee;
+}
+
+.count1 input {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 34rpx;
+}
+
+.deleteBtn {
+  background-color: #eb4e3d;
+  color: #fff;
+  font-size: 15px;
+  line-height: 160rpx;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.editLeft {
+  width: 75%;
+  float: left;
+}
+
+.list .choice {
+  /* zoom:72%; */
+}
+
+.pay {
+  border-top: 1px solid #e2e2e2;
+  position: fixed;
+  bottom: 0rpx;
+  background-color: #fff;
+  width: 100%;
+  z-index: 99;
+  height: 100rpx;
+  /* line-height: 90rpx; *//* padding: 5px; */
+}
+
+.pay .x-col {
+  padding: 0 0 0 20rpx;
+}
+
+.pay .choice {
+  /* zoom:72%; */
+}
+
+.pay button {
+  width: 168rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+}
+
+.pay .jiesuan {
+  width: 240rpx;
+  text-align: center;
+  background-color: #ed2106;
+  color: #fff;
+  line-height: 100rpx;
+}
+
+.pay .jiesuan text {
+  font-size: 36rpx;
+}
+
+.pay .center {
+  display: inline-block;
+  font-size: 26rpx;
+}
+
+.pay .jiage {
+  padding: 0 30rpx;
+  font-size: 32rpx;
+}
+
+.pay .jiage .price {
+  color: #ff3445;
+  font-size: 34rpx;
+}
+
+.list-item {
+  padding: 10px 0 10px 15px;
+  border-bottom: 2rpx solid #e2e2e2;
+  position: relative;
+  /* display: flex; */
+}
+
+.list-item:last-child {
+  /* border-bottom: 0; */
+}
+
+.cart-top {
+  font-size: 16px;
+}
+
+.tail, .tail .x-col {
+  padding: 10rpx;
+  font-size: 16px;
+}
+
+.p-body {
+  padding-right: 15px;
+}
+
+.tail {
+  background-color: #fff;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 13rpx 20rpx;
+}
+
+.tail .left text {
+  margin: 0 10rpx;
+}
+
+.tail .right {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.tail .right text {
+  margin-left: 10rpx;
+}
+
+.editeBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #fafafa;
+  display: none;
+}
+
+.order-item {
+  height: 240rpx;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.remove {
+  width: 160rpx;
+  height: 100%;
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: -160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

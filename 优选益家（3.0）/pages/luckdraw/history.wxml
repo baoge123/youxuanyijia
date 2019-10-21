@@ -1,0 +1,42 @@
+<!--pages/user/history.wxml-->
+<view class='x-row head'>
+  <view class='x-col x-col-center' bindtap='selectType' data-type='0'>
+    <view class='name {{type==0?"ed":""}}'>中奖记录</view>
+    <view class='xian {{type==0?"xed":""}}'></view>
+  </view>
+  <view class='x-col x-col-center' bindtap='selectType' data-type='1'>
+    <view class='name {{type==1?"ed":""}}'>参与记录</view>
+    <view class='xian {{type==1?"xed":""}}'></view>
+  </view>
+</view>
+<view class='yt_body'>
+  <view class='list' wx:for="{{list}}" wx:key="" wx:for-item="li">
+    <view class='x-row title'>
+      <view class='x-col x-col-center time'>{{li.datetime}}</view>
+      <!-- "status": "1",0未中奖 1中奖 2待开奖 -->
+      <view class='x-col-center zjl'>{{li.status==0?'未中奖':(li.status==1&&li.active_user_status==0?'您中奖啦！未领奖':(li.status==1&&li.active_user_status==1?'已领奖':'待开奖'))}}</view>
+    </view>
+    <view class='x-row'>
+      <view class='pimg'>
+        <image src='{{url}}{{li.active_img}}' mode='aspectFit'></image>
+      </view>
+      <view class='right x-col'>
+        <view class='pname'>{{li.active_name}}</view>
+        <!-- <view class='gg'>标配1年以换代修</view> -->
+      </view>
+    </view>
+    <view class='lun x-row'>
+      <view class='di x-col-center'>
+        <span>第{{li.num}}轮中奖用户： </span>
+      </view>
+      <view class='uimg x-col-center'>
+        <image src='{{li.user_img}}'></image>
+      </view>
+      <view class='uname x-col-center'>{{li.user_name}}</view>
+    </view>
+    <view class='x-row' wx:if="{{li.status==1&&li.active_user_status==0&&type==0}}">
+      <view class='x-col'></view>
+      <view class='x-col-center ljlq' bindtap='getJp' data-id="{{li.id}}" data-pimg='{{li.active_img}}' data-pname='{{li.active_name}}'>立即领奖</view>
+    </view>
+  </view>
+</view>

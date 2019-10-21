@@ -1,0 +1,23 @@
+<!--pages/user/buySvip.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<!-- <view class="yt_body" bindtap='gotoPayVip' style='height:{{rpxHeight}}rpx;'>
+  <view class='price'>
+       <view class="title0">￥{{price}}（季卡体验卡）</view>
+       <view class="price1">￥49/张</view>
+  </view>
+  <scroll-view scroll-y style="height:46%;">
+    <view class="box">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </scroll-view>
+  <!-- <view class="box">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view> -->
+<!-- </view>  -->
+<view>
+      <view class="img">
+      <image src="../../image/equity/wvip.jpg"></image>
+</view>
+       <view class="button" bindtap="gotoPayVip">立即开通仅需1元<span></span></view>
+       <view class="button1">原价49元</view>
+</view>

@@ -1,0 +1,164 @@
+/* pages/user/my/ubi.wxss */
+.head{
+  height: 200rpx;
+  background: #f5a623;
+  padding: 0 40rpx 0 68rpx;
+  color: #fff;
+}
+
+.head .num{
+  font-size: 64rpx;
+  padding:0 0 10rpx 10rpx;
+
+}
+.head .dq{
+  font-size: 24rpx;
+}
+
+.head .zyBox{
+  padding-top: 24rpx;
+}
+.head .zyBox .wenhao{
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 34rpx;
+  border: 2rpx solid #fff;
+  font-size: 24rpx;
+  margin-right: 14rpx;
+
+}
+.head .zyBox .sm{
+  font-size: 24rpx;
+}
+.head .zyBox .zyhy{
+  margin: 24rpx 0 0 0;
+  width:202rpx;
+height:80rpx;
+background:rgba(255,255,255,1);
+border-radius:40rpx;
+color: #F5A623;
+text-align: center;
+line-height: 80rpx;
+}
+
+
+
+
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+}
+
+.yt_types {
+  text-align: center;
+  padding: 20rpx 20rpx 0 20rpx;
+  background-color: #fff;
+  /* border-top: 16rpx solid #f7f7f9; */
+  box-shadow: 0 0 30rpx #e9eaec;
+}
+
+.yt_types .nearby {
+  width: 48rpx;
+  height: 4rpx;
+  background: #323c58;
+  border-radius: 4rpx 4rpx 0rpx 0rpx;
+  margin: 0 auto;
+  /* padding-top: 14rpx; */
+  margin-top: 14rpx;
+}
+
+.yt_types .name {
+  font-size: 32rpx;
+  /* padding-bottom: 10rpx; */
+  color: #3c444f;
+}
+
+.yt_types .named {
+  font-size: 32rpx;
+  /* padding-bottom: 10rpx; */
+  color: #323c58;
+  font-weight: 600;
+}
+
+.yt_types .noNearby {
+  padding-top: 10rpx;
+  /* border-bottom: 6rpx solid #fff; */
+  background: #fff;
+}
+
+.yt_body {
+  padding: 0 0 110rpx 48rpx;
+  /* box-shadow: 0 0 30rpx #e9eaec; */
+}
+
+.yt_body .list {
+  height: 124rpx;
+}
+
+.yt_body .list .name {
+  color: #3c444f;
+  padding-top: 6rpx;
+}
+
+.yt_body .list .time {
+  color: #abb2bc;
+  font-size: 24rpx;
+}
+
+.yt_body .list .num {
+  color: #c4a171;
+  font-size: 32rpx;
+  padding: 0 42rpx;
+}
+
+.yt_body .list .jian {
+  color: #3c444f;
+  font-size: 30rpx;
+}
+
+
+.fixedBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.fixedBox .guige {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  bottom:0rpx;
+  /* padding: 20px 0; */
+  left: 0;
+  /* padding-bottom: 45px; */
+}
+
+.fixedBox .ftitle{
+  padding:10rpx 14rpx 0rpx 48rpx;
+  /* height: 107rpx; */
+  border-bottom:1rpx solid #e2e2e2;
+}
+
+.fixedBox .ftitle .guanbi .iconfont{
+  font-size: 64rpx;
+}
+.fixedBox .box{
+  padding: 20rpx;
+}
+
+.box image{
+  vertical-align: top; 
+  width:100%!important;
+}

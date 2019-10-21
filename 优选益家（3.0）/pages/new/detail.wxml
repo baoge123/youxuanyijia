@@ -1,0 +1,11 @@
+<!--pages/new/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='titleBox'>
+  <view class="box">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <view class='x-row' wx:if="{{id}}">
+    <view class='time x-col x-col-center'>{{data.date}}发布</view>
+    <view class='time x-col x-col-center'>已阅 {{data.num}} 人</view>
+  </view>
+</view>

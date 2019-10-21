@@ -1,0 +1,33 @@
+/* pages/money/record.wxss */
+page{
+  background:rgba(248,249,249,1);
+}
+.yt_body{
+  margin: 24rpx 0 0 0 ;
+  background: #fff;
+  padding-left: 30rpx;
+}
+
+.list {
+  height: 160rpx;
+}
+
+.list .state{
+  color: #333333;
+
+}
+
+.list .time{
+  font-size: 24rpx;
+  color: #B5B5B5;
+  padding-top: 14rpx;
+}
+
+.list .num{
+  font-size: 36rpx;
+  color: #030303;
+  padding-right: 48rpx;
+}
+.yt_body .list:last-child{
+  border-bottom: 0rpx;
+}

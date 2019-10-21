@@ -1,0 +1,12 @@
+<!--pages/money/recharge.wxml-->
+<view class='yt_body'>
+  <view class='x-row priceBox borderBottom'>
+    <view class='x-col-center rmb'>￥</view>
+    <view class='x-col x-col-center'>
+      <input class='ipt' bindinput='moneyInput' placeholder='输入充值金额' placeholder-class='ipt'></input>
+    </view>
+
+  </view>
+
+  <button bindtap='gotoSure' class='sure {{money>0?"bg":""}}'>确认充值</button>
+</view>

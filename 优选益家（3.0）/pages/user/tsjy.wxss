@@ -1,0 +1,145 @@
+/* pages/user/tsjy.wxss */
+
+page{
+  background: #f5f5f5;
+}
+.yt_body{
+  padding:0 0 100rpx 0;
+}
+.sendSure{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  z-index:2;
+}
+
+.sendSure .s1{
+  text-align: center;
+  color: #fff;
+  background:rgba(50,60,88,1);
+  width:100%;
+  line-height:96rpx;
+  height:96rpx;
+}
+
+
+.yt_body .content{
+  padding: 38rpx 30rpx 48rpx 30rpx;
+  margin:  0 0 20rpx 0;
+  background: #fff;
+}
+.yt_body .li{
+  padding-top: 90rpx;
+}
+.yt_body .li .send {
+  margin: 5%;
+  color: #fff;
+  background-color: #fe7143;
+  border-radius: 5px;
+  line-height: 2.55555556;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.yt_body .content .titleIpt{
+  padding:40rpx 0;
+}
+.yt_body .content .text{
+  padding:40rpx 0;
+}
+.yt_body .content .text textarea{
+  height: 208rpx;
+}
+
+.yt_body .phoneBox {
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.yt_body .phoneBox .lx{
+  height: 82rpx;
+  line-height: 82rpx;
+  color: #333;
+}
+.yt_body .phoneBox .pipt input{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.placeStyle{
+  color: #CDD2DA;
+}
+
+
+/* 上传样式 */
+.uploadS {
+  background: #fff;
+  padding: 20rpx 0;
+  overflow: auto;
+}
+
+.uploadS .item {
+  float: left;
+  width: 33.33%;
+  margin-bottom: 4px;
+}
+
+.uploadS .zoomImage {
+   width: 96%;
+   height: 0;
+   padding-bottom: 100%;
+   overflow: hidden;
+   background-position: center center;
+   background-repeat: no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+}
+
+.upload-img .icon {
+  /* border:1px solid #e2e2e2; */
+  border-radius: 10rpx;
+  text-align: center;
+  margin-right: 30rpx;
+  position: relative;
+  background: #eee;
+  
+}
+.upload-img .icon .iconfont{
+  color:#fff;
+}
+.upload-img .icon i {
+  font-size: 60rpx;
+  color: #c2c0c2;
+}
+
+.upload-img .tips {
+  color: #ddd;
+  margin:20rpx 0;
+}
+
+.box-item {
+  background: #fff;
+  padding:0 0 20rpx 0px;
+}
+
+.box-item .x-row {
+  padding: 20rpx 20rpx 20rpx 0;
+  border-bottom: 2rpx solid #e2e2e2;
+}
+
+.box-item .x-row .name {
+  width: 130rpx;
+  text-align: right;
+  margin-right: 20px;
+}
+
+
+.uploadNumber {
+  position: absolute;
+  right: 10rpx;
+  bottom: 6rpx;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 16px;
+}

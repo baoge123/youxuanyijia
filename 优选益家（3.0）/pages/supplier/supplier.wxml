@@ -1,0 +1,92 @@
+<!--pages/supplier/supplier.wxml-->
+<view class="all_page">
+<view class="all_image"><image src="../../image/equity/supplier.png"></image></view> 
+<!-- 团长权益 -->
+<view class="equity">
+      <view class="tzpage">
+            <view class="icon"><image src="../../image/equity/supplier1.png"></image></view>
+            <view class="equity_title"></view>
+      </view>
+<view class="hezuo">
+       <view class="equity_title1">
+            <view class="equity_image"><image src="../../image/equity/1.png"></image></view>
+            <view class="equity_title2">
+                  <view class="equity_title3">客户广</view>
+                  <view class="equity_title4">
+                            全国拥有大量优质稳定用户
+                        </view>
+            </view>
+      </view>
+<view class="border"></view>
+
+
+      <view class="equity_title1">
+            <view class="equity_image"><image src="../../image/equity/2.png"></image></view>
+            <view class="equity_title2">
+                  <view class="equity_title3">零费用</view>
+                  <view class="equity_title4">
+                            无需缴纳加盟费、上架费
+                        </view>
+            </view>
+      </view>
+<view class="border"></view>
+      <view class="equity_title1">
+            <view class="equity_image"><image src="../../image/equity/10.png"></image></view>
+            <view class="equity_title2">
+                  <view class="equity_title3">回款快</view>
+                  <view class="equity_title4">
+                            结款周期短回款快
+                        </view>
+            </view>
+      </view>
+</view>
+</view>
+
+
+<view class="equity1">
+      <view class="tzpage1">
+            <view class="icon"><image src="../../image/equity/supplier2.png"></image></view>
+            <view class="equity_title"></view>
+      </view>
+      <view class="hezuo">
+               <view class="equity_title1">
+            <view class="equity_image1" ><image src="../../image/equity/3.png"></image></view>
+            <view class="equity_title2">
+                  <view class="equity_title12">大量稳定优质货源</view>
+                  
+            </view>
+      </view>
+
+
+
+      <view class="equity_title1">
+            <view class="equity_image1"><image src="../../image/equity/4.png"></image></view>
+            <view class="equity_title2">
+                  <view class="equity_title13">
+                            实惠的价格
+                        </view>
+                  
+            </view>
+      </view>
+
+      <view class="equity_title1">
+            <view class="equity_image1"><image src="../../image/equity/5.png"></image></view>
+            <view class="equity_title2">
+                  <view class="equity_title12">厂家直供或一级代理商</view>
+                  
+            </view>
+      </view>
+
+      </view>
+     
+      
+</view>
+
+
+<!-- 申请 -->
+
+<!-- <view class="bottom">
+      <view class="bottom_image" bindtap="getSupplier"><image src="../../image/equity/supplier3.png"></image></view>
+</view> -->
+
+</view>

@@ -1,0 +1,33 @@
+<!--pages/money/get.wxml-->
+<view class='head x-row' >
+  <view class='x-col x-col-center'>
+    <view class='num'>{{shopInfo.u_num}}</view>
+    <view class='ktxje'>总U币数量</view>
+  </view>
+
+    <view class='x-col '>
+    <view class='unum'>{{usedUbi}}</view>
+    <view class='kesyb'>可结算U币</view>
+  </view>
+  <!-- <view class='txjl' catchtap='gotoTxjl'>提现记录</view>
+  <view class='you '><i class="iconfont iconyou"/></view> -->
+</view>
+
+<view class='yt_body'>
+  <view class='li x-row borderBottom'>
+    <view class='name x-col-center'>结算数量:</view>
+    <view class='x-col x-col-center'>
+      <input class='ipt' placeholder='输入折算U币' value='{{store_u}}' bindinput='store_uIpt' placeholder-class='ipt'></input>
+    </view>
+    <view class='type x-col-center' bindtap='gotoAllUbi'>全部</view>
+  </view>
+  <!-- <view class='txje'>结算金额：<span>￥0</span></view> -->
+  <button class='sure' bindtap='gotoSureSend'>确认结算</button>
+  <view class='zrsm'>结算说明：
+    <!-- <view> · U币结算每天只能结算1次  </view> -->
+     <!-- <view>· U币相关其他细则</view> -->
+    <view>· 结算的数量以10U币为单位</view>
+    <view>· U币相关其他细则</view>
+  </view>
+    
+</view>

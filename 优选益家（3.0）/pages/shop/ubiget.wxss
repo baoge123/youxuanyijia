@@ -1,0 +1,100 @@
+/* pages/money/get.wxss */
+.head{
+  height: 200rpx;
+  padding: 0 48rpx 0 64rpx;
+  background:rgba(50,60,88,1);
+  color: #fff;
+
+}
+
+.head .num{
+  font-size: 56rpx;
+}
+.head .unum{
+  font-size: 32rpx;
+  color: #fff;
+  padding:72rpx 0 4rpx 0;
+  line-height: 44rpx;
+}
+.head .kesyb{
+font-size: 22rpx;
+  color: #fff;
+}
+.head .ktxje{
+  font-size: 28rpx;
+  opacity: 0.8;
+}
+
+.head .txjl{
+  font-size: 28rpx;
+  opacity: 0.8;
+  padding-top: 52rpx;
+}
+.head .you{
+  padding-top: 52rpx;
+}
+.head .you .iconfont{
+  font-size: 36rpx;
+  opacity: 0.8;
+  padding-top: 52rpx;
+}
+
+
+
+.yt_body {
+  padding: 66rpx 48rpx;
+}
+
+.yt_body .li {
+  padding: 50rpx 16rpx 24rpx 0;
+}
+
+.li .name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.li .type {
+  font-size: 30rpx;
+  color: #003e97;
+}
+
+.ipt {
+  font-size: 32rpx;
+  color: #cdd2da;
+  padding-left: 20rpx;
+}
+
+.yt_body .sure {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  /* background: rgba(229, 231, 235, 1); */
+  background:rgba(50,60,88,1);
+  border-radius: 10rpx;
+  margin: 48rpx 0;
+  font-size: 32rpx;
+}
+
+.yt_body .txje{
+  padding-top: 24rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+.yt_body .txje span{
+  color: #ED2106;
+} 
+.yt_body .sured {
+  background: #f5a623;
+}
+
+button::after {
+  border: none;
+}
+
+.yt_body .zrsm {
+  color: #939aa5;
+  font-size: 26rpx;
+  padding-top: 48rpx;
+  line-height:2;
+}

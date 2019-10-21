@@ -1,0 +1,62 @@
+<!--pages/order/comment.wxml-->
+<view class='starBox borderTop'>
+  <view class='line x-row borderBottom'>
+    <view class='pimg'>
+      <image src='{{url}}{{pimg}}' mode='aspectFit'></image>
+    </view>
+    <view class='x-col x-col-center '>
+      <view class='name' style='padding-left:25rpx;'>{{aroma}}</view>
+      <view class='star x-col x-col-center'>
+        <i wx:for="{{5}}" wx:key="" class="iconfont {{xqstar>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} " bindtap='selectXqStar' data-num="{{index}}"></i>
+      </view>
+    </view>
+
+    <!-- <view class='pfNum'>{{xqstar}}</view> -->
+  </view>
+
+</view>
+
+
+<view class='yt_body'>
+
+  <view class='content'>
+    <view class='text'>
+      <textarea placeholder='说说您对商品的评价吧' placeholder-style='font-size:26rpx;' bindinput='textInput'></textarea>
+    </view>
+  </view>
+  <view class="uploadS">
+    <view class="item" wx:for="{{uploads}}" wx:key="" style="width:{{imgWidth}}px; height:{{imgWidth}}px;">
+      <view class="zoomImage" style="background-image:url({{url}}{{item}})" bindtap="preview" bindlongtap="deleteImg" data-img="{{item}}"></view>
+    </view>
+  </view>
+  <view class="x-row upload-img box-item">
+    <!-- <view class="icon" style="width:{{imgWidth*0.96}}px;height:{{imgWidth*0.96}}px;line-height:{{imgWidth}}px;" bindtap="upload"> -->
+    <view class="icon" bindtap="upload">
+      <i class="iconfont iconxiangji"></i>
+      <!-- <text class="uploadNumber">{{uploads.length}}/5</text> -->
+    </view>
+    <view class="x-col x-col-center">
+      <view class="tips size16">上传图片</view>
+    </view>
+  </view>
+
+</view>
+<view class='starBox' style='padding-top:10rpx;padding-bottom:100rpx;'>
+  <view class='line x-row'>
+    <view class='x-col-center name' wx:if="{{taste}}">{{taste}}:</view>
+    <view class='star x-col x-col-center'>
+      <i wx:for="{{5}}" wx:key="" class="iconfont {{wdstar>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} " bindtap='selectWdStar' data-num="{{index}}"></i>
+    </view>
+    <!-- <view class='pfNum'>{{wdstar}}</view> -->
+  </view>
+  <view class='line x-row'>
+    <view class='x-col-center name' wx:if="{{exterior}}">{{exterior}}:</view>
+    <view class='star x-col x-col-center'>
+      <i wx:for="{{5}}" wx:key="" class="iconfont {{wgstar>=index+1?' iconxingxing1 icon-select':'iconxingxing icon-no'}} " bindtap='selectWgStar' data-num="{{index}}"></i>
+    </view>
+    <!-- <view class='pfNum'>{{wgstar}}</view> -->
+  </view>
+</view>
+<view class='sendSure' bindtap='sendInfo'>
+  <view class='s1'>发布评价</view>
+</view>

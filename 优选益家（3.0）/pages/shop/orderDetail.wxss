@@ -1,0 +1,65 @@
+/* pages/shop/orderDetail.wxss */
+.bomBorder{
+  border-bottom: 18rpx solid #f8f9f9;
+}
+.list {
+  padding: 12rpx 0;
+}
+
+.list .product{
+  padding: 12rpx 20rpx ;
+}
+
+.product .pimg image {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 0 20rpx 0 0;
+}
+
+.list .product .info .pname {
+  font-size: 24rpx;
+  color: #3c444f;
+}
+
+.list .product .info .gg {
+  color: #666a6f;
+  font-size: 24rpx;
+  padding: 12rpx 0 32rpx 0;
+}
+
+.list .product .info .price {
+  color: #313336;
+}
+
+.list .product .info .price span {
+  font-size: 28rpx;
+  color: #999;
+}
+.jbBox{
+  padding:28rpx 0 0 32rpx;
+}
+.jbBox .li{
+  padding: 0 32rpx 0 0;
+  height: 80rpx;
+}
+
+.jbBox .li .name{
+  font-size: 26rpx;
+  color: #202020;
+}
+.jbBox .li .price{
+  color: #333;
+}
+
+.jbBox .li .sj{
+  font-size: 30rpx;
+}
+
+.jbBox .li .sjjg{
+  color: #EE2929;
+  font-size: 32rpx;
+}
+
+.jbBox .li .hui{
+  color: #939AA5;
+}

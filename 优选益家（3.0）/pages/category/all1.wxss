@@ -1,0 +1,110 @@
+/* pages/category/all.wxss */
+
+page {
+  background: #f8f9f9;
+}
+
+.head {
+  height: 88rpx;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 30rpx #ebecec;
+}
+
+.head .zh .iconfont {
+  font-size: 24rpx;
+  margin-left: 18rpx;
+}
+
+.head .price .iconfont {
+  margin-left: 18rpx;
+}
+
+.head .zh, .head .price {
+  font-size: 28rpx;
+}
+
+.head .ed {
+  color: #ed2106;
+}
+
+.head .price .no {
+  color: #222;
+}
+.zhBox{
+  background:#fff;
+  padding:21rpx 0;
+}
+.zhBox .x-row{
+  padding: 13rpx 0;
+}
+
+.zhBox .x-row .ed{
+  color: #ED2106;
+}
+.zhBox .name {
+  /* padding: 0 0 0 88rpx; */
+  width: 33.33%;
+  text-align: center;
+}
+.zhBox .gou{
+  padding:0 48rpx 0 0;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.zhBox .gou .iconfont{
+  font-size: 30rpx;
+}
+.yt_body .list {
+  overflow: auto;
+  padding: 21rpx;
+}
+
+.yt_body .list .li {
+  width: 50%;
+  float: left;
+}
+
+.yt_body .list .li .item {
+  margin: 9rpx;
+  height: 520rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.list .item image {
+  width: 336rpx;
+  height: 336rpx;
+}
+
+.list .item .pname {
+  margin: 16rpx 20rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666a6f;
+}
+
+.list .pBox {
+  padding: 0 20rpx;
+}
+
+.list .pBox .yuan {
+  align-self: flex-end;
+  font-size: 24rpx;
+  color: #e80000;
+  margin:0 0 5rpx 0;
+}
+
+.list .pBox .price {
+  align-self: flex-end;
+  font-size: 36rpx;
+  color: #e80000;
+}
+
+.list .pBox .fan {
+  color: #dab876;
+  align-self: flex-end;
+  font-size: 24rpx;
+}

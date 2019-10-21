@@ -1,0 +1,88 @@
+/* pages/user/buySvip.wxss */
+
+/* http://i2.bvimg.com/685251/bcd9495dce91b527.png */
+.price1{
+  text-decoration:line-through;
+  /* margin-top: 30rpx; */
+}
+.title{
+  border: solid 1px red;
+  height: 80rpx;
+  margin-top: 280rpx;
+  position: absolute;
+  width: 640rpx;
+  margin-left: 50rpx;
+}
+.yt_body {
+  background-image: url("https://yjxcx.sccxbe.com/upload/user/vip.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  width: 100%;
+  /* height: calc(100vh); */
+  
+}
+
+.price {
+  padding: 330rpx 60rpx 210rpx 60rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: rgba(109, 73, 23, 1);
+  /* line-height: 52rpx; */
+  letter-spacing: 2rpx;
+  text-align: center;
+  /* padding-bottom: 200rpx; */
+}
+.yt_body .box{
+  padding: 0 60rpx;
+}
+.box image {
+  vertical-align: top;
+  width: 100% !important;
+}
+.title0{
+    /* margin-top: -20rpx; */
+    font-size: 35rpx;
+}
+.img{
+  width: 750rpx;
+  height: 2090rpx;
+  /* border: solid 1px  red; */
+}
+.img image{
+  width: 750rpx;
+  height: 100%;
+  /* border: solid 1px green; */
+  /* background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat; */
+}
+.button{
+  width: 565rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  /* border: solid 1px firebrick; */
+  position: absolute;
+  top: 560rpx;
+  left: 90rpx;
+  text-align-last: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 36rpx;
+  background-color: rgba(194, 152, 92, 0.95);
+}
+span{
+  font-size: 20rpx;
+  line-height: 80rpx;
+}
+.button1{
+  position: absolute;
+  top: 470rpx;
+  left: 480rpx;
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #664630;
+  /* border: solid 1px red; */
+}

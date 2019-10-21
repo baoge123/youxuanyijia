@@ -1,0 +1,92 @@
+/* pages/user/team.wxss */
+
+.titleBox {
+  height: 208rpx;
+  background: rgba(50, 60, 88, 1);
+  width: 100%;
+}
+
+.titleBox .ttzrs {
+  width: 19%;
+  /* text-align: center; */
+  padding-left: 68rpx;
+}
+
+.titleBox .num {
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.titleBox .ttzrs .ttnum {
+  color: #fff;
+  font-size: 48rpx;
+}
+
+.titleBox .name {
+  font-size: 22rpx;
+  color: #fff;
+  opacity: 0.4;
+}
+.titleBox .ed {
+  color: #fff;
+  opacity:1;
+  font-size: 24rpx;
+}
+.titleBox .yifs {
+  width: 120rpx;
+  padding: 0 30rpx 0 50rpx;
+}
+
+.titleBox .xian {
+  width: 2rpx;
+  height: 40rpx;
+  background:rgba(255,255,255,0.1);
+}
+
+.titleBox .ejfs{
+  padding-left:8%;
+}
+
+.liBox .list {
+  padding:22rpx 48rpx 22rpx 30rpx;
+}
+.liBox .list .img image{
+  width:80rpx;
+height:80rpx;
+border-radius: 50%;
+margin: 0 26rpx 0 0;
+}
+
+.liBox .list .nameBox .svip image{
+  width: 112rpx;
+  height: 100%;
+  margin: 0 0 0 24rpx;
+}
+
+.liBox .list .nameBox .uname{
+  font-size: 30rpx;
+  color: #333;
+}
+
+.liBox .list .time{
+  font-size:24rpx;
+  color: #999;
+}
+
+.liBox .list .fsnum view{
+  text-align: center;
+  color: #313336;
+  font-size: 32rpx;
+}
+
+.liBox .list .fsnum .yyfs{
+  color: #999;
+  font-size: 24rpx;
+}
+
+.liBox .list .fsnum .num{
+  height: 42rpx;
+  line-height: 42rpx;
+}

@@ -1,0 +1,112 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/getUserInfo",
+    "pages/user/service",
+    "pages/user/serviceDetail",
+    "pages/user/sharePage",
+    "pages/luckdraw/receive",
+    "pages/luckdraw/history",
+    "pages/luckdraw/list",
+    "pages/luckdraw/winningList",
+    "pages/luckdraw/detail",
+    "pages/good/sharePage",
+    "pages/shop/detail",
+    "pages/user/main",
+    "pages/index/hotProductLi",
+    "pages/worker/worke",
+    "pages/worker/customer",
+    "pages/worker/infos",
+    "pages/worker/login",
+    "pages/shop/shop",
+    "pages/shop/settledin",
+    "pages/shop/myUbi",
+    "pages/shop/editPassword",
+    "pages/shop/contacts",
+    "pages/shop/order",
+    "pages/shop/orderDetail",
+    "pages/shop/ubiget",
+    "pages/shop/index",
+    "pages/shop/myAssets",
+    "pages/shop/center",
+    "pages/shop/login",
+    "pages/order/logistics",
+    "pages/order/paySucces",
+    "pages/order/createOrder",
+    "pages/money/get",
+    "pages/money/record",
+    "pages/money/recharge",
+    "pages/user/my/ubiTurn",
+    "pages/user/my/commissionDetail",
+    "pages/user/my/ubi",
+    "pages/user/myAssets",
+    "pages/user/tsjy",
+    "pages/user/canva",
+    "pages/user/team",
+    "pages/user/paySvip",
+    "pages/user/buySvip",
+    "pages/order/detail",
+    "pages/order/list",
+    "pages/order/comment",
+    "pages/order/commentLi",
+    "pages/good/detail",
+    "pages/new/list",
+    "pages/new/detail",
+    "pages/category/all",
+    "pages/category/searchCate",
+    "pages/cart/cart",
+    "pages/category/category",
+    "pages/category/search",
+    "pages/user/register",
+    "pages/Community/tuanzhang",
+    "pages/supplier/supplier",
+    "pages/supplier/apply",
+    "pages/category1/category1",
+    "pages/goodall/goodall",
+    "pages/merchant/merchant",
+    "pages/all1/all1",
+    "pages/category1/storeall",
+    "pages/index/goods",
+    "pages/order/createOrder1",
+    "pages/luckdraw/play/play",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "优选益家",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#ED2106",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/category1/category1",
+        "iconPath": "image/icon/idx_icon44.png",
+        "selectedIconPath": "image/icon/idx_icon444.png",
+        "text": "本地生活"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon/idx_icon1.png",
+        "selectedIconPath": "image/icon/idx_icon2.png",
+        "text": "优选自营"
+      },
+      {
+        "pagePath": "pages/user/main",
+        "iconPath": "image/icon/idx_icon7.png",
+        "selectedIconPath": "image/icon/idx_icon8.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于匹配周边商户"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/* pages/shop/contacts.wxss */
+page{
+  background: #f8f9f9;
+}
+
+.nBox{
+  background: #fff;
+  height: 120rpx;
+  margin: 16rpx 0;
+  color: #202020;
+}
+
+.nBox .name{
+  padding: 0 40rpx;
+}
+.sm{
+  padding: 32rpx 40rpx 216rpx 40rpx;
+  font-size: 26rpx;
+  color: #939AA5;
+}
+.cellBox{
+  height: 80rpx;
+  margin: 0 40rpx;
+  background:rgba(50,60,88,1);
+border-radius:4rpx;
+color: #fff;
+}.cellBox .cell{
+  font-size: 32rpx;
+  padding-left: 18rpx;
+}

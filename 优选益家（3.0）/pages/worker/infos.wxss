@@ -1,0 +1,91 @@
+/* pages/worker/infos.wxss */
+
+.title {
+  text-align: center;
+}
+
+.img {
+  text-align: center;
+  padding: 28rpx 0 8rpx 0;
+}
+
+.img image {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.title .sending {
+  font-size: 36rpx;
+  color: #030303;
+  padding-bottom: 4rpx;
+}
+
+.title .htsh {
+  font-size: 28rpx;
+  color: #999;
+  padding-bottom: 26rpx;
+}
+
+.infoBox {
+  padding: 0 40rpx;
+}
+
+.infoBox .dpname {
+  padding: 32rpx 0 58rpx 0;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: 600;
+}
+
+.infoBox .name {
+  padding: 0 0 16rpx 0;
+}
+
+.infoBox .name span {
+  padding-left: 24rpx;
+}
+
+.zjBox {
+  padding: 12rpx 0;
+}
+
+.zjBox .zfzName {
+  padding: 18rpx 0;
+  font-size: 28rpx;
+  color: #333;
+}
+.zjBox .zfzBox{
+  padding-bottom: 18rpx;
+}
+.zjBox .zfzBox image {
+  width: 304rpx;
+  height: 192rpx;
+}
+
+.zjBox .dpImgBox{
+  padding-bottom: 18rpx;
+  overflow: auto;
+}
+
+.zjBox .dpImgBox .dpimg{
+  width: 230rpx;
+  height: 218rpx;
+  float: left;
+  padding-bottom: 10rpx;
+}
+
+.zjBox .dpImgBox .dpimg image{
+  width: 218rpx;
+  height: 218rpx;
+  border: 1rpx solid #f6f6f6;
+}
+
+.jynr{
+  padding:0 40rpx ;
+  border-bottom: 200rpx solid #f7f7f9;
+}
+
+.jynr .zfzBox{
+  padding-bottom:48rpx;
+
+}

@@ -1,0 +1,76 @@
+/* pages/order/paySucces.wxss */
+
+.yt_body {
+  text-align: center;
+}
+
+.yt_body .cg {
+  font-size: 48rpx;
+  padding-top: 38rpx;
+  color: #f5a623;
+}
+
+.yt_body .ycgzf {
+  font-size: 28rpx;
+  color: #999;
+  padding-top: 16rpx;
+}
+
+.yt_body .wxzf {
+  font-size: 24rpx;
+  color: #999;
+  padding-top: 48rpx;
+}
+
+.yt_body .wxzf span {
+  color: #ed2106;
+}
+
+.yt_body .yyh {
+  font-size: 24rpx;
+  color: #999;
+  padding: 16rpx 0 48rpx 0;
+}
+
+.yt_body .yyh span {
+  color: #ed2106;
+}
+
+
+.yt_body .ewmBox {
+  width: 600rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 12rpx;
+  border: 2rpx solid rgba(245, 247, 249, 1);
+}
+.yt_body .ewmBox .xfewm{
+  padding:64rpx 0 44rpx 0;
+font-size:30rpx;
+font-family:PingFangSC-Medium;
+font-weight:500;
+color:rgba(51,51,51,1);
+line-height:42rpx;
+}
+
+.yt_body .ewmBox .ewmImg image{
+  width:320rpx;
+height:318rpx;
+border: 1rpx solid #e2e2e2;
+}
+
+.yt_body .ewmBox .xfs{
+  font-size: 26rpx;
+  color: #999;
+  padding: 50rpx 0 0 0;
+}
+
+.yt_body .ygxa{
+  font-size: 24rpx;
+  font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+  padding: 50rpx 0 0 0;
+}
